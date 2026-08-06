@@ -1,0 +1,321 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>第3章 VSO：视频与语音搜索优化 - 从 SEO 到 GEO：AI 时代的搜索优化实战手册</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="favicon-de23e50b.svg">
+        <link rel="shortcut icon" href="favicon-8114d1fc.png">
+        <link rel="stylesheet" href="css/variables-8adf115d.css">
+        <link rel="stylesheet" href="css/general-e96d0476.css">
+        <link rel="stylesheet" href="css/chrome-d279d366.css">
+        <link rel="stylesheet" href="css/print-9e4910d8.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="fonts/fonts-9644e21d.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="mdbook-highlight-css" href="highlight-493f70e1.css">
+        <link rel="stylesheet" id="mdbook-tomorrow-night-css" href="tomorrow-night-4c0ae647.css">
+        <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="ayu-highlight-3fdfc3ac.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "";
+            const default_light_theme = "light";
+            const default_dark_theme = "ayu";
+            window.path_to_searchindex_js = "searchindex-732bf55d.js";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="toc-b56c35ea.js"></script>
+    </head>
+    <body>
+    <div id="mdbook-help-container">
+        <div id="mdbook-help-popup">
+            <h2 class="mdbook-help-title">Keyboard shortcuts</h2>
+            <div>
+                <p>Press <kbd>←</kbd> or <kbd>→</kbd> to navigate between chapters</p>
+                <p>Press <kbd>S</kbd> or <kbd>/</kbd> to search in the book</p>
+                <p>Press <kbd>?</kbd> to show this help</p>
+                <p>Press <kbd>Esc</kbd> to hide this help</p>
+            </div>
+        </div>
+    </div>
+    <div id="mdbook-body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="mdbook-sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("mdbook-sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+                sidebar_toggle.checked = false;
+            }
+            if (sidebar === 'visible') {
+                sidebar_toggle.checked = true;
+            } else {
+                html.classList.remove('sidebar-visible');
+            }
+        </script>
+
+        <nav id="mdbook-sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="toc.html"></iframe>
+            </noscript>
+            <div id="mdbook-sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="mdbook-page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="mdbook-menu-bar-hover-placeholder"></div>
+                <div id="mdbook-menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="mdbook-sidebar-toggle" class="icon-button" for="mdbook-sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="mdbook-sidebar">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg></span>
+                        </label>
+                        <button id="mdbook-theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="mdbook-theme-list">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M371.3 367.1c27.3-3.9 51.9-19.4 67.2-42.9L600.2 74.1c12.6-19.5 9.4-45.3-7.6-61.2S549.7-4.4 531.1 9.6L294.4 187.2c-24 18-38.2 46.1-38.4 76.1L371.3 367.1zm-19.6 25.4l-116-104.4C175.9 290.3 128 339.6 128 400c0 3.9 .2 7.8 .6 11.6c1.8 17.5-10.2 36.4-27.8 36.4H96c-17.7 0-32 14.3-32 32s14.3 32 32 32H240c61.9 0 112-50.1 112-112c0-2.5-.1-5-.2-7.5z"/></svg></span>
+                        </button>
+                        <ul id="mdbook-theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-ayu">Ayu</button></li>
+                        </ul>
+                        <button id="mdbook-search-toggle" class="icon-button" type="button" title="Search (`/`)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="/ s" aria-controls="mdbook-searchbar">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352c79.5 0 144-64.5 144-144s-64.5-144-144-144S64 128.5 64 208s64.5 144 144 144z"/></svg></span>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">从 SEO 到 GEO：AI 时代的搜索优化实战手册</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <span class=fa-svg id="print-button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M128 0C92.7 0 64 28.7 64 64v96h64V64H354.7L384 93.3V160h64V93.3c0-17-6.7-33.3-18.7-45.3L400 18.7C388 6.7 371.7 0 354.7 0H128zM384 352v32 64H128V384 368 352H384zm64 32h32c17.7 0 32-14.3 32-32V256c0-35.3-28.7-64-64-64H64c-35.3 0-64 28.7-64 64v96c0 17.7 14.3 32 32 32H64v64c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V384zm-16-88c-13.3 0-24-10.7-24-24s10.7-24 24-24s24 10.7 24 24s-10.7 24-24 24z"/></svg></span>
+                        </a>
+                        <a href="https://github.com/JingHao-Leon/geo-book" title="Git repository" aria-label="Git repository">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg></span>
+                        </a>
+                        <a href="https://github.com/JingHao-Leon/geo-book/edit/main/./03-vso.md" title="Suggest an edit" aria-label="Suggest an edit" rel="edit">
+                            <span class=fa-svg id="git-edit-button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M421.7 220.3l-11.3 11.3-22.6 22.6-205 205c-6.6 6.6-14.8 11.5-23.8 14.1L30.8 511c-8.4 2.5-17.5 .2-23.7-6.1S-1.5 489.7 1 481.2L38.7 353.1c2.6-9 7.5-17.2 14.1-23.8l205-205 22.6-22.6 11.3-11.3 33.9 33.9 62.1 62.1 33.9 33.9zM96 353.9l-9.3 9.3c-.9 .9-1.6 2.1-2 3.4l-25.3 86 86-25.3c1.3-.4 2.5-1.1 3.4-2l9.3-9.3H112c-8.8 0-16-7.2-16-16V353.9zM453.3 19.3l39.4 39.4c25 25 25 65.5 0 90.5l-14.5 14.5-22.6 22.6-11.3 11.3-33.9-33.9-62.1-62.1L314.3 67.7l11.3-11.3 22.6-22.6 14.5-14.5c25-25 65.5-25 90.5 0z"/></svg></span>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="mdbook-search-wrapper" class="hidden">
+                    <form id="mdbook-searchbar-outer" class="searchbar-outer">
+                        <div class="search-wrapper">
+                            <input type="search" id="mdbook-searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="mdbook-searchresults-outer" aria-describedby="searchresults-header">
+                            <div class="spinner-wrapper">
+                                <span class=fa-svg id="fa-spin"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M304 48c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zm0 416c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zM48 304c26.5 0 48-21.5 48-48s-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48zm464-48c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zM142.9 437c18.7-18.7 18.7-49.1 0-67.9s-49.1-18.7-67.9 0s-18.7 49.1 0 67.9s49.1 18.7 67.9 0zm0-294.2c18.7-18.7 18.7-49.1 0-67.9S93.7 56.2 75 75s-18.7 49.1 0 67.9s49.1 18.7 67.9 0zM369.1 437c18.7 18.7 49.1 18.7 67.9 0s18.7-49.1 0-67.9s-49.1-18.7-67.9 0s-18.7 49.1 0 67.9z"/></svg></span>
+                            </div>
+                        </div>
+                    </form>
+                    <div id="mdbook-searchresults-outer" class="searchresults-outer hidden">
+                        <div id="mdbook-searchresults-header" class="searchresults-header"></div>
+                        <ul id="mdbook-searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('mdbook-sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('mdbook-sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#mdbook-sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="mdbook-content" class="content">
+                    <main>
+                        <h1 id="第3章-vso视频与语音搜索优化"><a class="header" href="#第3章-vso视频与语音搜索优化">第3章 VSO：视频与语音搜索优化</a></h1>
+<p>先讲一个我观察了很多年的现象：越来越多的人，遇到问题后的第一反应不是打开搜索引擎，而是打开抖音或者小红书，直接在搜索框里敲问题。装修踩坑了，搜“美缝发黄怎么办“；带孩子发烧，搜“美林和泰诺林能交替吃吗“；投千川跑不动，搜“千川消耗不动是什么原因“。</p>
+<p>这不是感觉，是平台自己都在反复讲的方向：搜索流量的占比在持续上升，搜索场景承接的转化越来越重。各家公布的口径不完全一样，我不在这里给你编一个精确到小数点的数字——你只需要记住一个判断：<strong>视频平台的搜索框，已经从“找乐子的入口“变成了“找答案的入口“。</strong></p>
+<p>而“找答案“这件事，恰恰是整本书的主线。用户今天在这些框里搜，明天就会对着豆包、DeepSeek 问同样的问题——而且 AI 引擎会回过头来到这些视频平台里找答案引用。这一章讲的 VSO（Video &amp; Voice Search Optimization，视频与语音搜索优化），表面上是两个平台内的话题，实际上是 GEO 的前传。读完你会明白为什么。</p>
+<h2 id="一先搞懂双引擎推荐是逛街被搭讪搜索是主动问导购"><a class="header" href="#一先搞懂双引擎推荐是逛街被搭讪搜索是主动问导购">一、先搞懂双引擎：推荐是逛街被搭讪，搜索是主动问导购</a></h2>
+<p>视频平台同时装着两台发动机：推荐引擎和搜索引擎。大部分人做内容只伺候推荐这一台，因为流量大头在推荐。但这两台发动机的脾气完全不同。</p>
+<p>我给你们打一个用了很久的比方：<strong>推荐流量是你在商场逛街，被柜姐搭讪；搜索流量是你走进店里，主动抓住导购问“有没有 42 码的“。</strong></p>
+<p>被搭讪的时候，你本来没打算买鞋。柜姐把你拦下来，靠的是话术抓人、气氛到位——所以推荐算法喜欢完播率、喜欢前三秒钩子、喜欢情绪浓度。它不在乎你讲了什么，在乎你留住了谁。</p>
+<p>主动问导购就不一样了。你带着明确的问题来，导购能不能答上、答得准不准，直接决定你这单成不成。搜索引擎干的就是导购的活：它不在乎你的视频多热闹，它在乎你的视频和那个问题对不对得上号。</p>
+<p>这个区别决定了 VSO 的全部打法：</p>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th></th><th>推荐引擎（逛街被搭讪）</th><th>搜索引擎（主动问导购）</th></tr>
+</thead>
+<tbody>
+<tr><td>用户状态</td><td>闲逛，无明确意图</td><td>带着问题来，意图明确</td></tr>
+<tr><td>内容靠什么赢</td><td>前三秒、完播率、情绪</td><td>关键词命中、答案完整度</td></tr>
+<tr><td>流量特征</td><td>大、泛、转瞬即逝</td><td>小、准、长尾、持续</td></tr>
+<tr><td>优化核心</td><td>让人停下来</td><td>让机器“听懂“你在答什么题</td></tr>
+</tbody>
+</table>
+</div>
+<p>做过电商的人一听就懂：推荐是逛出来的流量，搜索是带着钱包来的流量。后者转化率天然高一个量级。而现在越来越多的账号发现，自己涨粉靠推荐，但<strong>成交和询盘的大头来自搜索</strong>——这就是搜索占比上升在一线的体感。</p>
+<p>更关键的是，导购这个角色正在换人的趋势：以前导购是平台自己的搜索，现在豆包、DeepSeek 这些 AI 也来当导购了，而且它们进货的地方，就包括抖音。这件事我们放在第三节讲。</p>
+<h2 id="二视频搜索优化把答案翻译给机器听"><a class="header" href="#二视频搜索优化把答案翻译给机器听">二、视频搜索优化：把答案“翻译“给机器听</a></h2>
+<p>视频平台搜索优化的核心矛盾一句话：<strong>视频是给人看的，但搜索引擎只能读字。</strong> 画面拍得再好，机器读不懂；机器能读的，是标题、字幕、合集名、简介、评论区这些文字层。VSO 做的就是把你的答案在这些文字层里“翻译“一遍。</p>
+<h3 id="1-标题菜市场的招牌不是电梯里的海报"><a class="header" href="#1-标题菜市场的招牌不是电梯里的海报">1. 标题：菜市场的招牌，不是电梯里的海报</a></h3>
+<p>推荐流里的标题像电梯广告，要的是三秒抓眼球，“震惊”“千万别“这套玩得转。但搜索场景里，标题是菜市场的招牌——买菜的人抬头找的是“活鱼”“土鸡蛋”，不是“你绝对想不到的新鲜“。</p>
+<p>所以搜索向的标题要<strong>把用户会敲进搜索框的词，原样写进标题</strong>。用户搜“千川跑不动怎么办“，你的标题最好是“千川跑不动？先查这三个开关“，症状词一字不落。别嫌土。菜市场招牌写得最直白的那家，生意最好，因为找他的人一眼就对上了。</p>
+<p>实操上我会先列用户真实会搜的句子（下拉联想词、评论区的高频问法、5118 之类工具拉的长尾），然后让标题去贴这些句子，而不是反过来让标题自己发挥。</p>
+<h3 id="2-字幕跟班主任请假口头说没用得交假条"><a class="header" href="#2-字幕跟班主任请假口头说没用得交假条">2. 字幕：跟班主任请假，口头说没用，得交假条</a></h3>
+<p>很多创作者觉得字幕是给听障用户和静音党看的，顺手做做。错了。字幕是你交给平台的“书面材料“——<strong>你跟班主任请假，当面说得再恳切都不算数，假条交上去才算数。</strong> 平台的搜索和审核系统读你的视频，主要靠 ASR 转写和字幕文本。你口播里念到的关键词，如果不落在字幕里，在机器眼里就跟没说过差不多。</p>
+<p>所以搜索向的视频，拍摄前写脚本时就要把目标关键词“安排进台词“，让人在镜头前自然念出来：“千川消耗不动，一般是三个原因：计划学习期没过、出价低于大盘、素材衰退。“这整句话进了字幕，机器就把“千川消耗不动“这个长尾词和你的视频锁死了。</p>
+<p>顺手说一句：这个习惯到了 GEO 时代会加倍值钱，因为 AI 引擎引视频，读的还是这些文字层。这点第四节展开。</p>
+<h3 id="3-合集小区公告栏按楼栋分栏才有人找得到"><a class="header" href="#3-合集小区公告栏按楼栋分栏才有人找得到">3. 合集：小区公告栏，按楼栋分栏才有人找得到</a></h3>
+<p>合集（B 站叫合集/列表，抖音叫合集，小红书叫专辑）是被严重低估的搜索资产。它的作用像<strong>小区物业的公告栏</strong>：零散的通知贴得满墙都是没人看，物业按“1 号楼““2 号楼”“商铺“分栏贴，住户一眼就能找到自己那栏。</p>
+<p>合集名本身是一个可被搜索命中的关键词位，合集聚合的播放时长和完播又会反哺单条视频的权重。做千川内容，别散装发，做一个“千川投放避坑合集“，把“跑不动““成本高”“不起量“各做一集——用户搜任何一个症状，都可能先撞进你的合集，然后连看好几集。这在搜索场景里叫“主题的完整性”，平台喜欢，后来的 AI 引擎也喜欢。</p>
+<h3 id="4-评论区自己给自己留的第一条追问"><a class="header" href="#4-评论区自己给自己留的第一条追问">4. 评论区：自己给自己留的第一条追问</a></h3>
+<p>搜索排序或多或少会参考互动，评论区还是新的关键词位。养成习惯：视频发出后，自己在评论区置顶一条“补充“——把视频里没讲透的点用文字写全，里面自然地带上同义问法（“有人问巨量千川一直处在学习期怎么办，其实是同一个问题”）。这条置顶评论既喂了搜索，又喂了以后可能来爬的 AI。</p>
+<h2 id="三vso-是-geo-的前传豆包在大量引用抖音视频"><a class="header" href="#三vso-是-geo-的前传豆包在大量引用抖音视频">三、VSO 是 GEO 的前传：豆包在大量引用抖音视频</a></h2>
+<p>现在讲这本书真正关心的部分。</p>
+<p>2026 年 8 月，我们做了一次六家国产 AI 引擎 × 12 道真实用户问题的对照实测（完整过程和数据见附录的实测报告，第 5 章也会细讲方法）。其中一个发现直接改写了我们对内容渠道优先级的判断：<strong>豆包在 12 道题里，有 9 道题的回答引用了抖音视频作为来源</strong>——除此之外还有 7 道题引了今日头条。字节系内容在豆包的引用列表里几乎是霸榜的存在。</p>
+<p>这意味着什么？意味着你在抖音做搜索优化，做的其实是一鱼两吃：同一套标题关键词、字幕、合集，既喂了抖音自己的搜索引擎，又喂了豆包。豆包不会“看“视频，它引用视频时读的就是标题、字幕、简介这些文字层——你在 VSO 里练的所有基本功，原封不动就是 GEO 的基本功。这就是我把它叫作“GEO 前传“的原因。</p>
+<p>但实测也给了一个重要的反面提醒，不说清楚就是误导：<strong>症状型的口语问题，豆包倾向于纯模型作答、不联网引用。</strong> 我们那道“千川跑不动“的题，单次测试豆包没给引用；后来补做的多次采样里，这道题 4 次提问 0 次引用，相当稳定。而同一份实测里，对比类问题（“几个客服机器人怎么选”）六家引擎几乎全部引用。</p>
+<p>把两条结论放在一起，判断就出来了：</p>
+<ul>
+<li><strong>视频形态主攻的题</strong>：对比类、盘点类、“怎么选“类——这类题 AI 几乎必然找信源，视频有真实被引的机会；</li>
+<li><strong>症状型 how-to 的题</strong>：别把宝全押在视频上。AI 可能直接用参数里的知识答，不引任何来源。这类题要图文、官方文档形态兜底——我们实测里，千川类症状题被各家引用最多的是抖音电商学习中心这样的官方文档站，还有飞书云文档、垂直博客。</li>
+</ul>
+<p>换句话说：视频是敲门砖，图文是保险绳。两手都要有。</p>
+<h2 id="四语音搜索优化把内容写给说话的人"><a class="header" href="#四语音搜索优化把内容写给说话的人">四、语音搜索优化：把内容写给“说话的人“</a></h2>
+<p>另一半 VSO 是语音。语音搜索的量没有视频那么显性，但它在悄悄改变 query 的形态，而这个形态恰好是 AI 时代 query 的预演。</p>
+<p>打字搜索像<strong>给同桌传纸条</strong>：能省则省，“千川 跑不动“四个字扔过去就完事。语音搜索像<strong>举手当堂问老师</strong>：你会把句子说全——“老师，我这个千川计划昨天还好好的，今天突然跑不动了，是哪里出问题了？”——带主语、带场景、带条件、带情绪。</p>
+<p>这两种 query 的差别就是优化对象：</p>
+<ul>
+<li><strong>口语化长尾词是你的主战场</strong>。打字没人敲“千川昨天还好好的今天突然消耗不动怎么办“，但说话的人张嘴就来。布局关键词时，别只盯着工具里的短词，去评论区、客服记录、售后群里捞用户的原话，那些带着“我家孩子““我们店”“昨天突然“的长句子，才是语音搜索的真实 query。</li>
+<li><strong>答案要前置成“一句话能念出来“的形态</strong>。语音助手（和小度、小爱同学，以及后来的 AI 助手）通常只念一个答案。你的内容里如果有一句完整的、可以直接朗读的回答——“千川突然跑不动，八成是学习期没过或素材衰退，先看计划诊断里的提示”——这句话就是被念出来的那句。这和第 4 章讲 AEO 时的“答案胶囊“是同一个手法，这里先记住：<strong>写给耳朵的答案必须是一口气能读完的完整句。</strong></li>
+<li><strong>问答式的结构天然适配语音</strong>。标题用问句、正文第一句给答案、后面展开——这个结构对语音助手、对 AI 引擎、对真人口播全都友好。一套结构吃三个场景。</li>
+</ul>
+<p>语音搜索今天单独看，盘子不大；但它的 query 形态——完整句子、口语、带场景——正是所有 AI 对话的输入形态。你现在为语音助手练的“回答完整问题“的能力，就是为豆包和 DeepSeek 练的。</p>
+<h2 id="五案例一条千川教学视频的双吃路径"><a class="header" href="#五案例一条千川教学视频的双吃路径">五、案例：一条千川教学视频的双吃路径</a></h2>
+<p>把整章串起来，走一遍真实打法。假设我们做的是千川投流教学，选题“千川消耗不动怎么办“。</p>
+<p><strong>第一步，选词。</strong> 下拉联想 + 评论区捞原话，确定主攻词：“千川跑不动”（症状口语词）、“千川消耗不动是什么原因”（语音式完整问句）。</p>
+<p><strong>第二步，写脚本，把词念进字幕。</strong> 视频开头 15 秒直接把答案说完：“千川消耗不动，九成是三个原因：学习期没过、出价偏低、素材衰退。一个一个查。”——这句同时是抖音搜索的答案胶囊、豆包可引用的文本、语音助手可直接朗读的回答。然后分三段展开，每段口播都带一遍症状词，字幕完整上屏。</p>
+<p><strong>第三步，标题和合集。</strong> 标题用症状原句：“千川跑不动？先查这三个开关”。收录进“千川投放避坑合集“，合集里已有“不起量““成本高“等几集，主题完整性拉满。</p>
+<p><strong>第四步，评论区兜底。</strong> 置顶评论用文字把三个原因写全，带上同义问法：“也有人问千川一直学习期怎么办，和跑不动是同源的，看第三分钟。”</p>
+<p><strong>第五步，配一条图文。</strong> 同样内容改写成一篇问答式图文，发在头条号和自己的博客/文档站上。这一步是冲着实测结论去的：症状型问题豆包可能纯模型作答、不引视频，但会引抖音电商学习中心、飞书文档这类图文信源。视频拿不下的，图文去补位。</p>
+<p>这条路径的效果怎么评估？抖音侧，看搜索词来源的播放占比和私信询盘；AI 侧，定期拿“千川跑不动“这类题去问豆包、DeepSeek，看自己的内容形态（视频或图文）有没有出现在引用里——我们的实测证明豆包引抖音视频是高频行为（9/12 题），所以这条路是通的，只是单次测试有随机性，要多问几轮看趋势（具体的监测方法和频次控制，第 6 章讲）。</p>
+<p>注意一个诚实的边界：实测是单账号单次采样，AI 回答本身有随机性，“9/12“要当成方向性信号而不是保证书。你照着做，提高的是被引的概率，不是买的保险。</p>
+<h2 id="小结"><a class="header" href="#小结">小结</a></h2>
+<blockquote>
+<p><strong>本章小结</strong></p>
+<ul>
+<li>视频平台是双引擎：推荐是“逛街被搭讪“，搜索是“主动问导购“。搜索流量占比持续上升，且意图更准、转化更高。</li>
+<li>视频搜索优化的本质是把答案翻译给机器：标题贴用户原句（菜市场招牌）、字幕是交给平台的书面假条、合集是分好栏的公告栏、评论区置顶补充关键词。</li>
+<li>VSO 是 GEO 的前传：我们的实测显示，豆包 12 道题中 9 道引用了抖音视频；但症状型口语问题豆包倾向纯模型作答（千川题多次采样 0 引用），需要图文形态兜底。</li>
+<li>语音搜索的 query 是完整口语句，优化重点是口语化长尾词 + 一口气能念完的答案胶囊——这套能力和 AI 对话完全同构。</li>
+<li>实战路径：视频主攻对比/盘点类必被引的题，图文补位症状类题，一鱼两吃。</li>
+</ul>
+</blockquote>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="02-lso.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
+                            </a>
+
+                            <a rel="next prefetch" href="04-aeo.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="02-lso.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
+                    </a>
+
+                    <a rel="next prefetch" href="04-aeo.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
+                    </a>
+            </nav>
+
+        </div>
+
+        <template id=fa-eye><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM432 256c0 79.5-64.5 144-144 144s-144-64.5-144-144s64.5-144 144-144s144 64.5 144 144zM288 192c0 35.3-28.7 64-64 64c-11.5 0-22.3-3-31.6-8.4c-.2 2.8-.4 5.5-.4 8.4c0 53 43 96 96 96s96-43 96-96s-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6z"/></svg></span></template>
+        <template id=fa-eye-slash><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M38.8 5.1C28.4-3.1 13.3-1.2 5.1 9.2S-1.2 34.7 9.2 42.9l592 464c10.4 8.2 25.5 6.3 33.7-4.1s6.3-25.5-4.1-33.7L525.6 386.7c39.6-40.6 66.4-86.1 79.9-118.4c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C465.5 68.8 400.8 32 320 32c-68.2 0-125 26.3-169.3 60.8L38.8 5.1zM223.1 149.5C248.6 126.2 282.7 112 320 112c79.5 0 144 64.5 144 144c0 24.9-6.3 48.3-17.4 68.7L408 294.5c5.2-11.8 8-24.8 8-38.5c0-53-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6c0 10.2-2.4 19.8-6.6 28.3l-90.3-70.8zm223.1 298L373 389.9c-16.4 6.5-34.3 10.1-53 10.1c-79.5 0-144-64.5-144-144c0-6.9 .5-13.6 1.4-20.2L83.1 161.5C60.3 191.2 44 220.8 34.5 243.7c-3.3 7.9-3.3 16.7 0 24.6c14.9 35.7 46.2 87.7 93 131.1C174.5 443.2 239.2 480 320 480c47.8 0 89.9-12.9 126.2-32.5z"/></svg></span></template>
+        <template id=fa-copy><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M502.6 70.63l-61.25-61.25C435.4 3.371 427.2 0 418.7 0H255.1c-35.35 0-64 28.66-64 64l.0195 256C192 355.4 220.7 384 256 384h192c35.2 0 64-28.8 64-64V93.25C512 84.77 508.6 76.63 502.6 70.63zM464 320c0 8.836-7.164 16-16 16H255.1c-8.838 0-16-7.164-16-16L239.1 64.13c0-8.836 7.164-16 16-16h128L384 96c0 17.67 14.33 32 32 32h47.1V320zM272 448c0 8.836-7.164 16-16 16H63.1c-8.838 0-16-7.164-16-16L47.98 192.1c0-8.836 7.164-16 16-16H160V128H63.99c-35.35 0-64 28.65-64 64l.0098 256C.002 483.3 28.66 512 64 512h192c35.2 0 64-28.8 64-64v-32h-47.1L272 448z"/></svg></span></template>
+        <template id=fa-play><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"/></svg></span></template>
+        <template id=fa-clock-rotate-left><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M75 75L41 41C25.9 25.9 0 36.6 0 57.9V168c0 13.3 10.7 24 24 24H134.1c21.4 0 32.1-25.9 17-41l-30.8-30.8C155 85.5 203 64 256 64c106 0 192 86 192 192s-86 192-192 192c-40.8 0-78.6-12.7-109.7-34.4c-14.5-10.1-34.4-6.6-44.6 7.9s-6.6 34.4 7.9 44.6C151.2 495 201.7 512 256 512c141.4 0 256-114.6 256-256S397.4 0 256 0C185.3 0 121.3 28.7 75 75zm181 53c-13.3 0-24 10.7-24 24V256c0 6.4 2.5 12.5 7 17l72 72c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-65-65V152c0-13.3-10.7-24-24-24z"/></svg></span></template>
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr-ef4e11c1.min.js"></script>
+        <script src="mark-09e88c2c.min.js"></script>
+        <script src="searcher-09f2665d.js"></script>
+
+        <script src="clipboard-1626706a.min.js"></script>
+        <script src="highlight-abc7f01d.js"></script>
+        <script src="book-609e4cb8.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+
+    </div>
+    </body>
+</html>

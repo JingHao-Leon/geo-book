@@ -1,0 +1,314 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>第2章 LSO：本地搜索优化 - 从 SEO 到 GEO：AI 时代的搜索优化实战手册</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="favicon-de23e50b.svg">
+        <link rel="shortcut icon" href="favicon-8114d1fc.png">
+        <link rel="stylesheet" href="css/variables-8adf115d.css">
+        <link rel="stylesheet" href="css/general-e96d0476.css">
+        <link rel="stylesheet" href="css/chrome-d279d366.css">
+        <link rel="stylesheet" href="css/print-9e4910d8.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="fonts/fonts-9644e21d.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="mdbook-highlight-css" href="highlight-493f70e1.css">
+        <link rel="stylesheet" id="mdbook-tomorrow-night-css" href="tomorrow-night-4c0ae647.css">
+        <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="ayu-highlight-3fdfc3ac.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "";
+            const default_light_theme = "light";
+            const default_dark_theme = "ayu";
+            window.path_to_searchindex_js = "searchindex-732bf55d.js";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="toc-b56c35ea.js"></script>
+    </head>
+    <body>
+    <div id="mdbook-help-container">
+        <div id="mdbook-help-popup">
+            <h2 class="mdbook-help-title">Keyboard shortcuts</h2>
+            <div>
+                <p>Press <kbd>←</kbd> or <kbd>→</kbd> to navigate between chapters</p>
+                <p>Press <kbd>S</kbd> or <kbd>/</kbd> to search in the book</p>
+                <p>Press <kbd>?</kbd> to show this help</p>
+                <p>Press <kbd>Esc</kbd> to hide this help</p>
+            </div>
+        </div>
+    </div>
+    <div id="mdbook-body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="mdbook-sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("mdbook-sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+                sidebar_toggle.checked = false;
+            }
+            if (sidebar === 'visible') {
+                sidebar_toggle.checked = true;
+            } else {
+                html.classList.remove('sidebar-visible');
+            }
+        </script>
+
+        <nav id="mdbook-sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="toc.html"></iframe>
+            </noscript>
+            <div id="mdbook-sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="mdbook-page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="mdbook-menu-bar-hover-placeholder"></div>
+                <div id="mdbook-menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="mdbook-sidebar-toggle" class="icon-button" for="mdbook-sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="mdbook-sidebar">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg></span>
+                        </label>
+                        <button id="mdbook-theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="mdbook-theme-list">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M371.3 367.1c27.3-3.9 51.9-19.4 67.2-42.9L600.2 74.1c12.6-19.5 9.4-45.3-7.6-61.2S549.7-4.4 531.1 9.6L294.4 187.2c-24 18-38.2 46.1-38.4 76.1L371.3 367.1zm-19.6 25.4l-116-104.4C175.9 290.3 128 339.6 128 400c0 3.9 .2 7.8 .6 11.6c1.8 17.5-10.2 36.4-27.8 36.4H96c-17.7 0-32 14.3-32 32s14.3 32 32 32H240c61.9 0 112-50.1 112-112c0-2.5-.1-5-.2-7.5z"/></svg></span>
+                        </button>
+                        <ul id="mdbook-theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-ayu">Ayu</button></li>
+                        </ul>
+                        <button id="mdbook-search-toggle" class="icon-button" type="button" title="Search (`/`)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="/ s" aria-controls="mdbook-searchbar">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352c79.5 0 144-64.5 144-144s-64.5-144-144-144S64 128.5 64 208s64.5 144 144 144z"/></svg></span>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">从 SEO 到 GEO：AI 时代的搜索优化实战手册</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <span class=fa-svg id="print-button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M128 0C92.7 0 64 28.7 64 64v96h64V64H354.7L384 93.3V160h64V93.3c0-17-6.7-33.3-18.7-45.3L400 18.7C388 6.7 371.7 0 354.7 0H128zM384 352v32 64H128V384 368 352H384zm64 32h32c17.7 0 32-14.3 32-32V256c0-35.3-28.7-64-64-64H64c-35.3 0-64 28.7-64 64v96c0 17.7 14.3 32 32 32H64v64c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V384zm-16-88c-13.3 0-24-10.7-24-24s10.7-24 24-24s24 10.7 24 24s-10.7 24-24 24z"/></svg></span>
+                        </a>
+                        <a href="https://github.com/JingHao-Leon/geo-book" title="Git repository" aria-label="Git repository">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg></span>
+                        </a>
+                        <a href="https://github.com/JingHao-Leon/geo-book/edit/main/./02-lso.md" title="Suggest an edit" aria-label="Suggest an edit" rel="edit">
+                            <span class=fa-svg id="git-edit-button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M421.7 220.3l-11.3 11.3-22.6 22.6-205 205c-6.6 6.6-14.8 11.5-23.8 14.1L30.8 511c-8.4 2.5-17.5 .2-23.7-6.1S-1.5 489.7 1 481.2L38.7 353.1c2.6-9 7.5-17.2 14.1-23.8l205-205 22.6-22.6 11.3-11.3 33.9 33.9 62.1 62.1 33.9 33.9zM96 353.9l-9.3 9.3c-.9 .9-1.6 2.1-2 3.4l-25.3 86 86-25.3c1.3-.4 2.5-1.1 3.4-2l9.3-9.3H112c-8.8 0-16-7.2-16-16V353.9zM453.3 19.3l39.4 39.4c25 25 25 65.5 0 90.5l-14.5 14.5-22.6 22.6-11.3 11.3-33.9-33.9-62.1-62.1L314.3 67.7l11.3-11.3 22.6-22.6 14.5-14.5c25-25 65.5-25 90.5 0z"/></svg></span>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="mdbook-search-wrapper" class="hidden">
+                    <form id="mdbook-searchbar-outer" class="searchbar-outer">
+                        <div class="search-wrapper">
+                            <input type="search" id="mdbook-searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="mdbook-searchresults-outer" aria-describedby="searchresults-header">
+                            <div class="spinner-wrapper">
+                                <span class=fa-svg id="fa-spin"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M304 48c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zm0 416c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zM48 304c26.5 0 48-21.5 48-48s-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48zm464-48c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zM142.9 437c18.7-18.7 18.7-49.1 0-67.9s-49.1-18.7-67.9 0s-18.7 49.1 0 67.9s49.1 18.7 67.9 0zm0-294.2c18.7-18.7 18.7-49.1 0-67.9S93.7 56.2 75 75s-18.7 49.1 0 67.9s49.1 18.7 67.9 0zM369.1 437c18.7 18.7 49.1 18.7 67.9 0s18.7-49.1 0-67.9s-49.1-18.7-67.9 0s-18.7 49.1 0 67.9z"/></svg></span>
+                            </div>
+                        </div>
+                    </form>
+                    <div id="mdbook-searchresults-outer" class="searchresults-outer hidden">
+                        <div id="mdbook-searchresults-header" class="searchresults-header"></div>
+                        <ul id="mdbook-searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('mdbook-sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('mdbook-sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#mdbook-sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="mdbook-content" class="content">
+                    <main>
+                        <h1 id="第2章-lso本地搜索优化"><a class="header" href="#第2章-lso本地搜索优化">第2章 LSO：本地搜索优化</a></h1>
+<p>上一章我们聊了 SEO——在网页搜索里抢位置。但有一类生意，客户根本不在乎你的网站排第几：小区门口的理发店、三公里内的少儿英语班、写字楼底下的轻食店。这些生意的客户打开手机，搜的是“附近“，看的地图和点评。这类搜索有自己的一套玩法，叫 LSO（Local Search Optimization，本地搜索优化）。</p>
+<h2 id="什么是-lso数字商圈里的生意"><a class="header" href="#什么是-lso数字商圈里的生意">什么是 LSO：数字商圈里的生意</a></h2>
+<p>LSO 优化的对象不是网页排名，而是<strong>本地商户在各种本地生活入口里的可见度</strong>。在中国，这些入口主要是四类：</p>
+<ul>
+<li><strong>地图类</strong>：高德地图、百度地图、腾讯地图。用户搜“附近的牙科诊所“，出来的那串带距离、带导航按钮的结果，就是本地搜索最原教旨的形态。</li>
+<li><strong>点评类</strong>：大众点评。用户不一定有明确目的地，而是来“逛“的——看看哪家评分高、评论里怎么说。</li>
+<li><strong>交易类</strong>：美团。从看到下单一步到位，商户页就是收银台。</li>
+<li><strong>内容类</strong>：抖音本地生活。用户是被视频“种草“之后，顺手搜一下店名或者“附近同款“。</li>
+</ul>
+<p>这四类入口的共同点是：<strong>用户的意图里带着地理位置</strong>。这跟传统 SEO 最大的不同在于——你优化半天，只对半径几公里内的人有意义。听起来是限制，其实是好事：你的竞争对手也从全国几百万个网页，缩成了方圆几公里里的同行。</p>
+<h2 id="本地排名的三要素相关性距离知名度"><a class="header" href="#本地排名的三要素相关性距离知名度">本地排名的三要素：相关性、距离、知名度</a></h2>
+<p>地图和点评平台怎么决定把谁排在前面？抛开各家算法的细节差异，底层逻辑就三条：<strong>相关性、距离、知名度</strong>。这套框架最早是 Google 对本地搜索的官方表述，国内平台的排序逻辑与之相通。</p>
+<p>要讲清楚这三条，我用个比喻：<strong>LSO 就是在数字商圈里挂对招牌</strong>。</p>
+<p>想象你在一条步行街上开店。客人怎么找到你？第一，你招牌上写的是“修鞋“还是“修手机“——客人要什么，你的招牌得说清楚你是干什么的，这是<strong>相关性</strong>。第二，你的店开在街口还是巷子深处——离客人越近，被光顾的概率越大，这是<strong>距离</strong>。第三，街坊四邻有没有听说过你、提起你时是夸是骂，这是<strong>知名度</strong>。</p>
+<p>实体店的三件事，在线上一件不少，而且全是可优化的。</p>
+<h3 id="相关性招牌上写清楚你卖什么"><a class="header" href="#相关性招牌上写清楚你卖什么">相关性：招牌上写清楚你卖什么</a></h3>
+<p>线上商户的“招牌“，就是你的商户名称、品类选择、经营项目、简介文案。一家琴行如果在平台上把自己归到“兴趣培训“这个大而泛的品类，而不是勾选“乐器培训—钢琴培训“，那搜“钢琴课“的用户就很可能看不到它。</p>
+<p>相关性优化最常犯的错误是“贪大“。有的商户什么都做，恨不得把品类全勾上。这在平台眼里反而是信号混乱——就像一个摊位上既挂“活鱼现杀“又挂“手机贴膜“，客人第一反应是不专业。**宁可窄而准，不要宽而糊。**把主营品类选准，把关键词（“少儿”“钢琴”“考级”“成人零基础”）自然地写进商户名称后缀和简介里，相关性这一分就拿到了。</p>
+<h3 id="距离你搬不走店但可以扩大被发现半径"><a class="header" href="#距离你搬不走店但可以扩大被发现半径">距离：你搬不走店，但可以扩大“被发现半径“</a></h3>
+<p>距离是三要素里最“硬“的一条——店在哪就在哪，搜的人在哪就在哪，这条你改不了。但有两点可以做：</p>
+<p>第一，<strong>地址定位要精确到门</strong>。很多商户认领店铺时随手一点，地图上的图钉落在马路对面，甚至飘到隔壁小区。用户按导航走到一半找不到店，转头就去了别家——这是白白送走的生意。认领门店后，第一件事就是核对图钉位置和导航终点。</p>
+<p>第二，如果你有多家门店，<strong>每一家都要单独做商户页</strong>，共享同一套品牌信息，但各自积累各自的评价和排名。连锁品牌最怕“总部一个页面打天下“，那样每家分店在各自商圈里都排不上号。</p>
+<h3 id="知名度线上知名度是可以经营的"><a class="header" href="#知名度线上知名度是可以经营的">知名度：线上知名度是可以经营的</a></h3>
+<p>实体店靠年头熬名声，线上的知名度是可以主动经营的。平台判断你“知名不知名“，主要看：评价的数量和质量、用户的互动（收藏、咨询、导航请求）、以及外部网络上有没有你的信息痕迹。</p>
+<p>注意一个常被误解的点：<strong>知名度不等于好评率，而是一个综合信号</strong>。一家开了三年、有两百条真实评价、偶尔有条差评且商家认真回复的店，通常比一家刚注册、十条清一色五星的店排得更靠前。前者像巷子里的老馆子，后者像刚开张就雇人排队的网红店——平台和用户一样，见多了。</p>
+<h2 id="lso-三件套nap评价运营本地内容"><a class="header" href="#lso-三件套nap评价运营本地内容">LSO 三件套：NAP、评价运营、本地内容</a></h2>
+<p>三要素告诉你“排名看什么“，这一节讲“具体做什么“。一线实操里，LSO 的日常工作就三件事。</p>
+<h3 id="nap-一致性全网一个户口本"><a class="header" href="#nap-一致性全网一个户口本">NAP 一致性：全网一个“户口本“</a></h3>
+<p>NAP 是 Name（名称）、Address（地址）、Phone（电话）的缩写。所谓 NAP 一致性，就是你的店名、地址、电话，在高德、百度地图、大众点评、美团、抖音、你自己的官网和公众号上，<strong>一字不差地一致</strong>。</p>
+<p>这事为什么重要？打个比方：平台就像一个片区的派出所，它手里有各个渠道汇总来的商户信息。如果你在高德上叫“悦音琴行（望京店）“，在美团上叫“悦音艺术培训”，在公众号里电话还是三年前的旧号码——平台就像碰到一个户口本、身份证、驾驶证信息对不上的人，第一反应不是帮你核实，而是<strong>降低对你所有信息的信任度</strong>。信任度一降，排名就降，这是隐形扣分，商户自己往往毫无察觉。</p>
+<p>实操建议：建一张表，把所有平台的商户信息列一遍，定下唯一的标准写法（包括括号用全角还是半角、“室“还是“号”），然后逐平台改齐。新店开业、搬迁、换电话时，第一件事不是发朋友圈，是把这张表里的每个平台都更新掉。</p>
+<h3 id="评价运营别把口碑当成玄学"><a class="header" href="#评价运营别把口碑当成玄学">评价运营：别把口碑当成“玄学“</a></h3>
+<p>评价是本地商户的生命线，但多数老板对评价的态度还停留在“被动作战“：来一条看一条，差评来了生闷气。正确的姿势是把评价当成一项运营工作：</p>
+<ul>
+<li><strong>引导而非收买</strong>。合规的做法是在服务交付的满意时刻，自然提醒客户“方便的话帮我们写个评价“。用钱买好评、刷好评，平台的识别能力比多数商户想象得强，一旦被判刷评，处罚比没有评价严重得多。</li>
+<li><strong>回复比评分重要</strong>。尤其是差评。一条认真、具体、不辩解不甩锅的差评回复，是做给后面所有潜在客户看的——就像餐馆老板当着一屋子客人的面处理投诉，处理得体，围观的客人反而更放心。</li>
+<li><strong>差评要当成产品反馈</strong>。三条差评都提到“约课难“，那不是公关问题，是排课系统的问题。</li>
+</ul>
+<h3 id="本地内容让你的店长在这片社区里"><a class="header" href="#本地内容让你的店长在这片社区里">本地内容：让你的店“长“在这片社区里</a></h3>
+<p>第三类工作是在本地生活入口里持续产出内容：美团和点评上的商户动态、抖音上的门店短视频、公众号里的社区活动。内容的作用有两层：一是向平台证明这家店是“活的“（活跃商户会获得排序倾斜），二是抢占那些带地域词的长尾搜索，比如“望京 少儿钢琴““周末亲子 手工坊”。</p>
+<p>比喻来说，这就像摊主不满足于只守摊，还天天在小区业主群里发“今天到了新鲜荠菜““周末免费教孩子认秤”。发的不是广告，是存在感。本地内容的关键是<strong>带上具体的地名、社区名、学校名</strong>——这些内容会成为平台和搜索引擎理解你“服务哪个片区“的素材。</p>
+<h2 id="典型场景教育机构招生为什么是典型的-lso"><a class="header" href="#典型场景教育机构招生为什么是典型的-lso">典型场景：教育机构招生为什么是典型的 LSO</a></h2>
+<p>全书讲了很多行业，教育培训机构可能是最吃 LSO 红利的一类。原因很直接：</p>
+<p>家长给孩子选培训班，决策链条几乎注定落在本地搜索上——离家或离学校超过一定距离，课再好也坚持不下来。所以家长的动作高度一致：打开地图搜“附近 钢琴“，打开大众点评比评分和评价，在美团上买一节试听课。整条链路没有一个环节经过传统网页搜索。</p>
+<p>而且教培行业还有几个特性放大了 LSO 的价值：<strong>决策周期长</strong>（家长会反复看评价）、<strong>客单价高</strong>（一次报名几千上万，值得投入优化）、<strong>评价权重极高</strong>（别的家长的真实反馈是转化率的核心）。</p>
+<p>这个场景在第 9 章会有更完整的展开——那里会讲教育机构如何把 LSO 的本地流量，和 AI 引擎时代的 GEO 获客接成一条完整的招生漏斗。本章先把本地搜索这一段打扎实。</p>
+<h2 id="案例实战一家少儿美术机构的完整优化路径"><a class="header" href="#案例实战一家少儿美术机构的完整优化路径">案例实战：一家少儿美术机构的完整优化路径</a></h2>
+<p>下面用一个典型案例把前面所有动作串一遍。某二线城市的一家少儿美术培训机构，开在住宅区集中的街区，教学口碑不错，但招生一直靠老带新，线上几乎是空白。我们按步骤来看它该怎么做。</p>
+<p><strong>第一步：盘点并认领全部数字门店。</strong>
+先在所有入口搜自己的店名。结果发现：高德上有一个位置错误的旧地址（半年前搬过家）；百度地图上的门店图钉落在 200 米外；大众点评的商户页是用户自发创建的，名称写成了简称，电话是前台的私人手机，早已停机；美团和抖音上干脆没有商户。</p>
+<p>这一步没有技术含量，但它是地基：**把每个平台的商户页认领下来，改正名称、地址、电话，把图钉校准到店门口。**光这一步做完，“按导航找不到店“这个隐形流失就堵上了。</p>
+<p><strong>第二步：统一 NAP，修相关性。</strong>
+定下标准商户名“某某少儿美术（XX 街区店）“，所有平台逐字统一。品类从笼统的“兴趣培训“改选为“美术培训”，经营项目写清“少儿创意美术、素描、考级辅导、成人油画“，简介里自然带上“XX 小区旁““XX 小学对面“这类地域锚点。</p>
+<p><strong>第三步：补齐“货架“。</strong>
+在美团上线体验课产品：一节 90 分钟的体验课，定价放到低门槛区间，配齐教室环境照、学生作品照、老师的资质介绍。点评上的商户相册同样补全——本地商户页和电商详情页是一个道理，图片和介绍就是货架，货架空了，排名再高也转化不了。</p>
+<p><strong>第四步：启动评价运营。</strong>
+把“邀请评价“嵌进服务流程：每期课程结束的成果展示课上，老师当面邀请满意的家长在点评或美团上写评价。前三个月积累了几十条真实评价，其中有两条中评（提到“停车位不好找“），商家逐条认真回复，并在简介里补上了停车指引。注意这个细节：<strong>差评没有消灭，但被转化成了服务改进和信息完善。</strong></p>
+<p><strong>第五步：本地内容持续喂。</strong>
+抖音号每周发两三条：学生作画过程的延时视频、老师点评作品、教室日常，定位挂在门店，文案带街区名。公众号同步发社区活动（“XX 社区公益美术课”）。三个月后，搜“XX 街区 少儿美术“，这家机构在地图和点评上的位置稳定进入了第一屏，体验课的线上订单成了稳定的新客来源。</p>
+<p>这五步里没有一步是“黑科技“，全是体力活和细活。这也是 LSO 的真实面貌：**门槛不在技巧，在执行的完整度。**大多数同行只做了其中一两步，你做完五步，就在这个商圈里赢了大半。</p>
+<h2 id="lsoseo-与-geo同一盘生意的三层门面"><a class="header" href="#lsoseo-与-geo同一盘生意的三层门面">LSO、SEO 与 GEO：同一盘生意的三层门面</a></h2>
+<p>最后把 LSO 放回全书的坐标系里。如果说 SEO 是你在整个互联网这条大街上的门脸，LSO 就是你在这片数字商圈里的招牌——服务的是“带着地点来“的即时需求。而后面章节要讲的 GEO，面对的则是“带着问题去问 AI“的新一代用户。</p>
+<p>三者不是替代关系，而是层层叠加。一个值得记住的判断是：**AI 引擎在回答本地类问题时，大量依赖的正是点评、地图、商户信息这些 LSO 耕耘的阵地。**你在本地生活平台里的信息完整度、评价资产、内容痕迹，都会成为 AI 推荐你时的素材。把 LSO 做扎实的商户，等于提前给 GEO 存了本钱——这笔账怎么算，我们在第 9 章和第 11 章还会细聊。</p>
+<blockquote>
+<p><strong>本章小结</strong></p>
+<ul>
+<li>LSO 优化的是地图、点评、美团、抖音本地生活这些“带地理位置的搜索入口“，竞争范围是商圈而不是全网。</li>
+<li>本地排名三要素：相关性（招牌写对品类）、距离（图钉校准、分店各自为战）、知名度（可经营的综合信号）。</li>
+<li>日常三件套：NAP 全网一字不差、评价主动运营（回复比评分重要）、本地内容带地名持续产出。</li>
+<li>教育机构招生是典型 LSO 场景：决策链路全程落在地图和点评上，与第 9 章的教培 GEO 策略首尾相接。</li>
+<li>LSO 没有黑科技，五步完整执行就能赢过商圈里的大多数同行；而且本地信息资产会成为 AI 时代的 GEO 本钱。</li>
+</ul>
+</blockquote>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="01-seo.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
+                            </a>
+
+                            <a rel="next prefetch" href="03-vso.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="01-seo.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
+                    </a>
+
+                    <a rel="next prefetch" href="03-vso.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
+                    </a>
+            </nav>
+
+        </div>
+
+        <template id=fa-eye><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM432 256c0 79.5-64.5 144-144 144s-144-64.5-144-144s64.5-144 144-144s144 64.5 144 144zM288 192c0 35.3-28.7 64-64 64c-11.5 0-22.3-3-31.6-8.4c-.2 2.8-.4 5.5-.4 8.4c0 53 43 96 96 96s96-43 96-96s-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6z"/></svg></span></template>
+        <template id=fa-eye-slash><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M38.8 5.1C28.4-3.1 13.3-1.2 5.1 9.2S-1.2 34.7 9.2 42.9l592 464c10.4 8.2 25.5 6.3 33.7-4.1s6.3-25.5-4.1-33.7L525.6 386.7c39.6-40.6 66.4-86.1 79.9-118.4c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C465.5 68.8 400.8 32 320 32c-68.2 0-125 26.3-169.3 60.8L38.8 5.1zM223.1 149.5C248.6 126.2 282.7 112 320 112c79.5 0 144 64.5 144 144c0 24.9-6.3 48.3-17.4 68.7L408 294.5c5.2-11.8 8-24.8 8-38.5c0-53-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6c0 10.2-2.4 19.8-6.6 28.3l-90.3-70.8zm223.1 298L373 389.9c-16.4 6.5-34.3 10.1-53 10.1c-79.5 0-144-64.5-144-144c0-6.9 .5-13.6 1.4-20.2L83.1 161.5C60.3 191.2 44 220.8 34.5 243.7c-3.3 7.9-3.3 16.7 0 24.6c14.9 35.7 46.2 87.7 93 131.1C174.5 443.2 239.2 480 320 480c47.8 0 89.9-12.9 126.2-32.5z"/></svg></span></template>
+        <template id=fa-copy><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M502.6 70.63l-61.25-61.25C435.4 3.371 427.2 0 418.7 0H255.1c-35.35 0-64 28.66-64 64l.0195 256C192 355.4 220.7 384 256 384h192c35.2 0 64-28.8 64-64V93.25C512 84.77 508.6 76.63 502.6 70.63zM464 320c0 8.836-7.164 16-16 16H255.1c-8.838 0-16-7.164-16-16L239.1 64.13c0-8.836 7.164-16 16-16h128L384 96c0 17.67 14.33 32 32 32h47.1V320zM272 448c0 8.836-7.164 16-16 16H63.1c-8.838 0-16-7.164-16-16L47.98 192.1c0-8.836 7.164-16 16-16H160V128H63.99c-35.35 0-64 28.65-64 64l.0098 256C.002 483.3 28.66 512 64 512h192c35.2 0 64-28.8 64-64v-32h-47.1L272 448z"/></svg></span></template>
+        <template id=fa-play><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"/></svg></span></template>
+        <template id=fa-clock-rotate-left><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M75 75L41 41C25.9 25.9 0 36.6 0 57.9V168c0 13.3 10.7 24 24 24H134.1c21.4 0 32.1-25.9 17-41l-30.8-30.8C155 85.5 203 64 256 64c106 0 192 86 192 192s-86 192-192 192c-40.8 0-78.6-12.7-109.7-34.4c-14.5-10.1-34.4-6.6-44.6 7.9s-6.6 34.4 7.9 44.6C151.2 495 201.7 512 256 512c141.4 0 256-114.6 256-256S397.4 0 256 0C185.3 0 121.3 28.7 75 75zm181 53c-13.3 0-24 10.7-24 24V256c0 6.4 2.5 12.5 7 17l72 72c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-65-65V152c0-13.3-10.7-24-24-24z"/></svg></span></template>
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr-ef4e11c1.min.js"></script>
+        <script src="mark-09e88c2c.min.js"></script>
+        <script src="searcher-09f2665d.js"></script>
+
+        <script src="clipboard-1626706a.min.js"></script>
+        <script src="highlight-abc7f01d.js"></script>
+        <script src="book-609e4cb8.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+
+    </div>
+    </body>
+</html>

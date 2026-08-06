@@ -1,0 +1,338 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>第6章 实测：六大国产 AI 引擎引用行为 - 从 SEO 到 GEO：AI 时代的搜索优化实战手册</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="favicon-de23e50b.svg">
+        <link rel="shortcut icon" href="favicon-8114d1fc.png">
+        <link rel="stylesheet" href="css/variables-8adf115d.css">
+        <link rel="stylesheet" href="css/general-e96d0476.css">
+        <link rel="stylesheet" href="css/chrome-d279d366.css">
+        <link rel="stylesheet" href="css/print-9e4910d8.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="fonts/fonts-9644e21d.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="mdbook-highlight-css" href="highlight-493f70e1.css">
+        <link rel="stylesheet" id="mdbook-tomorrow-night-css" href="tomorrow-night-4c0ae647.css">
+        <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="ayu-highlight-3fdfc3ac.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "";
+            const default_light_theme = "light";
+            const default_dark_theme = "ayu";
+            window.path_to_searchindex_js = "searchindex-732bf55d.js";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="toc-b56c35ea.js"></script>
+    </head>
+    <body>
+    <div id="mdbook-help-container">
+        <div id="mdbook-help-popup">
+            <h2 class="mdbook-help-title">Keyboard shortcuts</h2>
+            <div>
+                <p>Press <kbd>←</kbd> or <kbd>→</kbd> to navigate between chapters</p>
+                <p>Press <kbd>S</kbd> or <kbd>/</kbd> to search in the book</p>
+                <p>Press <kbd>?</kbd> to show this help</p>
+                <p>Press <kbd>Esc</kbd> to hide this help</p>
+            </div>
+        </div>
+    </div>
+    <div id="mdbook-body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="mdbook-sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("mdbook-sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+                sidebar_toggle.checked = false;
+            }
+            if (sidebar === 'visible') {
+                sidebar_toggle.checked = true;
+            } else {
+                html.classList.remove('sidebar-visible');
+            }
+        </script>
+
+        <nav id="mdbook-sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="toc.html"></iframe>
+            </noscript>
+            <div id="mdbook-sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="mdbook-page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="mdbook-menu-bar-hover-placeholder"></div>
+                <div id="mdbook-menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="mdbook-sidebar-toggle" class="icon-button" for="mdbook-sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="mdbook-sidebar">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg></span>
+                        </label>
+                        <button id="mdbook-theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="mdbook-theme-list">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M371.3 367.1c27.3-3.9 51.9-19.4 67.2-42.9L600.2 74.1c12.6-19.5 9.4-45.3-7.6-61.2S549.7-4.4 531.1 9.6L294.4 187.2c-24 18-38.2 46.1-38.4 76.1L371.3 367.1zm-19.6 25.4l-116-104.4C175.9 290.3 128 339.6 128 400c0 3.9 .2 7.8 .6 11.6c1.8 17.5-10.2 36.4-27.8 36.4H96c-17.7 0-32 14.3-32 32s14.3 32 32 32H240c61.9 0 112-50.1 112-112c0-2.5-.1-5-.2-7.5z"/></svg></span>
+                        </button>
+                        <ul id="mdbook-theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-ayu">Ayu</button></li>
+                        </ul>
+                        <button id="mdbook-search-toggle" class="icon-button" type="button" title="Search (`/`)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="/ s" aria-controls="mdbook-searchbar">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352c79.5 0 144-64.5 144-144s-64.5-144-144-144S64 128.5 64 208s64.5 144 144 144z"/></svg></span>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">从 SEO 到 GEO：AI 时代的搜索优化实战手册</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <span class=fa-svg id="print-button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M128 0C92.7 0 64 28.7 64 64v96h64V64H354.7L384 93.3V160h64V93.3c0-17-6.7-33.3-18.7-45.3L400 18.7C388 6.7 371.7 0 354.7 0H128zM384 352v32 64H128V384 368 352H384zm64 32h32c17.7 0 32-14.3 32-32V256c0-35.3-28.7-64-64-64H64c-35.3 0-64 28.7-64 64v96c0 17.7 14.3 32 32 32H64v64c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V384zm-16-88c-13.3 0-24-10.7-24-24s10.7-24 24-24s24 10.7 24 24s-10.7 24-24 24z"/></svg></span>
+                        </a>
+                        <a href="https://github.com/JingHao-Leon/geo-book" title="Git repository" aria-label="Git repository">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg></span>
+                        </a>
+                        <a href="https://github.com/JingHao-Leon/geo-book/edit/main/./06-engines-experiment.md" title="Suggest an edit" aria-label="Suggest an edit" rel="edit">
+                            <span class=fa-svg id="git-edit-button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M421.7 220.3l-11.3 11.3-22.6 22.6-205 205c-6.6 6.6-14.8 11.5-23.8 14.1L30.8 511c-8.4 2.5-17.5 .2-23.7-6.1S-1.5 489.7 1 481.2L38.7 353.1c2.6-9 7.5-17.2 14.1-23.8l205-205 22.6-22.6 11.3-11.3 33.9 33.9 62.1 62.1 33.9 33.9zM96 353.9l-9.3 9.3c-.9 .9-1.6 2.1-2 3.4l-25.3 86 86-25.3c1.3-.4 2.5-1.1 3.4-2l9.3-9.3H112c-8.8 0-16-7.2-16-16V353.9zM453.3 19.3l39.4 39.4c25 25 25 65.5 0 90.5l-14.5 14.5-22.6 22.6-11.3 11.3-33.9-33.9-62.1-62.1L314.3 67.7l11.3-11.3 22.6-22.6 14.5-14.5c25-25 65.5-25 90.5 0z"/></svg></span>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="mdbook-search-wrapper" class="hidden">
+                    <form id="mdbook-searchbar-outer" class="searchbar-outer">
+                        <div class="search-wrapper">
+                            <input type="search" id="mdbook-searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="mdbook-searchresults-outer" aria-describedby="searchresults-header">
+                            <div class="spinner-wrapper">
+                                <span class=fa-svg id="fa-spin"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M304 48c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zm0 416c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zM48 304c26.5 0 48-21.5 48-48s-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48zm464-48c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zM142.9 437c18.7-18.7 18.7-49.1 0-67.9s-49.1-18.7-67.9 0s-18.7 49.1 0 67.9s49.1 18.7 67.9 0zm0-294.2c18.7-18.7 18.7-49.1 0-67.9S93.7 56.2 75 75s-18.7 49.1 0 67.9s49.1 18.7 67.9 0zM369.1 437c18.7 18.7 49.1 18.7 67.9 0s18.7-49.1 0-67.9s-49.1-18.7-67.9 0s-18.7 49.1 0 67.9z"/></svg></span>
+                            </div>
+                        </div>
+                    </form>
+                    <div id="mdbook-searchresults-outer" class="searchresults-outer hidden">
+                        <div id="mdbook-searchresults-header" class="searchresults-header"></div>
+                        <ul id="mdbook-searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('mdbook-sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('mdbook-sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#mdbook-sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="mdbook-content" class="content">
+                    <main>
+                        <h1 id="第6章-实测六大国产-ai-引擎引用行为"><a class="header" href="#第6章-实测六大国产-ai-引擎引用行为">第6章 实测：六大国产 AI 引擎引用行为</a></h1>
+<p>前面几章讲的都是推断和方法，这一章上硬菜：我们把六大国产 AI 引擎——豆包、DeepSeek、腾讯元宝、通义千问、文心一言、Kimi——拉进同一个考场，用同一套 12 道题逐个问过去，把它们的引用记录一条条扒下来对账。</p>
+<p>为什么要自己做这件事？因为市面上关于“AI 引擎爱引用什么“的说法，大多是从搜索语料反推的——就像你想知道一家餐馆用什么食材，不去后厨看，而是去翻它扔在门口的垃圾袋。翻垃圾袋能猜个大概，但只有实测才知道：豆包到底有多偏爱抖音视频，元宝是不是真的被公众号“包养“，Kimi 是不是压根不联网。实测做完，我们发现有些推断对了，有些错得离谱——比如知乎，这个被无数 GEO 文章捧上神坛的渠道，在我们的实测引用里几乎查无此人。</p>
+<p>这一章是全书的“数据发动机“：后面的渠道优先级、内容形态选择，都以这里的数据为准。</p>
+<h2 id="实验设计先讲清楚我们是怎么测的"><a class="header" href="#实验设计先讲清楚我们是怎么测的">实验设计：先讲清楚我们是怎么测的</a></h2>
+<h3 id="12-道题怎么选的"><a class="header" href="#12-道题怎么选的">12 道题怎么选的</a></h3>
+<p>题目不是拍脑袋来的，而是从前面 prompt 研究阶段筛出来的真实用户查询，覆盖两个行业（广告电商、教育培训）和五种典型的提问动机：</p>
+<ul>
+<li><strong>对比题</strong>：Q1“晓多跟乐言比店小蜜哪个好用“——用户在 AI 面前做购买决策；</li>
+<li><strong>症状题</strong>：Q2“千川计划跑不动应该加价还是暂停计划“、Q3“全域推广一直消耗不出单怎么办“——带着具体问题来求医问药；</li>
+<li><strong>方法题</strong>：Q4“怎么用 DeepSeek 和剪映批量做带货短视频“——要一套可执行流程；</li>
+<li><strong>信任题</strong>：Q5“短视频带货训练营是真的吗“、Q6“抖音小店无货源是割韭菜吗“、Q9、Q10——用户在求一个“要不要信、要不要花钱“的判断；</li>
+<li><strong>选型/私域题</strong>：Q7“小鹅通太贵了有什么平替“、Q8“老师批改作文用什么 AI 工具“、Q11/Q12（教培私域转化）——这是中小商家最关心的钱袋子问题。</li>
+</ul>
+<p>这五种动机，基本就是商家做 GEO 要争夺的全部入口。选 12 题而不是 100 题，是因为我们要逐题人工核对引用来源——题目越少，每一题看得越细。这好比查账：抽查 12 笔流水逐笔对到原始凭证，比扫一眼 1000 笔的总数有用得多。</p>
+<h3 id="为什么每题必须开一个新对话"><a class="header" href="#为什么每题必须开一个新对话">为什么每题必须开一个新对话</a></h3>
+<p>实测方式是 WebBridge 控制真实浏览器逐题提问，<strong>每题都在一个全新的独立对话里提问，逐字提问、不改写</strong>。</p>
+<p>这条纪律是为了防“串味“。AI 对话有上下文记忆：如果你先问了“晓多跟乐言比店小蜜哪个好用“，再在同一会话里问“千川跑不动怎么办“，第二题的答案和引用可能被第一题的上下文带偏——就像面试官面完一个侃侃而谈的候选人，接着面下一个时手里还拿着上一份简历，评分就不干净了。开新对话等于每面一个人都换一块干净白板，保证每道题的引用行为都是该引擎对这个问题的“第一反应“，而不是被聊嗨了之后的样子。</p>
+<p>顺带一个执行细节：千问的匿名额度只够 4~5 个对话，Q5 之后的题是登录后补测完成的。这也提醒我们，不同平台的测试成本不一样，做长期监测时要把登录态、额度这些限制算进去。</p>
+<h3 id="引用率的口径与局限n1-是什么多次采样又是什么"><a class="header" href="#引用率的口径与局限n1-是什么多次采样又是什么">引用率的口径与局限：n=1 是什么，多次采样又是什么</a></h3>
+<p>先说口径。我们说的“引用率“，指<strong>一道题的回答里是否带出了可提取的外部引用来源</strong>：12 题里有几题带引用，就是“几/12“。DeepSeek 的引用来自回答内嵌的引文链接，元宝来自“源“面板的引用卡片，千问要从接口里回抓来源数据，文心更麻烦——页面不渲染链接，我们只能按回答末尾“参考资料“列表里标注的站名提取。</p>
+<p>再说局限，这一节请每个想引用本书数据的读者认真看。</p>
+<p><strong>单次测试是 n=1</strong>。AI 回答有随机性，同一道题今天问和明天问，引用可能不一样。n=1 的结论就像你去相亲角只站了一个下午，回来就说“这个市场全是属狗的“——样本量撑不起统计结论。所以单次测试的所有数字，我们只敢当<strong>方向性信号</strong>用：哪家引得多、哪家几乎不引、信源大致是什么构成，这些结论是稳的；但“引用率 75% 和 83% 谁高谁低“这种比较，别当真。</p>
+<p><strong>多次采样才是统计口径</strong>。我们后来补做了一轮：每题问 4~5 次，看引用行为的稳定性。这就像外卖评分——一条好评可能是刷的，连续五十条评价里四十三条提到“分量足“，那才是这家店的真实属性。多次采样总共落盘 97 条有效采样后被迫中止（原因见本章末尾的风控复盘），但它修正了三个单次测试的结论，后面会专门讲。</p>
+<p>一句话总结：**本书引用行为结论按“方向性“使用，不按“统计显著“使用。**谁要是拿我们的 9/12 去写“某某引擎引用率 75%“的精确报告，那是他不懂抽样，不是我们的数据有问题。</p>
+<h2 id="六引擎逐个画像"><a class="header" href="#六引擎逐个画像">六引擎逐个画像</a></h2>
+<p>给每个引擎一个拟人化比喻，方便你记住它们的脾气。GEO 的实操说白了就是“见人下菜碟“——先认清人，再决定上什么菜。</p>
+<h3 id="文心一言逢问必查的图书管理员"><a class="header" href="#文心一言逢问必查的图书管理员">文心一言：逢问必查的图书管理员</a></h3>
+<p>文心是六家里唯一 <strong>12/12 题全部带引用</strong>的，每题甩出 21~33 条参考资料，全书实测总共 321 条，来源含百度系（爱企查、百度百科、word.baidu、百家号）、新闻门户，以及——大量你听都没听过的小号：“糖汐兮”“猫猫”“好物品质分享全保障“这类。</p>
+<p>它像个强迫症晚期的图书管理员：你随便问一句“中午吃啥“，他都要抱一摞书过来，从《中国饮食文化史》到小区门口打印店复印的传单，全部摊在你面前，每张都标好出处。查得勤是优点，不挑就是缺点了——长尾小自媒体极多，噪音大。</p>
+<p><strong>GEO 含义</strong>：文心的引用门槛是六家里最低的，低权重小号内容也有机会被引。<strong>铺量策略在文心最有效</strong>——百家号、搜狐号发起来，别管账号权重多高。</p>
+<h3 id="腾讯元宝在业主群里翻聊天记录的热心邻居"><a class="header" href="#腾讯元宝在业主群里翻聊天记录的热心邻居">腾讯元宝：在业主群里翻聊天记录的热心邻居</a></h3>
+<p>元宝 12 题中 10 题有引用，去重域名 71 个，但信源构成极度偏科：<strong>mp.weixin.qq.com（公众号）出现 48 次，约占全部引用的三分之一</strong>。</p>
+<p>它像小区里那个消息最灵通的热心邻居：你问什么他都答得上来，但细一打听，情报八成来自他天天泡着的几个业主微信群。公众号就是元宝的业主群。</p>
+<p><strong>GEO 含义</strong>：做元宝，就是做公众号。B 端私域类问题（Q11 引了 15 条，公众号占多数）在元宝上的被引机制几乎全走公众号，这类内容优先发公众号长文，而不是知乎。</p>
+<h3 id="豆包只逛自家超市的导购"><a class="header" href="#豆包只逛自家超市的导购">豆包：只逛自家超市的导购</a></h3>
+<p>豆包 9/12 题有引用，信源构成把“字节系“三个字写在脸上：<strong>抖音视频（iesdouyin.com）出现在 9 题，今日头条 7 题</strong>，其后才是 CSDN（5 题）、博客园（3 题）。</p>
+<p>它像超市自有品牌专区的导购：你问什么他都推荐，但领你逛的永远是自家货架——抖音视频、头条文章，偶尔才去隔壁货架拿一瓶 CSDN。实测比我们此前的推断还极端。</p>
+<p><strong>GEO 含义</strong>：针对豆包的内容，形态上要靠<strong>抖音视频和头条文章</strong>，图文问答铺得再好也够不着它的引用区。另外注意，豆包的引用不在页面渲染成链接，是内嵌角标加底部参考列表——用户看得见来源名，但点不点得着是另一回事。</p>
+<h3 id="deepseek查完才开口的执业律师"><a class="header" href="#deepseek查完才开口的执业律师">DeepSeek：查完才开口的执业律师</a></h3>
+<p>DeepSeek 单次测试 9/12 有引用（Q10、Q11、Q12 未触发联网）。它的信源是六家里最“杂而正“的：新闻媒体（澎湃、央广、人民网）、投诉/政务源（黑猫投诉、地方 315、各地政府网）、品牌官网（小鹅通 sem 页、晓多博客）三管齐下。信任类问题上，它是唯一成体系引用黑猫投诉和地方 315 的。</p>
+<p>它像执业律师：开口之前先查卷宗，而且专挑有法律效力的证据——官方文件、投诉记录、权威媒体报道，营销号软文基本进不了它的证据链。</p>
+<p><strong>GEO 含义</strong>：品牌自有内容阵地能被它直接引用（晓多官方博客、小鹅通官方 sem 页都进了它的引用列表）；评估类内容挂上投诉/政务数据，在 DeepSeek 这里特别吃得开。</p>
+<h3 id="通义千问跑遍全城菜市场的采购员"><a class="header" href="#通义千问跑遍全城菜市场的采购员">通义千问：跑遍全城菜市场的采购员</a></h3>
+<p>千问 10/12 有引用，<strong>去重域名 53 个，引用面是六家里最广的</strong>：新闻媒体（新华网、澎湃、中新网）、百度系（百度百科、mbd.baidu）、机构官网（edu.iflytek.com、ai.youdao.com、xiaoe-tech.com）、政务站（scjgj.beijing.gov.cn）、技术社区、以及 11467 黄页、神马聚合页这类低质长尾，一锅端。</p>
+<p>它像给大食堂采购的老师傅：天不亮出门，批发市场的正经摊位要逛，犄角旮旯的游击队小摊也不放过，最后拉回来一三轮车菜——有有机蔬菜，也有来路不明的散装货。胜在全，输在杂。</p>
+<p><strong>GEO 含义</strong>：千问是唯一同时高频吃新闻媒体、教育机构官网和政务站的引擎，机构类品牌（教育 SaaS、官方平台）在千问上的机会独一份；但低质黄页也能进引用，说明它的门槛同样不高。</p>
+<h3 id="kimi凭记忆答题的学霸"><a class="header" href="#kimi凭记忆答题的学霸">Kimi：凭记忆答题的学霸</a></h3>
+<p>Kimi 是最扎心的一家：<strong>12 题里只有 3 题有引用</strong>，其余 9 题纯模型作答、不联网。少数几次联网，引的也多是 CSDN、搜狐这类内容农场。</p>
+<p>它像班里那个过目不忘的学霸：你问他题，他基本不翻书，张口就答——答案常常还像模像样（Q8 的品牌推荐名单给得挺全），但全凭脑子里的存货。问题是，他的记忆停留在训练数据截止那天，你的新内容根本不在他脑子里。</p>
+<p><strong>GEO 含义</strong>：3/12 的引用率意味着大部分回答完全由模型参数生成，<strong>外链内容很难影响 Kimi 的回答</strong>；叠加其 MAU 萎缩的趋势，Kimi 的 GEO 投入优先级应排在六家最后。prompts 清单里 target_engines 含 kimi 的行，建议整体降半档。</p>
+<h2 id="引用率总表"><a class="header" href="#引用率总表">引用率总表</a></h2>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>引擎</th><th>单次引用率</th><th>多次采样引用率</th><th>头号信源</th><th>一句话脾气</th></tr>
+</thead>
+<tbody>
+<tr><td>文心一言</td><td>12/12</td><td>未测（预计差异不大）</td><td>百度系 + 海量长尾小号</td><td>量大但质杂，门槛最低</td></tr>
+<tr><td>腾讯元宝</td><td>10/12</td><td><strong>89%</strong>（48/54）</td><td>公众号（约占 1/3）</td><td>公众号包养户</td></tr>
+<tr><td>千问</td><td>10/12</td><td>未测</td><td>新闻媒体 + 机构官网</td><td>引用面最广</td></tr>
+<tr><td>DeepSeek</td><td>9/12</td><td><strong>100%</strong>（32/32）</td><td>媒体 + 投诉/政务 + 官网</td><td>被单次测试低估</td></tr>
+<tr><td>豆包</td><td>9/12</td><td>45%（5/11，样本不全）</td><td>抖音视频 + 今日头条</td><td>字节系自留地</td></tr>
+<tr><td>Kimi</td><td>3/12</td><td>未测</td><td>内容农场（少量）</td><td>基本不联网</td></tr>
+</tbody>
+</table>
+</div>
+<p>第一梯队按修正后结论排：<strong>文心、元宝、DeepSeek、千问</strong>，四家都是高引用引擎；豆包看题目类型；Kimi 垫底。</p>
+<h2 id="多次采样带来的三个修正"><a class="header" href="#多次采样带来的三个修正">多次采样带来的三个修正</a></h2>
+<p>单次测试是相亲角站一个下午，多次采样是跟踪随访三个月。随访做完，三个“初诊结论“被推翻了。</p>
+<h3 id="修正一deepseek-被严重低估"><a class="header" href="#修正一deepseek-被严重低估">修正一：DeepSeek 被严重低估</a></h3>
+<p>单次测试 DeepSeek 是 9/12，我们一度把它放在第二梯队。多次采样打完脸：<strong>开启“智能搜索“后 32 次提问全部联网引用，100%</strong>（覆盖 Q1~Q6 各 5 次、Q7 两次）。单次的 9/12 只是部分题恰好没触发联网开关。</p>
+<p>DeepSeek 的高频信源也在这轮看清了：新浪系 13 次、百度系 10 次、抖音电商学习中心 9 次、华声在线 9 次、四川在线 8 次、博客园 7 次、飞书云文档 6 次。两个信号值得单独记：官方学习中心（school.jinritemai.com）被反复引用，<strong>行业 SOP 文档放在飞书云文档（bytedance.larkoffice.com）上也能被 DeepSeek 和千问引到</strong>——这是一个此前没有任何报告提过的内容形态。</p>
+<h3 id="修正二元宝的公众号主导成立"><a class="header" href="#修正二元宝的公众号主导成立">修正二：元宝的公众号主导，成立</a></h3>
+<p>54 次采样里 <strong>48 次有引用（89%），其中 43 次含 mp.weixin.qq.com</strong>——约八成采样带公众号，单次测试“公众号占三分之一“的判断在更大样本下站住了。但也更立体了：今日头条出现 33 次、腾讯新闻 new.qq.com 16 次，元宝的口粮比单次测试显示的更多元，不是只吃公众号一口奶。另外 Q9（AI 辅导作业）5/5 全部无引用——这题在元宝上是稳定的“纯模型作答“题，再多次采样也撬不动。</p>
+<h3 id="修正三豆包的症状题真的不联网"><a class="header" href="#修正三豆包的症状题真的不联网">修正三：豆包的症状题，真的不联网</a></h3>
+<p>Q2“千川跑不动“在单次测试里无引用，我们怀疑是偶然。多次采样 <strong>0/4，稳定无引用</strong>，而 Q1 对比题 4/5 有引用。结论坐实：<strong>症状型口语问题在豆包上倾向纯模型作答</strong>。做这类题的内容卡位，对豆包价值有限——你想让它在“千川跑不动“里引用你，就像往一个不看说明书的用户手里塞说明书，塞了也不看。</p>
+<h2 id="deepseek-风控事件一次代价不小的踩坑"><a class="header" href="#deepseek-风控事件一次代价不小的踩坑">DeepSeek 风控事件：一次代价不小的踩坑</a></h2>
+<p>多次采样原计划每题 5 次 × 5 引擎。执行到一半，停了。</p>
+<p>过程是这样的：我们用自动化方式对 DeepSeek 连续提问，<strong>大约 30 次连续提问后，平台判定违规、触发风控</strong>。考虑到账号安全，整个多次采样计划就此中止——这就是为什么多次采样数据停留在 97 条，元宝做得最全（54 次），DeepSeek 做到一半（32 次），豆包只有 3 题，千问和文心完全没做。</p>
+<p>教训有三条，想长期监测品牌 AI 可见度的读者直接抄作业：</p>
+<ol>
+<li><strong>平台不是爬虫的沙包</strong>。高频自动化提问一定会触发风控，这和爬搜索引擎被 ban 是同一个道理，只是 AI 平台的风控更直接——它本来就是给人一句一句聊的。</li>
+<li><strong>自建监测必须限速</strong>。分钟级间隔、每日提问上限，一个都不能少。单次测试那种“一下午问完 12 题“的强度是安全的，但把同样的强度乘以采样次数，就越线了。</li>
+<li><strong>认真考虑现成工具</strong>。如果你的需求是持续监测（而不是一次性摸底），GEOBase、新榜智汇这类监测工具的存在意义就在于此——自建抓取的隐性成本（账号风险、维护成本、被封后的数据断档）往往高于订阅费。</li>
+</ol>
+<p>这次踩坑也反过来印证了本章开头的方法论：正因为 AI 回答有随机性、平台有风控，引用行为研究才永远是“方向性结论 + 定期复核“，而不是一份测完管三年的报告。</p>
+<p>最后交代一个诚实的尾巴：本次实测在测试账号的各平台留下了每题一个的正式对话记录。这提醒我们，实测用的是真实账号、真实会话，数据带着真实现场的毛边——也正因为如此，它比任何模拟环境里的推断都更接近你的客户真实看到的东西。</p>
+<blockquote>
+<p><strong>本章小结</strong></p>
+<ul>
+<li>12 道实测题覆盖对比、症状、方法、信任、选型五种动机，每题独立新对话防止上下文污染，逐字提问不改写。</li>
+<li>单次测试是 n=1，只能当方向性信号；多次采样（97 条有效采样）才是统计口径，二者不能混着用。</li>
+<li>六引擎脾气分明：文心量大质杂门槛最低，元宝被公众号“包养“，豆包只吃字节系，DeepSeek 证据链最正，千问引用面最广，Kimi 基本不联网、GEO 优先级垫底。</li>
+<li>多次采样修正了三件事：DeepSeek 真实引用率是 100% 应入第一梯队；元宝 80% 采样含公众号、判断成立；豆包症状题稳定不联网、别白费力气。</li>
+<li>高频自动化提问约 30 次就触发 DeepSeek 风控——长期监测要么限速，要么用现成工具。</li>
+</ul>
+</blockquote>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="05-geo-intro.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
+                            </a>
+
+                            <a rel="next prefetch" href="07-source-map.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="05-geo-intro.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
+                    </a>
+
+                    <a rel="next prefetch" href="07-source-map.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
+                    </a>
+            </nav>
+
+        </div>
+
+        <template id=fa-eye><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM432 256c0 79.5-64.5 144-144 144s-144-64.5-144-144s64.5-144 144-144s144 64.5 144 144zM288 192c0 35.3-28.7 64-64 64c-11.5 0-22.3-3-31.6-8.4c-.2 2.8-.4 5.5-.4 8.4c0 53 43 96 96 96s96-43 96-96s-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6z"/></svg></span></template>
+        <template id=fa-eye-slash><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M38.8 5.1C28.4-3.1 13.3-1.2 5.1 9.2S-1.2 34.7 9.2 42.9l592 464c10.4 8.2 25.5 6.3 33.7-4.1s6.3-25.5-4.1-33.7L525.6 386.7c39.6-40.6 66.4-86.1 79.9-118.4c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C465.5 68.8 400.8 32 320 32c-68.2 0-125 26.3-169.3 60.8L38.8 5.1zM223.1 149.5C248.6 126.2 282.7 112 320 112c79.5 0 144 64.5 144 144c0 24.9-6.3 48.3-17.4 68.7L408 294.5c5.2-11.8 8-24.8 8-38.5c0-53-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6c0 10.2-2.4 19.8-6.6 28.3l-90.3-70.8zm223.1 298L373 389.9c-16.4 6.5-34.3 10.1-53 10.1c-79.5 0-144-64.5-144-144c0-6.9 .5-13.6 1.4-20.2L83.1 161.5C60.3 191.2 44 220.8 34.5 243.7c-3.3 7.9-3.3 16.7 0 24.6c14.9 35.7 46.2 87.7 93 131.1C174.5 443.2 239.2 480 320 480c47.8 0 89.9-12.9 126.2-32.5z"/></svg></span></template>
+        <template id=fa-copy><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M502.6 70.63l-61.25-61.25C435.4 3.371 427.2 0 418.7 0H255.1c-35.35 0-64 28.66-64 64l.0195 256C192 355.4 220.7 384 256 384h192c35.2 0 64-28.8 64-64V93.25C512 84.77 508.6 76.63 502.6 70.63zM464 320c0 8.836-7.164 16-16 16H255.1c-8.838 0-16-7.164-16-16L239.1 64.13c0-8.836 7.164-16 16-16h128L384 96c0 17.67 14.33 32 32 32h47.1V320zM272 448c0 8.836-7.164 16-16 16H63.1c-8.838 0-16-7.164-16-16L47.98 192.1c0-8.836 7.164-16 16-16H160V128H63.99c-35.35 0-64 28.65-64 64l.0098 256C.002 483.3 28.66 512 64 512h192c35.2 0 64-28.8 64-64v-32h-47.1L272 448z"/></svg></span></template>
+        <template id=fa-play><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"/></svg></span></template>
+        <template id=fa-clock-rotate-left><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M75 75L41 41C25.9 25.9 0 36.6 0 57.9V168c0 13.3 10.7 24 24 24H134.1c21.4 0 32.1-25.9 17-41l-30.8-30.8C155 85.5 203 64 256 64c106 0 192 86 192 192s-86 192-192 192c-40.8 0-78.6-12.7-109.7-34.4c-14.5-10.1-34.4-6.6-44.6 7.9s-6.6 34.4 7.9 44.6C151.2 495 201.7 512 256 512c141.4 0 256-114.6 256-256S397.4 0 256 0C185.3 0 121.3 28.7 75 75zm181 53c-13.3 0-24 10.7-24 24V256c0 6.4 2.5 12.5 7 17l72 72c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-65-65V152c0-13.3-10.7-24-24-24z"/></svg></span></template>
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr-ef4e11c1.min.js"></script>
+        <script src="mark-09e88c2c.min.js"></script>
+        <script src="searcher-09f2665d.js"></script>
+
+        <script src="clipboard-1626706a.min.js"></script>
+        <script src="highlight-abc7f01d.js"></script>
+        <script src="book-609e4cb8.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+
+    </div>
+    </body>
+</html>

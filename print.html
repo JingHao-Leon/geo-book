@@ -1,0 +1,1301 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>从 SEO 到 GEO：AI 时代的搜索优化实战手册</title>
+        <meta name="robots" content="noindex">
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="favicon-de23e50b.svg">
+        <link rel="shortcut icon" href="favicon-8114d1fc.png">
+        <link rel="stylesheet" href="css/variables-8adf115d.css">
+        <link rel="stylesheet" href="css/general-e96d0476.css">
+        <link rel="stylesheet" href="css/chrome-d279d366.css">
+        <link rel="stylesheet" href="css/print-9e4910d8.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="fonts/fonts-9644e21d.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="mdbook-highlight-css" href="highlight-493f70e1.css">
+        <link rel="stylesheet" id="mdbook-tomorrow-night-css" href="tomorrow-night-4c0ae647.css">
+        <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="ayu-highlight-3fdfc3ac.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "";
+            const default_light_theme = "light";
+            const default_dark_theme = "ayu";
+            window.path_to_searchindex_js = "searchindex-732bf55d.js";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="toc-b56c35ea.js"></script>
+    </head>
+    <body>
+    <div id="mdbook-help-container">
+        <div id="mdbook-help-popup">
+            <h2 class="mdbook-help-title">Keyboard shortcuts</h2>
+            <div>
+                <p>Press <kbd>←</kbd> or <kbd>→</kbd> to navigate between chapters</p>
+                <p>Press <kbd>S</kbd> or <kbd>/</kbd> to search in the book</p>
+                <p>Press <kbd>?</kbd> to show this help</p>
+                <p>Press <kbd>Esc</kbd> to hide this help</p>
+            </div>
+        </div>
+    </div>
+    <div id="mdbook-body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="mdbook-sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("mdbook-sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+                sidebar_toggle.checked = false;
+            }
+            if (sidebar === 'visible') {
+                sidebar_toggle.checked = true;
+            } else {
+                html.classList.remove('sidebar-visible');
+            }
+        </script>
+
+        <nav id="mdbook-sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="toc.html"></iframe>
+            </noscript>
+            <div id="mdbook-sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="mdbook-page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="mdbook-menu-bar-hover-placeholder"></div>
+                <div id="mdbook-menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="mdbook-sidebar-toggle" class="icon-button" for="mdbook-sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="mdbook-sidebar">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg></span>
+                        </label>
+                        <button id="mdbook-theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="mdbook-theme-list">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M371.3 367.1c27.3-3.9 51.9-19.4 67.2-42.9L600.2 74.1c12.6-19.5 9.4-45.3-7.6-61.2S549.7-4.4 531.1 9.6L294.4 187.2c-24 18-38.2 46.1-38.4 76.1L371.3 367.1zm-19.6 25.4l-116-104.4C175.9 290.3 128 339.6 128 400c0 3.9 .2 7.8 .6 11.6c1.8 17.5-10.2 36.4-27.8 36.4H96c-17.7 0-32 14.3-32 32s14.3 32 32 32H240c61.9 0 112-50.1 112-112c0-2.5-.1-5-.2-7.5z"/></svg></span>
+                        </button>
+                        <ul id="mdbook-theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-ayu">Ayu</button></li>
+                        </ul>
+                        <button id="mdbook-search-toggle" class="icon-button" type="button" title="Search (`/`)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="/ s" aria-controls="mdbook-searchbar">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352c79.5 0 144-64.5 144-144s-64.5-144-144-144S64 128.5 64 208s64.5 144 144 144z"/></svg></span>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">从 SEO 到 GEO：AI 时代的搜索优化实战手册</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <span class=fa-svg id="print-button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M128 0C92.7 0 64 28.7 64 64v96h64V64H354.7L384 93.3V160h64V93.3c0-17-6.7-33.3-18.7-45.3L400 18.7C388 6.7 371.7 0 354.7 0H128zM384 352v32 64H128V384 368 352H384zm64 32h32c17.7 0 32-14.3 32-32V256c0-35.3-28.7-64-64-64H64c-35.3 0-64 28.7-64 64v96c0 17.7 14.3 32 32 32H64v64c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V384zm-16-88c-13.3 0-24-10.7-24-24s10.7-24 24-24s24 10.7 24 24s-10.7 24-24 24z"/></svg></span>
+                        </a>
+                        <a href="https://github.com/JingHao-Leon/geo-book" title="Git repository" aria-label="Git repository">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg></span>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="mdbook-search-wrapper" class="hidden">
+                    <form id="mdbook-searchbar-outer" class="searchbar-outer">
+                        <div class="search-wrapper">
+                            <input type="search" id="mdbook-searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="mdbook-searchresults-outer" aria-describedby="searchresults-header">
+                            <div class="spinner-wrapper">
+                                <span class=fa-svg id="fa-spin"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M304 48c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zm0 416c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zM48 304c26.5 0 48-21.5 48-48s-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48zm464-48c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zM142.9 437c18.7-18.7 18.7-49.1 0-67.9s-49.1-18.7-67.9 0s-18.7 49.1 0 67.9s49.1 18.7 67.9 0zm0-294.2c18.7-18.7 18.7-49.1 0-67.9S93.7 56.2 75 75s-18.7 49.1 0 67.9s49.1 18.7 67.9 0zM369.1 437c18.7 18.7 49.1 18.7 67.9 0s18.7-49.1 0-67.9s-49.1-18.7-67.9 0s-18.7 49.1 0 67.9z"/></svg></span>
+                            </div>
+                        </div>
+                    </form>
+                    <div id="mdbook-searchresults-outer" class="searchresults-outer hidden">
+                        <div id="mdbook-searchresults-header" class="searchresults-header"></div>
+                        <ul id="mdbook-searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('mdbook-sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('mdbook-sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#mdbook-sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="mdbook-content" class="content">
+                    <main>
+                        <h1 id="从-seo-到-geoai-时代的搜索优化实战手册"><a class="header" href="#从-seo-到-geoai-时代的搜索优化实战手册">从 SEO 到 GEO：AI 时代的搜索优化实战手册</a></h1>
+<p>一本基于真实实验数据的搜索优化小书。不是翻译国外的概念文章，而是 2026 年 8 月用真实浏览器对<strong>豆包、DeepSeek、腾讯元宝、通义千问、文心一言、Kimi</strong> 六大国产 AI 引擎做了 12 题 × 6 引擎实测 + 97 次多次采样之后，写出来的实战总结。</p>
+<p>全书约 6 万字，覆盖搜索优化的完整演进线：<strong>SEO → LSO → VSO → AEO → GEO</strong>，每个概念配生活化比喻，每个论点配真实案例。</p>
+<h2 id="目录"><a class="header" href="#目录">目录</a></h2>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>章节</th><th>内容</th><th>一句话看点</th></tr>
+</thead>
+<tbody>
+<tr><td><a href="#前言">前言</a></td><td>为什么写这本书、术语表、阅读地图</td><td>83% 的用户已经在用 AI 做消费功课</td></tr>
+<tr><td><a href="#第1章-seo网页搜索时代的优化">第1章 SEO</a></td><td>网页搜索时代的优化</td><td>排名是租的铺位，内容是买的房产</td></tr>
+<tr><td><a href="#第2章-lso本地搜索优化">第2章 LSO</a></td><td>本地搜索优化（地图/点评/本地生活）</td><td>在数字商圈里挂对招牌</td></tr>
+<tr><td><a href="#第3章-vso视频与语音搜索优化">第3章 VSO</a></td><td>视频与语音搜索优化</td><td>豆包 9/12 题引用抖音视频——VSO 是 GEO 的前传</td></tr>
+<tr><td><a href="#第4章-aeo答案引擎优化">第4章 AEO</a></td><td>答案引擎优化</td><td>从“上架“到“被店员直接递到顾客手里“</td></tr>
+<tr><td><a href="#第5章-geo-登场生成式引擎优化是什么">第5章 GEO 登场</a></td><td>生成式引擎优化是什么</td><td>SEO 抢货架，GEO 影响导购员的推荐话术</td></tr>
+<tr><td><a href="#第6章-实测六大国产-ai-引擎引用行为">第6章 实测</a></td><td>六大引擎引用行为实测</td><td>全书数据核心：文心 12/12 vs Kimi 3/12</td></tr>
+<tr><td><a href="#第7章-信源地图内容铺在哪里才会被-ai-看见">第7章 信源地图</a></td><td>内容铺在哪里才会被 AI 看见</td><td>“知乎修正”：实测推翻了推断</td></tr>
+<tr><td><a href="#第8章-行业实战-i广告电商">第8章 实战·广告电商</a></td><td>症状型/对比型/信任型问题拆解</td><td>谁铺内容，谁上榜</td></tr>
+<tr><td><a href="#第9章-行业实战-ii教育">第9章 实战·教育</a></td><td>智商税句式与 AI 原生场景</td><td>B 端是全行业最干净的蓝海</td></tr>
+<tr><td><a href="#第10章-方法论与工具geo-工作流">第10章 方法论</a></td><td>GEO 工作流五步走与工具</td><td>高频抓取触发 DeepSeek 风控的教训</td></tr>
+<tr><td><a href="#第11章-未来从-geo-到-agent-时代">第11章 未来</a></td><td>从 GEO 到 Agent 时代</td><td>唯一不变的是“成为值得被引用的答案“</td></tr>
+</tbody>
+</table>
+</div>
+<h2 id="数据基础"><a class="header" href="#数据基础">数据基础</a></h2>
+<ul>
+<li>12 个真实业务问题（广告电商 6 + 教育 6），逐字提问、独立新对话</li>
+<li>六引擎单次实测（12 题 × 6 = 72 次回答全文采集）+ 多次采样 97 次（元宝 54 / DeepSeek 32 / 豆包 11）</li>
+<li>原始数据与研究过程见配套仓库 <a href="https://github.com/JingHao-Leon/geo-research-cn">geo-research-cn</a> 与在线报告 <a href="https://jinghao-leon.github.io/geo-research-cn/">jinghao-leon.github.io/geo-research-cn</a></li>
+</ul>
+<h2 id="阅读说明"><a class="header" href="#阅读说明">阅读说明</a></h2>
+<ul>
+<li>第 1–4 章是演进史，通用知识为主；第 5 章起进入 GEO 正题，全部基于实测</li>
+<li>所有实验数据均可回溯到原始记录；第 11 章为趋势推演，章内已明确标注</li>
+<li>赶时间的读者：前言 → 第 5 章 → 第 6 章 → 你所在行业的实战章 → 第 10 章</li>
+</ul>
+<hr>
+<p><sub>成书日期：2026-08-05 ｜ 数据实测日期：2026-08-05 ｜ 作者：JingHao-Leon（与 AI 协作完成）</sub></p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="前言"><a class="header" href="#前言">前言</a></h1>
+<h2 id="这本书为什么非写不可"><a class="header" href="#这本书为什么非写不可">这本书为什么非写不可</a></h2>
+<p>先说一个我最近反复见到的场景。</p>
+<p>朋友给孩子挑学习机，没打开百度，也没去翻电商详情页，而是掏出手机问豆包：“科大讯飞和作业帮的学习机哪个更适合五年级的孩子？“AI 噼里啪啦给出一段对比，还附了引用来源。他看完，基本就定了。</p>
+<p>这不是个例。知乎研究院 2025 年第二季度的白皮书（1046 份调研）显示，<strong>83% 的用户在过去 3 个月里用 AI 了解过消费品信息，55% 的消费者认为 AI 推荐会影响自己的决策</strong>；同一调研里，用户对 AI 搜索的满意度是 3.95，已经高于传统搜索的 3.62。HCR 慧辰 2025 年 5 月的调研更直接：92% 的消费者在购物决策中使用过 AI 辅助。</p>
+<p>把这些数字翻译成大白话：<strong>消费决策的入口正在从“搜索框“搬到“对话框“。</strong> 以前用户在百度搜“学习机哪个牌子好“，看到十个蓝色链接，逐个点开、自己比较——你的品牌只要在第一页，就有机会。现在用户只问一句，AI 直接给一个“看起来像结论“的答案。你的品牌要么在这个答案里，要么就不存在。没有第二页，没有“翻一翻再说“。</p>
+<p>做了十几年搜索优化的人，对这个变化的感觉应该像当年纸媒编辑看着门户崛起：不是渠道又多了一个，而是整个分发逻辑换了地基。关键词排名那套手艺，管不了一个“直接生成答案“的机器。怎么让 AI 在回答里提到你、正面地提到你、在关键问题上优先提到你——这就是 GEO，也是这本书的主题。</p>
+<p>市面上讲 GEO 的文章已经不少，但绝大多数是二手信息倒手：翻译几篇海外博客，拼几个“AI 搜索占比将达 XX%“的预测数字，再卖你一个“十大 GEO 服务商排行榜”（顺便说一句，这类排行榜基本是厂商自费软文，我们在研究时把它们的数据全部剔除了）。缺的是一本基于一手实测、讲国产引擎、能落地执行的书。这就是我们写它的原因。</p>
+<h2 id="本书的数据基础我们真的去问了-ai-一百多遍"><a class="header" href="#本书的数据基础我们真的去问了-ai-一百多遍">本书的数据基础：我们真的去问了 AI 一百多遍</a></h2>
+<p>空谈误国，实测兴邦。2026 年 8 月 5 日，我们做了一件笨事：用 WebBridge 控制真实浏览器，对<strong>豆包、DeepSeek、Kimi、通义千问、文心一言、腾讯元宝</strong>六大国产 AI 引擎，逐题提问 12 个真实业务问题（覆盖广告电商和教育两个行业，从“客服机器人怎么选“到“AI 课程是不是割韭菜“），每题开独立新对话、逐字提问不改写，把每家引擎的回答和引用来源完整落盘。</p>
+<p>在这 72 次（12 题 × 6 引擎）单次实测之上，我们又做了多次采样——原计划每题 5 次，执行中 DeepSeek 触发了平台风控（大约连续提问 30 次后被判违规），整体停止，停止前共拿到 <strong>97 条有效采样</strong>：元宝 54 次、DeepSeek 32 次、豆包 11 次。</p>
+<p>这批实测带来了一批此前没人拿数据说过的结论，举三个例子：</p>
+<p><strong>第一，各引擎的“口味“差异大到离谱，一套内容打天下是做梦。</strong> 我们的实测显示，豆包 12 题里有 9 题引用了抖音视频、7 题引用今日头条，字节系内容霸榜；腾讯元宝的引用里公众号独占 48 条、约占全部引用的三分之一，54 次多次采样里有 43 次引用了 mp.weixin.qq.com——<strong>没有公众号内容的品牌，在元宝上几乎拿不到曝光</strong>；文心一言 12 题全部有引用，每题引 21 到 33 篇，但里面混着大量无名小自媒体，引用门槛反而是六家里最低的；而 Kimi 只有 3/12 的题有引用，其余全是模型凭参数直接作答，外部内容很难影响它。</p>
+<p><strong>第二，官方自建内容确实能挤进 AI 的答案。</strong> 实测中，晓多的官方博客同时出现在豆包、元宝、DeepSeek 三家的引用里；抖音电商学习中心在千川投放类问题上被豆包和 DeepSeek 反复引用。这证明“自建结构化问答库会被 AI 直接引用“不是理论，是已经发生的事实。</p>
+<p><strong>第三，实测推翻了我们自己的预判，这才是数据的价值。</strong> 研究初期我们基于搜索语料推断“知乎是被引用最多的 UGC 形态“，实测一看：知乎几乎只在文心的引用里零星出现，真正被高频引用的是 CSDN、博客园、搜狐、网易、今日头条、公众号。另外，单次实测里 DeepSeek 只有 9/12 的引用率，多次采样却显示开启智能搜索后 32/32 全部联网引用——单次测试会系统性低估它。如果只看一次的结果就下结论，我们会把渠道优先级整个排错。</p>
+<p>这些发现（以及更多细节）贯穿全书。你会看到我们反复引用一句话：<strong>“我们的实测显示……”</strong> 凡是带这句话的，都来自 2026-08-05 那批落盘数据，不是道听途说。</p>
+<p>也要老实交代局限：本次是单账号采样，AI 回答有随机性，引用行为结论应视为方向性而非统计铁律；千问和文心的多次采样未及完成。但这不妨碍方向判断——六家引擎的生态绑定之强，强到任何样本量下都掩盖不住。</p>
+<h2 id="术语表先把五个词的口径钉死"><a class="header" href="#术语表先把五个词的口径钉死">术语表：先把五个词的口径钉死</a></h2>
+<p>这个行业最乱的还不是打法，是名词。SEO、LSO、VSO、AEO、GEO 五个词满天飞，不同文章里同一个词能指三件事。全书统一用下面的口径，请读者也以这套口径为准。</p>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>缩写</th><th>全称</th><th>一句话定义</th><th>主战场</th></tr>
+</thead>
+<tbody>
+<tr><td>SEO</td><td>Search Engine Optimization，搜索引擎优化</td><td>让网页在搜索结果列表里排得更靠前</td><td>百度、Google 等传统搜索</td></tr>
+<tr><td>LSO</td><td>Local Search Optimization，本地搜索优化</td><td>让“附近的人“在地图和本地结果里找到你</td><td>地图 App、大众点评、同城搜索</td></tr>
+<tr><td>VSO</td><td>Video/Voice Search Optimization，视频与语音搜索优化</td><td>让内容在视频搜索和语音问答中被找到、被念出来</td><td>抖音搜索、语音助手</td></tr>
+<tr><td>AEO</td><td>Answer Engine Optimization，答案引擎优化</td><td>让机器直接引用你作为“那个答案“（精选摘要、知识卡片）</td><td>百度精选摘要、语音问答</td></tr>
+<tr><td>GEO</td><td>Generative Engine Optimization，生成式引擎优化</td><td>让生成式 AI 在组织答案时采纳你、提及你、推荐你</td><td>豆包、DeepSeek、元宝、千问、文心、Kimi</td></tr>
+</tbody>
+</table>
+</div>
+<p>光定义不够，每个词配一个比喻，帮助建立直觉。</p>
+<p><strong>SEO 是菜市场里抢摊位。</strong> 菜市场管理员（搜索引擎）每天巡场，把最水灵、招牌最清楚的菜摊往入口调。你研究管理员的口味：菜名写大点（关键词）、摊位收拾整齐（页面体验）、老顾客多（外链和口碑），管理员自然把你往前排。你和顾客之间隔着一个“列表“，顾客要自己走两步、比较一下才掏钱。</p>
+<p><strong>LSO 是开在小区里的裁缝铺去物业登记。</strong> 你的手艺再好，隔壁楼的住户也不知道你存在——除非你去物业的便民信息栏登记（地图收录）、在业主群里露脸（点评和本地评价）、门口挂个清楚的牌子（地址电话营业时间三要素齐全）。LSO 的本质不是“排名靠前“，而是“进入三公里生活圈的认知“。它服务的是“我现在就要、而且要离我近“的需求，和 SEO 争夺的是完全不同的注意力。</p>
+<p><strong>VSO 是训练店员的“应声能力“。</strong> 客人不进门、不看菜单，站在马路对面喊一嗓子：“附近哪家粉好吃？”（语音搜索）；或者干脆刷短视频看别人嗦粉再决定（视频搜索）。你的店名、招牌菜得能被“说出口、被听懂、被拍出来“。文字时代你写的是给人看的标题，VSO 时代你还得考虑这句话被语音助手念出来时像不像人话。</p>
+<p><strong>AEO 是医院分诊台的护士。</strong> 病人不说“我想逛逛你们医院“，只说症状，护士一句话告诉你挂几号科。AEO 的目标不是让你出现在候选名单里，而是让机器把<strong>你</strong>当成那个“一句话答案“——比如百度的精选摘要、语音助手直接念出来的那段话。它从传统搜索的枝干上长出来，抢的是“零点击“的入口：用户看完答案就走了，根本不点进你的网站。</p>
+<p><strong>GEO 是让小区里最有威望的张阿姨替你说话。</strong> 张阿姨（生成式 AI）谁家孩子补习、谁家装修靠谱，街坊都信她。但张阿姨的答案不是从一个列表里挑的，是她把平时从各处听来的信息<strong>重新组织</strong>之后说出来的——这意味着两件事：第一，你得先混进她信任的信息圈（她常看的公众号、她信的媒体，也就是我们实测里各引擎的信源偏好）；第二，她引用你的方式是把你的话揉进她自己的话里，所以你的内容必须“值得被转述“——结论清楚、有数据、有立场。SEO 时代你优化的是“位置“，GEO 时代你优化的是“被采纳的资格“。</p>
+<p>看出这五者的关系了吗？它们不是替代，是分层：SEO 管列表时代的曝光，LSO 管本地半径，VSO 管新入口，AEO 管“零点击答案“，GEO 管“生成式采纳“。地基还是那套内容功底，但每往上一层，“被机器理解“就比“被人点击“更重要一分。这也是为什么本书从 SEO 讲起——不是为了怀旧，而是因为百度系引擎（我们的实测显示，文心与百度搜索收录深度绑定，是六家里 SEO 与 GEO 协同度最高的）会告诉你：老手艺在新牌桌上依然是筹码。</p>
+<h2 id="全书章节导览"><a class="header" href="#全书章节导览">全书章节导览</a></h2>
+<p>本书按“看懂牌桌 → 学会打法 → 落地执行 → 守住边界“的顺序组织：</p>
+<ul>
+<li><strong>第 1 章 搜索三十年：从目录到生成式引擎</strong>——SEO、LSO、VSO、AEO 的演进史，以及 GEO 为什么是必然出现的下一站。想理解“为什么“的读者从这里建立坐标系。</li>
+<li><strong>第 2 章 生成式引擎如何“读“互联网</strong>——训练数据、联网检索、信源引用三件事的底层机制。不懂机器怎么吃信息，一切优化都是玄学。</li>
+<li><strong>第 3 章 六大国产引擎格局与信源地图</strong>——豆包、DeepSeek、元宝、千问、文心、Kimi 的量级、生态绑定与信源偏好，全部基于本书的实测数据。这是全书的“渠道篇“。</li>
+<li><strong>第 4 章 GEO 内容方法论</strong>——什么样的内容会被 AI 采纳：结论前置、可验证数字、对比表、分场景建议。实测里被反复引用的内容形态，拆给你看。</li>
+<li><strong>第 5 章 渠道与铺稿策略</strong>——按引擎分工：什么内容发抖音/头条，什么发公众号，什么发百家号，什么铺门户。含“知乎从主阵地降为辅助“这类实测修正后的优先级。</li>
+<li><strong>第 6 章 信任占位与负面语义</strong>——“割韭菜吗”“靠谱吗“类问题是 GEO 的蓝海，也是品牌的雷区。不主动占位，答案就被吐槽帖定义。</li>
+<li><strong>第 7 章 监测与效果验证</strong>——怎么长期追踪品牌在 AI 回答中的可见度，含我们踩过的风控坑（高频自动化提问会被平台判定违规）和现成监测工具的选型。</li>
+<li><strong>第 8 章 行业实战：广告电商与教育</strong>——把前面所有方法落到两个信息最密集、AI 使用最深的行业，配可直接执行的 query 清单。</li>
+<li><strong>第 9 章 灰产边界与长期主义</strong>——低质 AIGC 铺稿正在被平台识别降权，哪些钱不能赚，哪些资产值得攒十年。</li>
+</ul>
+<h2 id="阅读地图不同的人走不同的路"><a class="header" href="#阅读地图不同的人走不同的路">阅读地图：不同的人走不同的路</a></h2>
+<p>这本书不必从头读到尾。按你的角色对号入座：</p>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>你是谁</th><th>建议路线</th><th>预期收获</th></tr>
+</thead>
+<tbody>
+<tr><td>企业主 / 品牌负责人</td><td>前言 → 第 1 章 → 第 3 章 → 第 9 章</td><td>搞清要不要做、往哪投、避开什么坑，其余章节交给执行团队</td></tr>
+<tr><td>市场 / 增长操盘手</td><td>前言 → 第 2–3 章 → 第 4–6 章 → 第 7 章</td><td>拿到完整的打法框架和渠道优先级，能直接排季度计划</td></tr>
+<tr><td>内容与 SEO 一线执行</td><td>前言术语表 → 第 4–5 章 → 第 8 章</td><td>跳过理论，直接抄内容模板和渠道清单，需要时再回头看第 2 章</td></tr>
+<tr><td>SEO 老兵转型</td><td>第 1 章快速过 → 第 2 章精读 → 全书顺序读</td><td>重点补“生成式“与“检索式“的机制差异，老经验哪些保留哪些扔掉</td></tr>
+<tr><td>研究者 / 媒体同行</td><td>前言数据基础一节 → 第 3、7 章</td><td>核查我们的实测方法与数据口径，欢迎复现和证伪</td></tr>
+</tbody>
+</table>
+</div>
+<p>三条通用建议：第一，术语表请先过一遍，后文不再解释缩写；第二，遇到“详见第 X 章“的地方先别跳，把当前章读完再回头补——每章是自洽的；第三，也是最重要的，<strong>这本书是让你动手用的，不是让你点头用的</strong>。读完任何一章，去打开一个 AI 引擎，用你自己行业的真实问题问它三遍，看看你看到了什么。那才是真正的第一章。</p>
+<blockquote>
+<p><strong>本章小结</strong></p>
+<ul>
+<li>消费决策入口正在从搜索框搬到对话框：知乎研究院 2025 Q2 数据显示 83% 用户用 AI 了解消费品、55% 认为 AI 推荐影响决策——品牌要么在 AI 的答案里，要么就不存在。</li>
+<li>本书数据基础是 2026-08-05 的真实浏览器实测：12 题 × 6 引擎单次测试 + 97 次多次采样，所有“我们的实测显示“均可追溯，同时我们也坦承其样本局限。</li>
+<li>实测核心结论：六大国产引擎信源偏好差异极大（豆包吃字节系、元宝吃公众号、文心量大质杂、Kimi 引用率仅 3/12），GEO 没有一招通吃，必须按引擎分工。</li>
+<li>术语口径全书统一：SEO 管搜索列表、LSO 管本地半径、VSO 管视频语音入口、AEO 管零点击答案、GEO 管生成式采纳；五者分层递进，不是替代关系。</li>
+<li>本书按“看懂牌桌 → 学会打法 → 落地执行 → 守住边界“组织，可按阅读地图对号入座；但任何一章的正确收尾方式，都是打开一个 AI 引擎亲手验证。</li>
+</ul>
+</blockquote>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="第1章-seo网页搜索时代的优化"><a class="header" href="#第1章-seo网页搜索时代的优化">第1章 SEO：网页搜索时代的优化</a></h1>
+<p>在讨论 GEO（生成式引擎优化）之前，我们必须先把 SEO 讲透。不是因为 SEO 过时了——恰恰相反，AI 搜索引擎的许多信号来源，正是传统搜索二十年积累下来的那套东西。不懂 SEO 的人做 GEO，就像没学过加减乘除直接上微积分：题目也许能蒙对几道，但你不知道自己对在哪、错在哪。这一章，我们把 SEO 的地基打牢。</p>
+<h2 id="搜索引擎是怎么工作的一家永不打烊的图书馆"><a class="header" href="#搜索引擎是怎么工作的一家永不打烊的图书馆">搜索引擎是怎么工作的：一家永不打烊的图书馆</a></h2>
+<p>搜索引擎的工作可以拆成三步：<strong>抓取（Crawl）、索引（Index）、排名（Rank）</strong>。这三步对应到现实世界，最贴切的模型不是数据库，而是一家图书馆。</p>
+<p><strong>爬虫是图书馆的采购员。</strong> 它每天在全网“采编“新书——派出蜘蛛程序顺着链接一个页面一个页面地访问，把网页内容搬回服务器。采购员不会买市面上所有的书：预算（抓取配额，行话叫 crawl budget）有限，它优先采购那些更新勤快、馆藏口碑好（权重高）的“出版社“出的书，以及被别的书反复引用（有外链指向）的书。你的网站如果结构混乱、链接藏得深，采购员可能一年也不来一趟。</p>
+<p><strong>索引是编目员。</strong> 书买回来了，不能往仓库一堆了事。编目员要给每本书分类、贴标签、做卡片：这本书讲什么的？涉及哪些主题？和已有的书是不是内容雷同（重复内容会被合并甚至丢弃）？搜索引擎的索引库就是这套卡片系统。很多站长抱怨“我明明发了文章，搜不到“——十有八九是采购员把书搬回来了，编目员却认为它不值得入编。内容单薄、拼凑、和已有页面高度重复的网页，会被挡在索引门外。</p>
+<p><strong>排名是检索台的资深馆员。</strong> 读者来问“有没有适合新手学烘焙的书“，馆员不会把所有烘焙书都搬出来，而是根据自己的判断排出先后：哪本最权威、哪本最对口、哪本最近修订过。搜索引擎的排名算法就是这位馆员，它参考几百个信号——关键词匹配度、内容质量、外链背书、页面体验、站点历史表现——在零点几秒内给出一份排序结果。</p>
+<p>这个比喻要记牢，因为后面做 GEO 时你会发现：AI 引擎干的事本质上一样，只是“馆员“从给书单变成了直接替你读书写摘要。检索方式变了，馆藏质量的要求没变。</p>
+<h2 id="关键词研究去菜市场听人怎么吆喝"><a class="header" href="#关键词研究去菜市场听人怎么吆喝">关键词研究：去菜市场听人怎么吆喝</a></h2>
+<p>关键词研究的本质是<strong>研究人，不是研究词</strong>。我常说，做关键词研究就像去菜市场蹲点：你不能坐在家里猜顾客要什么，得站到摊位旁边，听他们怎么开口问价。</p>
+<p>有意思的是，顾客嘴里说的词和摊主挂的招牌常常对不上。摊主写“有机西兰花“，顾客问的是“那个不用洗的绿菜花“。放到搜索里也一样：行业内部管产品叫“企业级内容分发中台“，用户搜的是“公众号文章怎么一键发到多个平台“。<strong>你要优化的是用户的问法，不是你的叫法。</strong></p>
+<p>实操层面，关键词研究的常识性动作就这几件：</p>
+<ul>
+<li><strong>从搜索框挖词。</strong> 在搜索框里敲半个词，看下拉联想补全了什么；搜完拉到页面底部，看“相关搜索“给了什么。这些全是真实用户搜出来的，免费且保真。</li>
+<li><strong>按意图分类。</strong> 关键词背后是人的意图，大致分三类：想搞懂一件事（信息型，如“SEO 是什么“）、想找某个网站（导航型，如“蝉妈妈官网“）、想掏钱（交易型，如“直播数据分析工具 价格“）。三类词要配三种页面，用一篇科普文去承接一个比价意图，转化率必然难看。</li>
+<li><strong>别只盯着大词。</strong> “数据分析“这种词，竞争惨烈且意图模糊；而“抖音直播间观看人数和成交的关系怎么看“这种长尾词，搜的人少，但搜的正是你的精准客户。长尾词的集合，往往比一个头部大词带来更多、更优质的流量。</li>
+</ul>
+<h2 id="内容质量导购专不专业两句话就露馅"><a class="header" href="#内容质量导购专不专业两句话就露馅">内容质量：导购专不专业，两句话就露馅</a></h2>
+<p>关键词把人引进门，内容负责把人留下。判断内容好坏，我有个很俗但很管用的标准：<strong>把网页当成商场里的导购</strong>。</p>
+<p>差的导购什么样？你问“这台洗衣机费电吗“，他背参数：“本产品额定功率五百瓦，能效等级一级。“背得一字不差，但等于没答——你在说明书上也能看到。好的导购会说：“一级能效，洗一次大概两毛钱电费，比旁边那台三级的一年省小一百块。“同样的信息，后者多走了一步：<strong>把信息翻译成了对用户有意义的东西</strong>。</p>
+<p>搜索引擎判断内容质量的思路，和顾客判断导购如出一辙：</p>
+<ul>
+<li><strong>有没有真正回答问题</strong>，而不是围绕关键词堆砌废话；</li>
+<li><strong>有没有增量信息</strong>——别处没有的数据、案例、经验、观点（行业里叫 information gain）；</li>
+<li><strong>谁写的、凭什么信</strong>——Google 后来把这套东西总结为 E-E-A-T（经验、专业、权威、可信），简单说就是：内容背后得站着一个“懂行且可信的人“。</li>
+</ul>
+<p>纯靠拼凑改写别人文章的“洗稿“打法，早年确实能骗过算法，但搜索引擎历年的核心更新（Google 的 Panda、Helpful Content Update，百度的飓风、清风系列算法）几乎全在围剿这类内容。方向非常一致：<strong>奖励能帮到人的内容，惩罚只为排名而生的内容。</strong> 这条原则到了 AI 搜索时代只会更严，不会放松。</p>
+<h2 id="外链别的店铺愿意给你写推荐信"><a class="header" href="#外链别的店铺愿意给你写推荐信">外链：别的店铺愿意给你写推荐信</a></h2>
+<p>外链（别的网站指向你网站的链接）是 SEO 里最难做、也最值钱的一环。它的逻辑和线下生意里的<strong>推荐信</strong>一模一样。</p>
+<p>你开了一家餐馆，自己挂个牌子写“全城最好吃“，没人当真。但如果本地美食协会的公众号写了一篇探店推荐，文末放了你家的地址——这条“推荐信“的分量，抵得上你自夸一年。搜索引擎就是这么看外链的：<strong>一个链接就是一张信任投票</strong>，而投票的分量取决于投票人是谁。行业权威站点给你的一条链接，胜过一百个不知名小站的链接；而你自己注册的五十个博客互相串链，相当于自己给自己写推荐信，搜索引擎早就学会识别并忽略甚至惩罚这种操作。</p>
+<p>所以外链建设没有捷径，健康的路子只有两条：</p>
+<ol>
+<li><strong>做出值得被引用的东西</strong>——原创数据、实用工具、深度的行业盘点，让别人写文章时绕不开你；</li>
+<li><strong>进入行业的话语圈</strong>——给垂直媒体供稿、参与行业报告、和上下游伙伴互相推荐。</li>
+</ol>
+<p>买卖链接、群发外链这些灰色玩法，和花钱雇人排队装生意火爆一个性质：短期像那么回事，一旦被查出来，扣分是小事，直接清出场（降权、除名）才是常态。</p>
+<h2 id="技术-seo把店铺门面收拾利索"><a class="header" href="#技术-seo把店铺门面收拾利索">技术 SEO：把店铺门面收拾利索</a></h2>
+<p>技术 SEO 不生产内容，但它决定内容能不能被顺利看到。还拿开店打比方：技术 SEO 就是<strong>店铺的门面工程</strong>——门能不能推开（页面能不能被抓取）、招牌挂没挂正（标题、描述等元信息）、货架标签清不清楚（URL 结构、内部链接）、消防通道通不通（移动端能不能正常浏览）、开门要等多久（加载速度）。</p>
+<p>几件必做的基础功课：</p>
+<ul>
+<li><strong>让爬虫进得来、走得通。</strong> 检查 robots.txt 别误伤重要页面，提交 sitemap，死链及时清理，重要页面别藏在五六层深的链接后面。</li>
+<li><strong>页面加载要快。</strong> 速度既影响爬虫效率，也直接影响排名和用户去留——打开要五秒的页面，用户等不到排名算法出手就已经走了。</li>
+<li><strong>移动端必须可用。</strong> 如今主流搜索引擎都以移动版内容为主要索引依据，手机上排版错乱的站点等于自废武功。</li>
+<li><strong>用好结构化数据。</strong> Schema 标记相当于给编目员递上一份填好的图书卡：这是商品、价格多少、评分几何、作者是谁。它能帮你的页面在搜索结果里以富摘要的形式展示，也（这一点后面章节会展开）让 AI 引擎更容易读懂你。</li>
+</ul>
+<h2 id="百度与-google两套评分标准一个基本功"><a class="header" href="#百度与-google两套评分标准一个基本功">百度与 Google：两套评分标准，一个基本功</a></h2>
+<p>中文网站绕不开百度，出海业务绕不开 Google。两家的大方向一致——都奖励好内容、好体验、真实的外链背书——但评分细则的差异不小，几个公认的区别要心里有数：</p>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>维度</th><th>Google</th><th>百度</th></tr>
+</thead>
+<tbody>
+<tr><td>内容生态</td><td>相对开放，全网内容按质量竞争</td><td>明显向自家生态倾斜，百家号、百科、知道等常占据前排</td></tr>
+<tr><td>收录与索引</td><td>机制透明，Search Console 工具完善</td><td>收录节奏相对慢且不太透明，新站需要更长的“观察期“</td></tr>
+<tr><td>合规要求</td><td>无备案概念</td><td>ICP 备案直接影响抓取积极性和收录表现</td></tr>
+<tr><td>商业化</td><td>广告与自然结果分界较清晰</td><td>竞价推广在自然结果中占比高，头部位置常需付费</td></tr>
+<tr><td>技术偏好</td><td>重视 Core Web Vitals、结构化数据等标准化信号</td><td>曾力推 MIP、熊掌号等自有标准（部分已成历史），主动推送、快速收录等站长工具值得用足</td></tr>
+</tbody>
+</table>
+</div>
+<p>结论其实不复杂：<strong>如果你只做百度，就要接受“在百度的院子里按百度的规矩玩“；如果做 Google，标准化、透明化的技术优化回报更直接。</strong> 而好内容、真外链、快而稳的站点，在哪边都是硬通货。</p>
+<h2 id="核心资产思维排名是租的内容是买的"><a class="header" href="#核心资产思维排名是租的内容是买的">核心资产思维：排名是租的，内容是买的</a></h2>
+<p>这一节是本章最重要的观点，也是理解全书后面所有章节的一把钥匙。</p>
+<p>我见过太多团队把 SEO 做成了“排名维护“：天天盯某几个关键词排在第几，掉了就慌，涨了就松口气。这是把脑子搞反了。<strong>排名是租来的位置，内容才是买下的资产。</strong></p>
+<p>道理用租房就能讲明白：排名就像你在闹市区租的铺位——位置好、人流大，但产权是房东（搜索引擎）的。算法一调整，等于房东重新招租，你可能一夜之间从一楼黄金位被挪到三楼拐角。你为它付出的所有优化，只换来了“租约续期的可能性“，租约本身随时可变。</p>
+<p>而内容——一篇真正解决了问题的教程、一份行业里人人引用的数据、一个顺手的工具——是<strong>你自己名下的房产</strong>。它带来的好处是可累积的：外链会一条条加上去，老用户会一次次回来，其他文章引用它会带新流量，甚至（这是后面 GEO 章节的核心命题）AI 引擎在回答问题时也会反复引用它。算法再怎么变，对“真正有用的东西“的需求不变。</p>
+<p>所以正确的姿势是：<strong>用排名的波动当仪表盘，而不是当目标。</strong> 目标是持续买入资产——那些三年后还有人搜、还有人引用的内容。</p>
+<h2 id="案例一个电商工具站的-seo-打法"><a class="header" href="#案例一个电商工具站的-seo-打法">案例：一个电商工具站的 SEO 打法</a></h2>
+<p>说一个我熟悉的典型场景：服务抖音、快手电商从业者的数据分析工具站。这类站有个共同点——主产品是个登录后才有价值的工具，单看产品页，内容少得可怜，纯拼产品页关键词很难排上去。那流量从哪来？</p>
+<p>答案是<strong>帮助中心和运营内容</strong>。你去看“蝉妈妈运营圈“这类内容板块就明白了：一个数据工具站，长期更新的不是产品功能稿，而是“抖音直播间的 GPM 怎么算““怎么判断达人带货数据有没有水分”“千川投放素材多久换一次“这类运营实战内容。这些东西和产品本身几乎不直接相关，但它命中了目标用户——电商运营——每天在搜索框里真实输入的问题。</p>
+<p>这个打法为什么成立？拆开看，正好是本章前面几节的合订本：</p>
+<ul>
+<li><strong>关键词上</strong>，放弃“数据分析工具“这种又贵又虚的大词，去承接海量、具体的运营长尾问题。每个问题搜的人不多，但搜的人就是目标用户，加起来是一片稳定的基本盘。</li>
+<li><strong>内容上</strong>，每篇文章都在回答一个真实的操作问题，有步骤、有判断，信息增量来自一线实操经验——这正是 E-E-A-T 里那个“经验（Experience）“。</li>
+<li><strong>外链上</strong>，高质量的运营干货会被行业自媒体、培训材料、同行文章反复引用，外链自然长出来，不用买。</li>
+<li><strong>资产上</strong>，“GPM 怎么算“这种内容三五年后照样有人搜——它是买下的房产，不是租的铺位。工具会改版，产品会迭代，但这批内容资产一直在给它输送精准用户。</li>
+</ul>
+<p>顺带说一句，这类“被高频引用的帮助中心“，到了 AI 搜索时代会变成一个更有意思的故事：AI 引擎回答电商运营问题时，引用的往往也正是这批沉淀多年的实操内容。SEO 时代攒下的资产，在 GEO 时代还在收租——这个话题，我们在后面的章节会详细展开。</p>
+<h2 id="写在最后"><a class="header" href="#写在最后">写在最后</a></h2>
+<p>SEO 不是一个技巧清单，而是一套理解“搜索引擎如何评价价值“的思维框架：爬虫-索引-排名的流水线决定了<strong>你得先被看到</strong>；关键词、内容、外链、技术四件事决定了<strong>你值不值得被排到前面</strong>；而资产思维决定了<strong>你做的事能不能穿越算法的潮起潮落</strong>。</p>
+<p>带着这三层理解，下一章我们来看一个新的变量：当用户不再点开十条蓝色链接，而是直接读 AI 给出的答案时，这套框架里哪些还成立、哪些失效了。</p>
+<blockquote>
+<p><strong>本章小结</strong></p>
+<ul>
+<li>搜索引擎的工作是“采编—编目—检索“三步流水线：进不了索引的内容，做得再好也没有排名的资格。</li>
+<li>关键词研究研究的是人的问法；内容质量的试金石是“有没有别处没有的增量信息“；外链是别人给你的推荐信，只能挣来，买不来。</li>
+<li>百度与 Google 评分细则差异明显，但好内容、真外链、快而稳的站点是两边通用的硬通货。</li>
+<li>排名是租来的位置，内容是买下的资产——盯排名波动当仪表盘，持续投资三年后仍有人引用的内容。</li>
+<li>工具类站点的破局点往往是帮助中心和实操内容：用高频长尾问题承接精准用户，这套资产在 AI 搜索时代会继续增值。</li>
+</ul>
+</blockquote>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="第2章-lso本地搜索优化"><a class="header" href="#第2章-lso本地搜索优化">第2章 LSO：本地搜索优化</a></h1>
+<p>上一章我们聊了 SEO——在网页搜索里抢位置。但有一类生意，客户根本不在乎你的网站排第几：小区门口的理发店、三公里内的少儿英语班、写字楼底下的轻食店。这些生意的客户打开手机，搜的是“附近“，看的地图和点评。这类搜索有自己的一套玩法，叫 LSO（Local Search Optimization，本地搜索优化）。</p>
+<h2 id="什么是-lso数字商圈里的生意"><a class="header" href="#什么是-lso数字商圈里的生意">什么是 LSO：数字商圈里的生意</a></h2>
+<p>LSO 优化的对象不是网页排名，而是<strong>本地商户在各种本地生活入口里的可见度</strong>。在中国，这些入口主要是四类：</p>
+<ul>
+<li><strong>地图类</strong>：高德地图、百度地图、腾讯地图。用户搜“附近的牙科诊所“，出来的那串带距离、带导航按钮的结果，就是本地搜索最原教旨的形态。</li>
+<li><strong>点评类</strong>：大众点评。用户不一定有明确目的地，而是来“逛“的——看看哪家评分高、评论里怎么说。</li>
+<li><strong>交易类</strong>：美团。从看到下单一步到位，商户页就是收银台。</li>
+<li><strong>内容类</strong>：抖音本地生活。用户是被视频“种草“之后，顺手搜一下店名或者“附近同款“。</li>
+</ul>
+<p>这四类入口的共同点是：<strong>用户的意图里带着地理位置</strong>。这跟传统 SEO 最大的不同在于——你优化半天，只对半径几公里内的人有意义。听起来是限制，其实是好事：你的竞争对手也从全国几百万个网页，缩成了方圆几公里里的同行。</p>
+<h2 id="本地排名的三要素相关性距离知名度"><a class="header" href="#本地排名的三要素相关性距离知名度">本地排名的三要素：相关性、距离、知名度</a></h2>
+<p>地图和点评平台怎么决定把谁排在前面？抛开各家算法的细节差异，底层逻辑就三条：<strong>相关性、距离、知名度</strong>。这套框架最早是 Google 对本地搜索的官方表述，国内平台的排序逻辑与之相通。</p>
+<p>要讲清楚这三条，我用个比喻：<strong>LSO 就是在数字商圈里挂对招牌</strong>。</p>
+<p>想象你在一条步行街上开店。客人怎么找到你？第一，你招牌上写的是“修鞋“还是“修手机“——客人要什么，你的招牌得说清楚你是干什么的，这是<strong>相关性</strong>。第二，你的店开在街口还是巷子深处——离客人越近，被光顾的概率越大，这是<strong>距离</strong>。第三，街坊四邻有没有听说过你、提起你时是夸是骂，这是<strong>知名度</strong>。</p>
+<p>实体店的三件事，在线上一件不少，而且全是可优化的。</p>
+<h3 id="相关性招牌上写清楚你卖什么"><a class="header" href="#相关性招牌上写清楚你卖什么">相关性：招牌上写清楚你卖什么</a></h3>
+<p>线上商户的“招牌“，就是你的商户名称、品类选择、经营项目、简介文案。一家琴行如果在平台上把自己归到“兴趣培训“这个大而泛的品类，而不是勾选“乐器培训—钢琴培训“，那搜“钢琴课“的用户就很可能看不到它。</p>
+<p>相关性优化最常犯的错误是“贪大“。有的商户什么都做，恨不得把品类全勾上。这在平台眼里反而是信号混乱——就像一个摊位上既挂“活鱼现杀“又挂“手机贴膜“，客人第一反应是不专业。**宁可窄而准，不要宽而糊。**把主营品类选准，把关键词（“少儿”“钢琴”“考级”“成人零基础”）自然地写进商户名称后缀和简介里，相关性这一分就拿到了。</p>
+<h3 id="距离你搬不走店但可以扩大被发现半径"><a class="header" href="#距离你搬不走店但可以扩大被发现半径">距离：你搬不走店，但可以扩大“被发现半径“</a></h3>
+<p>距离是三要素里最“硬“的一条——店在哪就在哪，搜的人在哪就在哪，这条你改不了。但有两点可以做：</p>
+<p>第一，<strong>地址定位要精确到门</strong>。很多商户认领店铺时随手一点，地图上的图钉落在马路对面，甚至飘到隔壁小区。用户按导航走到一半找不到店，转头就去了别家——这是白白送走的生意。认领门店后，第一件事就是核对图钉位置和导航终点。</p>
+<p>第二，如果你有多家门店，<strong>每一家都要单独做商户页</strong>，共享同一套品牌信息，但各自积累各自的评价和排名。连锁品牌最怕“总部一个页面打天下“，那样每家分店在各自商圈里都排不上号。</p>
+<h3 id="知名度线上知名度是可以经营的"><a class="header" href="#知名度线上知名度是可以经营的">知名度：线上知名度是可以经营的</a></h3>
+<p>实体店靠年头熬名声，线上的知名度是可以主动经营的。平台判断你“知名不知名“，主要看：评价的数量和质量、用户的互动（收藏、咨询、导航请求）、以及外部网络上有没有你的信息痕迹。</p>
+<p>注意一个常被误解的点：<strong>知名度不等于好评率，而是一个综合信号</strong>。一家开了三年、有两百条真实评价、偶尔有条差评且商家认真回复的店，通常比一家刚注册、十条清一色五星的店排得更靠前。前者像巷子里的老馆子，后者像刚开张就雇人排队的网红店——平台和用户一样，见多了。</p>
+<h2 id="lso-三件套nap评价运营本地内容"><a class="header" href="#lso-三件套nap评价运营本地内容">LSO 三件套：NAP、评价运营、本地内容</a></h2>
+<p>三要素告诉你“排名看什么“，这一节讲“具体做什么“。一线实操里，LSO 的日常工作就三件事。</p>
+<h3 id="nap-一致性全网一个户口本"><a class="header" href="#nap-一致性全网一个户口本">NAP 一致性：全网一个“户口本“</a></h3>
+<p>NAP 是 Name（名称）、Address（地址）、Phone（电话）的缩写。所谓 NAP 一致性，就是你的店名、地址、电话，在高德、百度地图、大众点评、美团、抖音、你自己的官网和公众号上，<strong>一字不差地一致</strong>。</p>
+<p>这事为什么重要？打个比方：平台就像一个片区的派出所，它手里有各个渠道汇总来的商户信息。如果你在高德上叫“悦音琴行（望京店）“，在美团上叫“悦音艺术培训”，在公众号里电话还是三年前的旧号码——平台就像碰到一个户口本、身份证、驾驶证信息对不上的人，第一反应不是帮你核实，而是<strong>降低对你所有信息的信任度</strong>。信任度一降，排名就降，这是隐形扣分，商户自己往往毫无察觉。</p>
+<p>实操建议：建一张表，把所有平台的商户信息列一遍，定下唯一的标准写法（包括括号用全角还是半角、“室“还是“号”），然后逐平台改齐。新店开业、搬迁、换电话时，第一件事不是发朋友圈，是把这张表里的每个平台都更新掉。</p>
+<h3 id="评价运营别把口碑当成玄学"><a class="header" href="#评价运营别把口碑当成玄学">评价运营：别把口碑当成“玄学“</a></h3>
+<p>评价是本地商户的生命线，但多数老板对评价的态度还停留在“被动作战“：来一条看一条，差评来了生闷气。正确的姿势是把评价当成一项运营工作：</p>
+<ul>
+<li><strong>引导而非收买</strong>。合规的做法是在服务交付的满意时刻，自然提醒客户“方便的话帮我们写个评价“。用钱买好评、刷好评，平台的识别能力比多数商户想象得强，一旦被判刷评，处罚比没有评价严重得多。</li>
+<li><strong>回复比评分重要</strong>。尤其是差评。一条认真、具体、不辩解不甩锅的差评回复，是做给后面所有潜在客户看的——就像餐馆老板当着一屋子客人的面处理投诉，处理得体，围观的客人反而更放心。</li>
+<li><strong>差评要当成产品反馈</strong>。三条差评都提到“约课难“，那不是公关问题，是排课系统的问题。</li>
+</ul>
+<h3 id="本地内容让你的店长在这片社区里"><a class="header" href="#本地内容让你的店长在这片社区里">本地内容：让你的店“长“在这片社区里</a></h3>
+<p>第三类工作是在本地生活入口里持续产出内容：美团和点评上的商户动态、抖音上的门店短视频、公众号里的社区活动。内容的作用有两层：一是向平台证明这家店是“活的“（活跃商户会获得排序倾斜），二是抢占那些带地域词的长尾搜索，比如“望京 少儿钢琴““周末亲子 手工坊”。</p>
+<p>比喻来说，这就像摊主不满足于只守摊，还天天在小区业主群里发“今天到了新鲜荠菜““周末免费教孩子认秤”。发的不是广告，是存在感。本地内容的关键是<strong>带上具体的地名、社区名、学校名</strong>——这些内容会成为平台和搜索引擎理解你“服务哪个片区“的素材。</p>
+<h2 id="典型场景教育机构招生为什么是典型的-lso"><a class="header" href="#典型场景教育机构招生为什么是典型的-lso">典型场景：教育机构招生为什么是典型的 LSO</a></h2>
+<p>全书讲了很多行业，教育培训机构可能是最吃 LSO 红利的一类。原因很直接：</p>
+<p>家长给孩子选培训班，决策链条几乎注定落在本地搜索上——离家或离学校超过一定距离，课再好也坚持不下来。所以家长的动作高度一致：打开地图搜“附近 钢琴“，打开大众点评比评分和评价，在美团上买一节试听课。整条链路没有一个环节经过传统网页搜索。</p>
+<p>而且教培行业还有几个特性放大了 LSO 的价值：<strong>决策周期长</strong>（家长会反复看评价）、<strong>客单价高</strong>（一次报名几千上万，值得投入优化）、<strong>评价权重极高</strong>（别的家长的真实反馈是转化率的核心）。</p>
+<p>这个场景在第 9 章会有更完整的展开——那里会讲教育机构如何把 LSO 的本地流量，和 AI 引擎时代的 GEO 获客接成一条完整的招生漏斗。本章先把本地搜索这一段打扎实。</p>
+<h2 id="案例实战一家少儿美术机构的完整优化路径"><a class="header" href="#案例实战一家少儿美术机构的完整优化路径">案例实战：一家少儿美术机构的完整优化路径</a></h2>
+<p>下面用一个典型案例把前面所有动作串一遍。某二线城市的一家少儿美术培训机构，开在住宅区集中的街区，教学口碑不错，但招生一直靠老带新，线上几乎是空白。我们按步骤来看它该怎么做。</p>
+<p><strong>第一步：盘点并认领全部数字门店。</strong>
+先在所有入口搜自己的店名。结果发现：高德上有一个位置错误的旧地址（半年前搬过家）；百度地图上的门店图钉落在 200 米外；大众点评的商户页是用户自发创建的，名称写成了简称，电话是前台的私人手机，早已停机；美团和抖音上干脆没有商户。</p>
+<p>这一步没有技术含量，但它是地基：**把每个平台的商户页认领下来，改正名称、地址、电话，把图钉校准到店门口。**光这一步做完，“按导航找不到店“这个隐形流失就堵上了。</p>
+<p><strong>第二步：统一 NAP，修相关性。</strong>
+定下标准商户名“某某少儿美术（XX 街区店）“，所有平台逐字统一。品类从笼统的“兴趣培训“改选为“美术培训”，经营项目写清“少儿创意美术、素描、考级辅导、成人油画“，简介里自然带上“XX 小区旁““XX 小学对面“这类地域锚点。</p>
+<p><strong>第三步：补齐“货架“。</strong>
+在美团上线体验课产品：一节 90 分钟的体验课，定价放到低门槛区间，配齐教室环境照、学生作品照、老师的资质介绍。点评上的商户相册同样补全——本地商户页和电商详情页是一个道理，图片和介绍就是货架，货架空了，排名再高也转化不了。</p>
+<p><strong>第四步：启动评价运营。</strong>
+把“邀请评价“嵌进服务流程：每期课程结束的成果展示课上，老师当面邀请满意的家长在点评或美团上写评价。前三个月积累了几十条真实评价，其中有两条中评（提到“停车位不好找“），商家逐条认真回复，并在简介里补上了停车指引。注意这个细节：<strong>差评没有消灭，但被转化成了服务改进和信息完善。</strong></p>
+<p><strong>第五步：本地内容持续喂。</strong>
+抖音号每周发两三条：学生作画过程的延时视频、老师点评作品、教室日常，定位挂在门店，文案带街区名。公众号同步发社区活动（“XX 社区公益美术课”）。三个月后，搜“XX 街区 少儿美术“，这家机构在地图和点评上的位置稳定进入了第一屏，体验课的线上订单成了稳定的新客来源。</p>
+<p>这五步里没有一步是“黑科技“，全是体力活和细活。这也是 LSO 的真实面貌：**门槛不在技巧，在执行的完整度。**大多数同行只做了其中一两步，你做完五步，就在这个商圈里赢了大半。</p>
+<h2 id="lsoseo-与-geo同一盘生意的三层门面"><a class="header" href="#lsoseo-与-geo同一盘生意的三层门面">LSO、SEO 与 GEO：同一盘生意的三层门面</a></h2>
+<p>最后把 LSO 放回全书的坐标系里。如果说 SEO 是你在整个互联网这条大街上的门脸，LSO 就是你在这片数字商圈里的招牌——服务的是“带着地点来“的即时需求。而后面章节要讲的 GEO，面对的则是“带着问题去问 AI“的新一代用户。</p>
+<p>三者不是替代关系，而是层层叠加。一个值得记住的判断是：**AI 引擎在回答本地类问题时，大量依赖的正是点评、地图、商户信息这些 LSO 耕耘的阵地。**你在本地生活平台里的信息完整度、评价资产、内容痕迹，都会成为 AI 推荐你时的素材。把 LSO 做扎实的商户，等于提前给 GEO 存了本钱——这笔账怎么算，我们在第 9 章和第 11 章还会细聊。</p>
+<blockquote>
+<p><strong>本章小结</strong></p>
+<ul>
+<li>LSO 优化的是地图、点评、美团、抖音本地生活这些“带地理位置的搜索入口“，竞争范围是商圈而不是全网。</li>
+<li>本地排名三要素：相关性（招牌写对品类）、距离（图钉校准、分店各自为战）、知名度（可经营的综合信号）。</li>
+<li>日常三件套：NAP 全网一字不差、评价主动运营（回复比评分重要）、本地内容带地名持续产出。</li>
+<li>教育机构招生是典型 LSO 场景：决策链路全程落在地图和点评上，与第 9 章的教培 GEO 策略首尾相接。</li>
+<li>LSO 没有黑科技，五步完整执行就能赢过商圈里的大多数同行；而且本地信息资产会成为 AI 时代的 GEO 本钱。</li>
+</ul>
+</blockquote>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="第3章-vso视频与语音搜索优化"><a class="header" href="#第3章-vso视频与语音搜索优化">第3章 VSO：视频与语音搜索优化</a></h1>
+<p>先讲一个我观察了很多年的现象：越来越多的人，遇到问题后的第一反应不是打开搜索引擎，而是打开抖音或者小红书，直接在搜索框里敲问题。装修踩坑了，搜“美缝发黄怎么办“；带孩子发烧，搜“美林和泰诺林能交替吃吗“；投千川跑不动，搜“千川消耗不动是什么原因“。</p>
+<p>这不是感觉，是平台自己都在反复讲的方向：搜索流量的占比在持续上升，搜索场景承接的转化越来越重。各家公布的口径不完全一样，我不在这里给你编一个精确到小数点的数字——你只需要记住一个判断：<strong>视频平台的搜索框，已经从“找乐子的入口“变成了“找答案的入口“。</strong></p>
+<p>而“找答案“这件事，恰恰是整本书的主线。用户今天在这些框里搜，明天就会对着豆包、DeepSeek 问同样的问题——而且 AI 引擎会回过头来到这些视频平台里找答案引用。这一章讲的 VSO（Video &amp; Voice Search Optimization，视频与语音搜索优化），表面上是两个平台内的话题，实际上是 GEO 的前传。读完你会明白为什么。</p>
+<h2 id="一先搞懂双引擎推荐是逛街被搭讪搜索是主动问导购"><a class="header" href="#一先搞懂双引擎推荐是逛街被搭讪搜索是主动问导购">一、先搞懂双引擎：推荐是逛街被搭讪，搜索是主动问导购</a></h2>
+<p>视频平台同时装着两台发动机：推荐引擎和搜索引擎。大部分人做内容只伺候推荐这一台，因为流量大头在推荐。但这两台发动机的脾气完全不同。</p>
+<p>我给你们打一个用了很久的比方：<strong>推荐流量是你在商场逛街，被柜姐搭讪；搜索流量是你走进店里，主动抓住导购问“有没有 42 码的“。</strong></p>
+<p>被搭讪的时候，你本来没打算买鞋。柜姐把你拦下来，靠的是话术抓人、气氛到位——所以推荐算法喜欢完播率、喜欢前三秒钩子、喜欢情绪浓度。它不在乎你讲了什么，在乎你留住了谁。</p>
+<p>主动问导购就不一样了。你带着明确的问题来，导购能不能答上、答得准不准，直接决定你这单成不成。搜索引擎干的就是导购的活：它不在乎你的视频多热闹，它在乎你的视频和那个问题对不对得上号。</p>
+<p>这个区别决定了 VSO 的全部打法：</p>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th></th><th>推荐引擎（逛街被搭讪）</th><th>搜索引擎（主动问导购）</th></tr>
+</thead>
+<tbody>
+<tr><td>用户状态</td><td>闲逛，无明确意图</td><td>带着问题来，意图明确</td></tr>
+<tr><td>内容靠什么赢</td><td>前三秒、完播率、情绪</td><td>关键词命中、答案完整度</td></tr>
+<tr><td>流量特征</td><td>大、泛、转瞬即逝</td><td>小、准、长尾、持续</td></tr>
+<tr><td>优化核心</td><td>让人停下来</td><td>让机器“听懂“你在答什么题</td></tr>
+</tbody>
+</table>
+</div>
+<p>做过电商的人一听就懂：推荐是逛出来的流量，搜索是带着钱包来的流量。后者转化率天然高一个量级。而现在越来越多的账号发现，自己涨粉靠推荐，但<strong>成交和询盘的大头来自搜索</strong>——这就是搜索占比上升在一线的体感。</p>
+<p>更关键的是，导购这个角色正在换人的趋势：以前导购是平台自己的搜索，现在豆包、DeepSeek 这些 AI 也来当导购了，而且它们进货的地方，就包括抖音。这件事我们放在第三节讲。</p>
+<h2 id="二视频搜索优化把答案翻译给机器听"><a class="header" href="#二视频搜索优化把答案翻译给机器听">二、视频搜索优化：把答案“翻译“给机器听</a></h2>
+<p>视频平台搜索优化的核心矛盾一句话：<strong>视频是给人看的，但搜索引擎只能读字。</strong> 画面拍得再好，机器读不懂；机器能读的，是标题、字幕、合集名、简介、评论区这些文字层。VSO 做的就是把你的答案在这些文字层里“翻译“一遍。</p>
+<h3 id="1-标题菜市场的招牌不是电梯里的海报"><a class="header" href="#1-标题菜市场的招牌不是电梯里的海报">1. 标题：菜市场的招牌，不是电梯里的海报</a></h3>
+<p>推荐流里的标题像电梯广告，要的是三秒抓眼球，“震惊”“千万别“这套玩得转。但搜索场景里，标题是菜市场的招牌——买菜的人抬头找的是“活鱼”“土鸡蛋”，不是“你绝对想不到的新鲜“。</p>
+<p>所以搜索向的标题要<strong>把用户会敲进搜索框的词，原样写进标题</strong>。用户搜“千川跑不动怎么办“，你的标题最好是“千川跑不动？先查这三个开关“，症状词一字不落。别嫌土。菜市场招牌写得最直白的那家，生意最好，因为找他的人一眼就对上了。</p>
+<p>实操上我会先列用户真实会搜的句子（下拉联想词、评论区的高频问法、5118 之类工具拉的长尾），然后让标题去贴这些句子，而不是反过来让标题自己发挥。</p>
+<h3 id="2-字幕跟班主任请假口头说没用得交假条"><a class="header" href="#2-字幕跟班主任请假口头说没用得交假条">2. 字幕：跟班主任请假，口头说没用，得交假条</a></h3>
+<p>很多创作者觉得字幕是给听障用户和静音党看的，顺手做做。错了。字幕是你交给平台的“书面材料“——<strong>你跟班主任请假，当面说得再恳切都不算数，假条交上去才算数。</strong> 平台的搜索和审核系统读你的视频，主要靠 ASR 转写和字幕文本。你口播里念到的关键词，如果不落在字幕里，在机器眼里就跟没说过差不多。</p>
+<p>所以搜索向的视频，拍摄前写脚本时就要把目标关键词“安排进台词“，让人在镜头前自然念出来：“千川消耗不动，一般是三个原因：计划学习期没过、出价低于大盘、素材衰退。“这整句话进了字幕，机器就把“千川消耗不动“这个长尾词和你的视频锁死了。</p>
+<p>顺手说一句：这个习惯到了 GEO 时代会加倍值钱，因为 AI 引擎引视频，读的还是这些文字层。这点第四节展开。</p>
+<h3 id="3-合集小区公告栏按楼栋分栏才有人找得到"><a class="header" href="#3-合集小区公告栏按楼栋分栏才有人找得到">3. 合集：小区公告栏，按楼栋分栏才有人找得到</a></h3>
+<p>合集（B 站叫合集/列表，抖音叫合集，小红书叫专辑）是被严重低估的搜索资产。它的作用像<strong>小区物业的公告栏</strong>：零散的通知贴得满墙都是没人看，物业按“1 号楼““2 号楼”“商铺“分栏贴，住户一眼就能找到自己那栏。</p>
+<p>合集名本身是一个可被搜索命中的关键词位，合集聚合的播放时长和完播又会反哺单条视频的权重。做千川内容，别散装发，做一个“千川投放避坑合集“，把“跑不动““成本高”“不起量“各做一集——用户搜任何一个症状，都可能先撞进你的合集，然后连看好几集。这在搜索场景里叫“主题的完整性”，平台喜欢，后来的 AI 引擎也喜欢。</p>
+<h3 id="4-评论区自己给自己留的第一条追问"><a class="header" href="#4-评论区自己给自己留的第一条追问">4. 评论区：自己给自己留的第一条追问</a></h3>
+<p>搜索排序或多或少会参考互动，评论区还是新的关键词位。养成习惯：视频发出后，自己在评论区置顶一条“补充“——把视频里没讲透的点用文字写全，里面自然地带上同义问法（“有人问巨量千川一直处在学习期怎么办，其实是同一个问题”）。这条置顶评论既喂了搜索，又喂了以后可能来爬的 AI。</p>
+<h2 id="三vso-是-geo-的前传豆包在大量引用抖音视频"><a class="header" href="#三vso-是-geo-的前传豆包在大量引用抖音视频">三、VSO 是 GEO 的前传：豆包在大量引用抖音视频</a></h2>
+<p>现在讲这本书真正关心的部分。</p>
+<p>2026 年 8 月，我们做了一次六家国产 AI 引擎 × 12 道真实用户问题的对照实测（完整过程和数据见附录的实测报告，第 5 章也会细讲方法）。其中一个发现直接改写了我们对内容渠道优先级的判断：<strong>豆包在 12 道题里，有 9 道题的回答引用了抖音视频作为来源</strong>——除此之外还有 7 道题引了今日头条。字节系内容在豆包的引用列表里几乎是霸榜的存在。</p>
+<p>这意味着什么？意味着你在抖音做搜索优化，做的其实是一鱼两吃：同一套标题关键词、字幕、合集，既喂了抖音自己的搜索引擎，又喂了豆包。豆包不会“看“视频，它引用视频时读的就是标题、字幕、简介这些文字层——你在 VSO 里练的所有基本功，原封不动就是 GEO 的基本功。这就是我把它叫作“GEO 前传“的原因。</p>
+<p>但实测也给了一个重要的反面提醒，不说清楚就是误导：<strong>症状型的口语问题，豆包倾向于纯模型作答、不联网引用。</strong> 我们那道“千川跑不动“的题，单次测试豆包没给引用；后来补做的多次采样里，这道题 4 次提问 0 次引用，相当稳定。而同一份实测里，对比类问题（“几个客服机器人怎么选”）六家引擎几乎全部引用。</p>
+<p>把两条结论放在一起，判断就出来了：</p>
+<ul>
+<li><strong>视频形态主攻的题</strong>：对比类、盘点类、“怎么选“类——这类题 AI 几乎必然找信源，视频有真实被引的机会；</li>
+<li><strong>症状型 how-to 的题</strong>：别把宝全押在视频上。AI 可能直接用参数里的知识答，不引任何来源。这类题要图文、官方文档形态兜底——我们实测里，千川类症状题被各家引用最多的是抖音电商学习中心这样的官方文档站，还有飞书云文档、垂直博客。</li>
+</ul>
+<p>换句话说：视频是敲门砖，图文是保险绳。两手都要有。</p>
+<h2 id="四语音搜索优化把内容写给说话的人"><a class="header" href="#四语音搜索优化把内容写给说话的人">四、语音搜索优化：把内容写给“说话的人“</a></h2>
+<p>另一半 VSO 是语音。语音搜索的量没有视频那么显性，但它在悄悄改变 query 的形态，而这个形态恰好是 AI 时代 query 的预演。</p>
+<p>打字搜索像<strong>给同桌传纸条</strong>：能省则省，“千川 跑不动“四个字扔过去就完事。语音搜索像<strong>举手当堂问老师</strong>：你会把句子说全——“老师，我这个千川计划昨天还好好的，今天突然跑不动了，是哪里出问题了？”——带主语、带场景、带条件、带情绪。</p>
+<p>这两种 query 的差别就是优化对象：</p>
+<ul>
+<li><strong>口语化长尾词是你的主战场</strong>。打字没人敲“千川昨天还好好的今天突然消耗不动怎么办“，但说话的人张嘴就来。布局关键词时，别只盯着工具里的短词，去评论区、客服记录、售后群里捞用户的原话，那些带着“我家孩子““我们店”“昨天突然“的长句子，才是语音搜索的真实 query。</li>
+<li><strong>答案要前置成“一句话能念出来“的形态</strong>。语音助手（和小度、小爱同学，以及后来的 AI 助手）通常只念一个答案。你的内容里如果有一句完整的、可以直接朗读的回答——“千川突然跑不动，八成是学习期没过或素材衰退，先看计划诊断里的提示”——这句话就是被念出来的那句。这和第 4 章讲 AEO 时的“答案胶囊“是同一个手法，这里先记住：<strong>写给耳朵的答案必须是一口气能读完的完整句。</strong></li>
+<li><strong>问答式的结构天然适配语音</strong>。标题用问句、正文第一句给答案、后面展开——这个结构对语音助手、对 AI 引擎、对真人口播全都友好。一套结构吃三个场景。</li>
+</ul>
+<p>语音搜索今天单独看，盘子不大；但它的 query 形态——完整句子、口语、带场景——正是所有 AI 对话的输入形态。你现在为语音助手练的“回答完整问题“的能力，就是为豆包和 DeepSeek 练的。</p>
+<h2 id="五案例一条千川教学视频的双吃路径"><a class="header" href="#五案例一条千川教学视频的双吃路径">五、案例：一条千川教学视频的双吃路径</a></h2>
+<p>把整章串起来，走一遍真实打法。假设我们做的是千川投流教学，选题“千川消耗不动怎么办“。</p>
+<p><strong>第一步，选词。</strong> 下拉联想 + 评论区捞原话，确定主攻词：“千川跑不动”（症状口语词）、“千川消耗不动是什么原因”（语音式完整问句）。</p>
+<p><strong>第二步，写脚本，把词念进字幕。</strong> 视频开头 15 秒直接把答案说完：“千川消耗不动，九成是三个原因：学习期没过、出价偏低、素材衰退。一个一个查。”——这句同时是抖音搜索的答案胶囊、豆包可引用的文本、语音助手可直接朗读的回答。然后分三段展开，每段口播都带一遍症状词，字幕完整上屏。</p>
+<p><strong>第三步，标题和合集。</strong> 标题用症状原句：“千川跑不动？先查这三个开关”。收录进“千川投放避坑合集“，合集里已有“不起量““成本高“等几集，主题完整性拉满。</p>
+<p><strong>第四步，评论区兜底。</strong> 置顶评论用文字把三个原因写全，带上同义问法：“也有人问千川一直学习期怎么办，和跑不动是同源的，看第三分钟。”</p>
+<p><strong>第五步，配一条图文。</strong> 同样内容改写成一篇问答式图文，发在头条号和自己的博客/文档站上。这一步是冲着实测结论去的：症状型问题豆包可能纯模型作答、不引视频，但会引抖音电商学习中心、飞书文档这类图文信源。视频拿不下的，图文去补位。</p>
+<p>这条路径的效果怎么评估？抖音侧，看搜索词来源的播放占比和私信询盘；AI 侧，定期拿“千川跑不动“这类题去问豆包、DeepSeek，看自己的内容形态（视频或图文）有没有出现在引用里——我们的实测证明豆包引抖音视频是高频行为（9/12 题），所以这条路是通的，只是单次测试有随机性，要多问几轮看趋势（具体的监测方法和频次控制，第 6 章讲）。</p>
+<p>注意一个诚实的边界：实测是单账号单次采样，AI 回答本身有随机性，“9/12“要当成方向性信号而不是保证书。你照着做，提高的是被引的概率，不是买的保险。</p>
+<h2 id="小结"><a class="header" href="#小结">小结</a></h2>
+<blockquote>
+<p><strong>本章小结</strong></p>
+<ul>
+<li>视频平台是双引擎：推荐是“逛街被搭讪“，搜索是“主动问导购“。搜索流量占比持续上升，且意图更准、转化更高。</li>
+<li>视频搜索优化的本质是把答案翻译给机器：标题贴用户原句（菜市场招牌）、字幕是交给平台的书面假条、合集是分好栏的公告栏、评论区置顶补充关键词。</li>
+<li>VSO 是 GEO 的前传：我们的实测显示，豆包 12 道题中 9 道引用了抖音视频；但症状型口语问题豆包倾向纯模型作答（千川题多次采样 0 引用），需要图文形态兜底。</li>
+<li>语音搜索的 query 是完整口语句，优化重点是口语化长尾词 + 一口气能念完的答案胶囊——这套能力和 AI 对话完全同构。</li>
+<li>实战路径：视频主攻对比/盘点类必被引的题，图文补位症状类题，一鱼两吃。</li>
+</ul>
+</blockquote>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="第4章-aeo答案引擎优化"><a class="header" href="#第4章-aeo答案引擎优化">第4章 AEO：答案引擎优化</a></h1>
+<p>上一章我们讲了 LSO 和 VSO——搜索场景从“打字“扩展到“位置“和“语音“。但不管是语音助手还是本地生活，它们背后藏着同一个趋势：用户越来越不想从十条蓝色链接里自己翻答案了，他们想要<strong>一个直接的答案</strong>。</p>
+<p>这一章讲的 AEO（Answer Engine Optimization，答案引擎优化），就是围绕这个“直接答案“展开的优化技术。它是 SEO 家族里离 GEO 最近的一个分支，甚至可以说：GEO 的地基，一半是 AEO 打的。不懂 AEO，后面第 5 章开始的 GEO 实操你会做得事倍功半。</p>
+<h2 id="从十条蓝色链接到一个直接答案"><a class="header" href="#从十条蓝色链接到一个直接答案">从“十条蓝色链接“到“一个直接答案“</a></h2>
+<p>传统搜索引擎的结果页，本质是一个<strong>目录</strong>：给你十条链接，你自己点进去找。这就像去菜市场买菜，摊主指着身后一堆菜说“都在那儿了，自己挑“。</p>
+<p>答案引擎不一样。它把菜洗好、切好、直接装盒递给你。</p>
+<p>这个转变在各家产品上都有明确的落点：</p>
+<ul>
+<li><strong>Google Featured Snippet（精选摘要）</strong>：2014 年前后推出，在搜索结果最顶部用一个框直接展示从某个网页里抽取的答案段落，下面才轮到正常的十条链接。谷歌官方叫它“featured snippet“，行业给它起了个更响亮的名字——<strong>位置零（position zero）</strong>，因为它排在第一名之上。</li>
+<li><strong>百度精选摘要</strong>：百度在移动端搜索结果顶部直接给出答案卡片，内容抽取自百科、知道或第三方网页，并标注来源。对中文搜索用户来说，这是最熟悉的“答案先于链接“形态。</li>
+<li><strong>知乎的想法卡片/回答卡片</strong>：在知乎站内搜索一个问题，顶部会把高赞回答的核心段落抽成卡片直接展示，用户往往看完卡片就走，连问题页都不点进去。</li>
+</ul>
+<p>注意这三者的共性：<strong>答案来自某个真实网页，引擎只是“搬运工“</strong>。谁能被搬运，谁就赢。这就是 AEO 要解决的问题——怎么让你写的那一段，成为被引擎抽走、直接展示的那一段。</p>
+<h2 id="位置零从上架到被店员直接递到顾客手里"><a class="header" href="#位置零从上架到被店员直接递到顾客手里">位置零：从“上架“到“被店员直接递到顾客手里“</a></h2>
+<p>我给位置零找过一个比喻，讲课时屡试不爽。</p>
+<p>传统排名第一，相当于你的商品<strong>摆上了超市货架最显眼的第三层</strong>——顾客看得见，但还得自己伸手拿、翻过来看配料表、和旁边竞品比一比。</p>
+<p>位置零，相当于顾客刚问“哪个酱油适合凉拌“，<strong>超市导购直接拿了一瓶塞到顾客手里</strong>：“就这个。“顾客大概率不会再去货架上翻第二瓶了。</p>
+<p>这个比喻里藏着 AEO 的两个残酷真相：</p>
+<ol>
+<li><strong>赢家通吃</strong>。货架有十个位置，导购手里只有一瓶。位置零没有“并列第一“，要么是你，要么是别人。</li>
+<li><strong>信任被转移了</strong>。顾客接过那瓶酱油时，信任的其实不是品牌，是导购。引擎把它的信用借给了被选中的网页——这正是后来 GEO 时代“AI 引用即背书“的雏形（详见第 6 章）。</li>
+</ol>
+<p>位置零值钱就值钱在这儿：它不只是流量入口，更是一次<strong>权威认证</strong>。被精选摘要抽中的页面，在用户心智里自动升级为“这个问题的标准答案“。</p>
+<h2 id="aeo-的三板斧结构化问答faqpagespeakable"><a class="header" href="#aeo-的三板斧结构化问答faqpagespeakable">AEO 的三板斧：结构化问答、FAQPage、Speakable</a></h2>
+<p>AEO 不是玄学，它的核心技术就三样，全是“把内容加工成机器好嚼的形状“。</p>
+<h3 id="第一板斧结构化问答"><a class="header" href="#第一板斧结构化问答">第一板斧：结构化问答</a></h3>
+<p>核心动作：把内容组织成<strong>一问一答</strong>的形式，问题直接作标题，答案第一段就给出完整结论，后面再展开。</p>
+<p>关键在“结论前置“。机器抽答案的方式很笨：它找标题里的问题，然后去标题下面抓第一段。第一段绕弯子，它就去找别家了。这就像<strong>外卖骑手取餐</strong>——他到店只看取餐柜上贴的号码和尾号，对得上就拿走，绝不会坐下来听你介绍这道菜的烹饪理念。你的答案第一段，就是那张贴在外卖袋上的取餐单：号码（问题）对得上，内容（答案）一眼能确认，骑手拿了就走。</p>
+<p>我们在研究中给学员的内容规范里，第一条就是“结论前置：40 到 60 字直接回答问题，再展开论证“。这个 40-60 字的经验值，在 GEO 实测里同样成立——AI 引擎引用一段内容时，偏好那种截下来就能独立成句、不用上下文的写法。</p>
+<h3 id="第二板斧faqpage-schema"><a class="header" href="#第二板斧faqpage-schema">第二板斧：FAQPage schema</a></h3>
+<p>如果说结构化问答是“把菜切好“，FAQPage schema 就是<strong>给每个餐盒贴上面单</strong>。</p>
+<p>它是 schema.org 定义的一种结构化数据标记：你在网页的 HTML 里用 JSON-LD 明确告诉机器——“这是一个 FAQ 页面，这是问题一，这是问题一的标准答案；这是问题二……”。机器不用猜，直接读取。</p>
+<p>打个比方：你在小区寄快递，手写地址的包裹分拣员要逐字辨认，贴好打印面单的包裹扫码就过。FAQPage 就是那张打印面单。内容还是那个内容，但机器处理你的成本降了一个数量级——<strong>搜索引擎和 AI 引擎都是懒的，谁让它省事它选谁</strong>。</p>
+<p>需要泼一盆冷水：Google 在 2023 年大幅缩减了 FAQ 富媒体摘要的展示范围（基本只保留政府、健康类网站），FAQPage 带来的“样式红利“在传统搜索里已经退潮。但它的底层价值没消失——<strong>结构化标记的本质是降低机器理解成本</strong>，这个逻辑在 AI 引擎时代反而更重要了。我们的实测也印证这一点：豆包、元宝、DeepSeek 三家引擎都直接引用过品牌方自建的官方问答内容，比如晓多的官方博客同时出现在三家引用列表里。自建结构化问答库会被引用，这不是推断，是测出来的。</p>
+<h3 id="第三板斧speakable"><a class="header" href="#第三板斧speakable">第三板斧：Speakable</a></h3>
+<p>Speakable 是 schema.org 里一个更细的标记：你可以在页面里圈定“哪几段适合被语音读出来“，主要服务于智能音箱、语音助手这类“用嘴回答“的场景。</p>
+<p>这就像<strong>班主任给课代表划重点</strong>：早读课就念这几段，别念全文。机器朗读答案时不需要你洋洋洒洒的三千字，它只要那两三句。</p>
+<p>坦率说，Speakable 在国内落地一直不温不火，主流场景集中在新闻类内容。但它代表的思路值得记住：<strong>同一份内容，要为不同的“消费方式“标注不同的出口</strong>。图文给屏幕，摘要给卡片，短句给语音。这个分层意识，到 GEO 时代会变成“同一份内容要适配不同 AI 引擎的引用口味“，第 7 章会展开讲。</p>
+<h2 id="aeo-与-geo-的承继关系教机器找答案到教机器信答案"><a class="header" href="#aeo-与-geo-的承继关系教机器找答案到教机器信答案">AEO 与 GEO 的承继关系：教机器找答案，到教机器信答案</a></h2>
+<p>现在讲这本书里我最想讲的一个判断。</p>
+<p><strong>AEO 教机器找答案，GEO 教机器信答案。</strong></p>
+<p>AEO 时代，机器的任务是“定位“：从亿万个网页里找到那段最像答案的文字，抽出来，贴到结果页顶部。它不太关心你是谁，只关心你这段文字像不像答案。所以 AEO 的技术重心全在“形态“上——问答结构、schema 标记、结论前置，都是在降低机器“找到并理解“的成本。</p>
+<p>GEO 时代，机器的任务升级成了“判断“：AI 引擎要综合多个信源，生成一段它自己组织语言的回答，并决定<strong>引用谁、采信谁、提谁的名字</strong>。这时候光是“形状好“不够了，它还要评估你靠不靠谱——来源是否有权威背书、数据是否可验证、多个信源之间说法是否一致。</p>
+<p>我用物业打个比方。AEO 像小区物业帮你<strong>查快递在哪</strong>：只要面单清楚、柜号明确，物业一查就有，这是流程问题。GEO 像物业敢不敢<strong>用自己的名义替你担保</strong>：“这户人家我认识，靠谱。“这就不是流程问题了，物业要掂量自己的信用——AI 引擎引用你，等于拿它自己的信誉给你背书，它自然会挑那些“担保风险最低“的信源。</p>
+<p>这个承继关系有三个实操推论：</p>
+<ol>
+<li><strong>AEO 的技术全部保留</strong>。问答结构、结论前置、schema 标记，在 GEO 时代一样有效，而且是基本功。我们的实测显示，AI 引擎高频引用的内容形态——带结论的问答、多维对比表、带日期的价格页——全是 AEO 玩剩下的。</li>
+<li><strong>SEO/AEO 时代积累的权重会直接继承</strong>。最明显的是文心一言：它和百度搜索的收录深度绑定，百度权重高的站基本同步被引用。在百度生态里，SEO 做得好的团队做 GEO 是有先发优势的。</li>
+<li><strong>但“信“这门课要重新修</strong>。怎么让 AI 觉得你可信——权威信源引用、跨平台口径一致、真实数据支撑——这是第 6 章以后的主题，也是 AEO 教不了你的部分。</li>
+</ol>
+<p>还有一个数据能说明这个转折有多彻底：鲸牙启量对 9786 个问题的采样显示，AI 回答的整体引用覆盖率只有一半左右——也就是说<strong>近一半的回答根本不引用任何网页，AI 直接用自己的“记忆“回答了</strong>。位置零尚且还有一个坑位可抢，AI 的“记忆“里没有坑位，只有“信不信“。这是 AEO 思维必须升级的根本原因。</p>
+<h2 id="实战案例千川开户要多少钱怎么占据答案位"><a class="header" href="#实战案例千川开户要多少钱怎么占据答案位">实战案例：“千川开户要多少钱“怎么占据答案位</a></h2>
+<p>最后用我们研究里的一个真实品类，把这一章的东西串一遍。</p>
+<p>“千川开户要多少钱“是巨量千川（抖音电商的投放平台）相关的高频问题。这类<strong>成本类问题</strong>有个通病：网上价格信息陈旧混乱，三年前的老帖、代理商的软文、道听途说的截图混在一起。我们的研究判断很明确：<strong>带日期的准确定价内容，很容易成为这类问题的引用源</strong>——因为机器也烦陈旧信息，一个明确标注更新时间的答案，对它来说就是低风险选项。</p>
+<p>假设你是一家电商服务商，要做一个“千川开户费用“的问答页。按 AEO 三板斧来：</p>
+<p><strong>第一步，页面结构改成纯问答体。</strong> 主标题就是用户原话：“千川开户要多少钱？（2026 年 8 月更新）”。注意标题里带日期——这是给机器看的“新鲜度标签“，也是给用户看的定心丸。</p>
+<p><strong>第二步，结论前置。</strong> 正文第一段 40-60 字直接给答案：“千川自助开户本身不收费，有抖音电商经营资质即可在线开通；首次充值门槛为千元级，具体以巨量千川官方页面为准。市面上收取的’开户费’多为代理商的服务包装。”——先给结论，再给免责锚点（以官方为准）。后面再展开：自助开户流程、代理商收费的几种情形、不同充值档位对应的返点差异。</p>
+<p><strong>第三步，上 FAQPage schema。</strong> 把页面里的子问题全部标记成结构化数据：“没有营业执照能开千川吗”“千川开户和抖店保证金是一回事吗”“代理商开户为什么有的收几千有的免费”。每个子问题配一段可独立摘引的短答案。你的 HTML 对机器来说就是一张填好的快递面单。</p>
+<p><strong>第四步，做一张对比表。</strong> 自助开通 vs 代理商开通，按费用、门槛、返点、服务、风险五个维度列清楚。我们的实测反复验证：横向对比表是 AI 引擎最容易整体引用的内容形态，对比类问题在六家国产引擎上全部被实质回答，且答案呈“按场景选“的平衡结构——表格正中这个口味。</p>
+<p><strong>第五步，多平台同口径分发。</strong> 同一个问答核心，改成公众号长文版和百家号版各发一份。实测里，千川类问题的引用源高度集中在抖音电商学习中心（school.jinritemai.com）这类官方结构化内容——光 DeepSeek 的高频信源里，抖音电商学习中心就出现了 9 次。官方阵地你占不了，但“同结构、同口径、带日期“的第三方内容，是机器找不到官方答案时的第一替补。</p>
+<p>做完这五步，你就不是在“优化一个网页“了，你是在<strong>给答案引擎供稿</strong>。这就是 AEO 的终极形态，也是通往 GEO 的桥——下一章我们正式过桥。</p>
+<blockquote>
+<p><strong>本章小结</strong></p>
+<ul>
+<li>搜索的终点从“十条蓝色链接“变成“一个直接答案“，Google 精选摘要、百度精选摘要、知乎回答卡片都是同一趋势的不同形态。</li>
+<li>位置零是第一名之上的答案位：货架有十层，导购手里只有一瓶——赢家通吃，且自带引擎的信用背书。</li>
+<li>AEO 三板斧：问答结构结论前置（40-60 字直接回答）、FAQPage schema（给机器贴面单）、Speakable（圈出适合朗读的段落）。核心是降低机器的理解成本。</li>
+<li>AEO 教机器找答案，GEO 教机器信答案：AEO 的技术在 GEO 时代全部有效，但“可信度建设“是必须重修的新课——实测显示近半 AI 回答不引用任何网页，纯靠“记忆“作答。</li>
+<li>成本类、对比类问答是最容易占据答案位的题型：带日期的准确价格 + 多维对比表 + 多平台同口径分发，是被实测验证的有效打法。</li>
+</ul>
+</blockquote>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="第5章-geo-登场生成式引擎优化是什么"><a class="header" href="#第5章-geo-登场生成式引擎优化是什么">第5章 GEO 登场：生成式引擎优化是什么</a></h1>
+<h2 id="51-先讲一个你每天都在经历的场景"><a class="header" href="#51-先讲一个你每天都在经历的场景">5.1 先讲一个你每天都在经历的场景</a></h2>
+<p>打开豆包或者 DeepSeek，输入“5000 块预算买什么降噪耳机“。十秒钟后，一段回答出现在屏幕上：两三款耳机的名字、各自的优缺点、一句“如果你主要通勤用，选 A；如果追求音质，选 B“。</p>
+<p>你关掉 App，直接去下单了。</p>
+<p>注意，整个过程里你没有看到任何一条蓝色链接，没有翻到第二页，没有点开任何一个品牌的官网。你没有“搜索“，你进行了一次“咨询“。而在这场咨询里，被点名的品牌赢了，没被点名的品牌——哪怕它 SEO 做得再好、常年挂在百度第一位——连出场的机会都没有。</p>
+<p>这就是 GEO 要解决的问题。本章回答四件事：GEO 这个概念从哪来、它和 SEO 到底差在哪、为什么现在的 AI 引擎是一个“没有广告位的商场“、以及这门生意现在的真实规模。</p>
+<h2 id="52-geo-的出处一个比-chatgpt-还年轻的概念"><a class="header" href="#52-geo-的出处一个比-chatgpt-还年轻的概念">5.2 GEO 的出处：一个比 ChatGPT 还年轻的概念</a></h2>
+<p>GEO，Generative Engine Optimization，生成式引擎优化。这个词不是营销公司拍脑袋造出来的，它有明确的学术出处：2023 年 11 月，来自普林斯顿大学、佐治亚理工学院等机构的研究者在 arXiv 上发表了一篇论文，标题就叫《GEO: Generative Engine Optimization》，后来这篇论文被数据挖掘领域的顶级会议 KDD 2024 正式收录。</p>
+<p>这篇论文干了一件很实在的事：研究者们搭建了一套评测框架，系统地测试“什么样的内容更容易被生成式引擎（当时主要是各类带联网能力的 AI 问答系统）在回答中引用和推荐“。结论可以浓缩成一句话——<strong>能被 AI 看上的内容有规律可循，而且这个规律和搜索引擎那套不一样</strong>。比如，在内容中嵌入清晰的引用来源、具体的统计数据、权威的引述，能显著提高内容在 AI 回答中的可见度，论文报告的提升幅度最高可达约四成。</p>
+<p>论文提出的方法论细节我们会在第 6 章展开。这里你只需要记住：GEO 从诞生第一天起，研究对象就不是“排名“，而是“引用“——AI 在生成答案时，挑谁的话来说、把谁的名字写进答案里。</p>
+<p>我用一句话定义这本书里的 GEO：</p>
+<blockquote>
+<p><strong>GEO 是通过优化内容的结构、可信度和分发位置，让 AI 引擎在回答用户问题时引用你、推荐你、替你说好话的一系列方法。</strong></p>
+</blockquote>
+<h2 id="53-核心比喻seo-是抢货架geo-是搞定导购员"><a class="header" href="#53-核心比喻seo-是抢货架geo-是搞定导购员">5.3 核心比喻：SEO 是抢货架，GEO 是搞定导购员</a></h2>
+<p>整本书我们用一个比喻贯穿始终，你先把它吃透，后面所有章节都是它的展开。</p>
+<p><strong>传统搜索是一家超市。</strong> 搜索结果页就是货架：第一页是进门最显眼的端架，第二页是中间的排面，第三页以后是仓库。SEO 的全部学问，是怎么把自己家的商品摆上端架——交得起“租金“（竞价排名）的直接买位，交不起的就研究超市的陈列规则（算法），靠优化包装、堆头、促销牌（标题、外链、关键词）挤上去。用户从货架上拿起商品（点击），走到收银台（落地页），成交。</p>
+<p><strong>AI 引擎不是超市，是带导购员的精品店。</strong> 店里没有货架。顾客进门说“我要买个降噪耳机，5000 预算“，导购员想了想，直接从后场拿出两三款，告诉你哪款适合你。顾客大概率听导购员的，拿了就走。</p>
+<p>注意这个场景里的几个关键事实：</p>
+<p>第一，<strong>导购员不收摊位费，没有货架租金这回事。</strong> 你想塞钱让她优先推荐你的货？目前没这个门——这一点 5.5 节会详细讲，截至 2026 年初，国内六家主流 AI 引擎都没有官方的 AI 回答广告产品。</p>
+<p>第二，<strong>导购员只信“她自己读过的可信材料“。</strong> 她的推荐话术不是凭空来的，是她平时读的杂志、看的测评、听同行聊出来的口碑，在她脑子里沉淀成的判断。你想让她推荐你，唯一的办法是：提前出现在她读的那些材料里，并且写得让她觉得可信、好用、值得转述。</p>
+<p>第三，<strong>导购员的推荐就是成交本身。</strong> 超市里顾客还要自己走完“看到—拿起—比价—结账“的流程，导购员场景里，她一句话说完，顾客的决策就结束了。没有中间环节给你拦截。</p>
+<p>所以 GEO 的本质动作就一句话：<strong>不去抢货架，去研究导购员的阅读清单，然后把自己写进她信得过的那几页里。</strong></p>
+<h2 id="54-geo-与-seo-的本质区别"><a class="header" href="#54-geo-与-seo-的本质区别">5.4 GEO 与 SEO 的本质区别</a></h2>
+<p>光说“排名 vs 引用“太抽象。我们把区别拆成三层，每一层都对应一个打法上的根本转变。</p>
+<h3 id="第一层排名-vs-引用位置是固定的话术是活的"><a class="header" href="#第一层排名-vs-引用位置是固定的话术是活的">第一层：排名 vs 引用——位置是固定的，话术是活的</a></h3>
+<p>SEO 的世界里，位置是稀缺而稳定的：第一名就是第一名，全天 24 小时挂在那里，谁搜都一样。GEO 的世界里没有“位置“，只有“这一次的答案“。同一个问题，AI 今天引用了你，明天可能引用别人；换个问法，答案整个重写。你争的不是一个格子，而是导购员每一次开口时“想起谁“。</p>
+<p>这里有一个我们在研究中反复确认、每个做 GEO 的人都该刻在脑子里的数字：鲸牙启量对国内引擎近万道题的样本统计显示，<strong>AI 回答的整体引用覆盖率只有 50.4%——将近一半的回答，一个引用来源都不给</strong>。换句话说，导购员每推荐两次，就有一次完全不报出处。在这种环境下，“能被点名、能被标注出处“本身就是稀缺卡位，比传统搜索的第一名稀缺得多。</p>
+<h3 id="第二层点击-vs-被说出流量漏斗变成了信任漏斗"><a class="header" href="#第二层点击-vs-被说出流量漏斗变成了信任漏斗">第二层：点击 vs 被说出——流量漏斗变成了信任漏斗</a></h3>
+<p>SEO 的度量是点击：曝光、点击率、落地页转化，一条漏斗。GEO 的度量是“被说出“：AI 有没有提你、怎么描述你、把你和哪些对手放在一起比。很多情况下用户根本不点击——答案看完，决策做完，你的网站流量统计里什么都不剩，但这单生意已经成了或者丢了。</p>
+<p>这带来一个反直觉的结论：<strong>GEO 时代，“零点击的胜利“是真实存在的胜利。</strong> 用户在 AI 里问“聚水潭和旺店通哪个好”，AI 给出一张对比表并引用了你写的测评，用户直接去买了——你的官网 UV 没有任何变化，但你赢了。还在盯着流量报表做 GEO 的团队，等于用体温计量体重。</p>
+<h3 id="第三层爬虫-vs-信源网络一只蜘蛛变成了一桌杂志"><a class="header" href="#第三层爬虫-vs-信源网络一只蜘蛛变成了一桌杂志">第三层：爬虫 vs 信源网络——一只蜘蛛变成了一桌杂志</a></h3>
+<p>搜索引擎的抓取逻辑是“爬虫“：一只蜘蛛顺着链接爬全网，你把自家网站优化好（收录、权重、结构），基本盘就在。AI 引擎不是这么干活的。它生成答案时依赖的是一张“信源网络“——模型训练读过的语料，加上联网检索时抓到的内容，而<strong>每家引擎抓哪、信哪，偏好完全不同</strong>。</p>
+<p>我们针对国内六家引擎的信源研究显示，这种偏好的差异大到可以直接决定打法：</p>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>引擎</th><th>导购员的“读物偏好“</th><th>GEO 实质动作</th></tr>
+</thead>
+<tbody>
+<tr><td>豆包</td><td>字节系：今日头条、抖音、西瓜视频</td><td>头条号 + 抖音号内容矩阵</td></tr>
+<tr><td>腾讯元宝</td><td>微信公众号（约占其信源的一成，单一渠道占比最高）、视频号</td><td>公众号矩阵——<strong>没有公众号内容的品牌在这里几乎拿不到曝光</strong></td></tr>
+<tr><td>文心一言</td><td>百家号、百度百科、百度知道，与百度搜索收录深度绑定</td><td>SEO 与 GEO 高度协同，最“稳“的平台</td></tr>
+<tr><td>DeepSeek</td><td>无自有生态，靠开放网页：搜狐、网易、百科、行业媒体</td><td>多平台铺同口径内容，提高被抓取概率</td></tr>
+<tr><td>Kimi</td><td>外采为主，但企业官网/品牌页权重高（引用覆盖率约 67.6%，六家最高之一）</td><td>官网事实页 + 媒体报道 + 目录一致性</td></tr>
+<tr><td>千问</td><td>权威媒体集中、知识文档</td><td>权威媒体铺稿 + 官方白皮书</td></tr>
+</tbody>
+</table>
+</div>
+<p>看出来了吗？<strong>六家引擎就是六个阅读习惯完全不同的导购员</strong>：豆包这个导购爱刷抖音和头条，元宝这个导购是公众号重度订阅者，DeepSeek 这个导购习惯翻门户新闻和百科。你在公众号里写得天花乱坠，对豆包的影响约等于零——那本杂志它根本不订。</p>
+<p>这对 SEO 老兵是最大的思维冲击：过去优化好一个网站就能通吃所有搜索引擎的日子结束了。GEO 的分发是“一鱼多吃“——同一份事实，要改造成知乎问答版、公众号长文版、门户新闻版，分别喂给不同的导购员。具体怎么改造，是第 7 章和第 8 章的内容。</p>
+<p>最后，把三层区别收进一张总表：</p>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>维度</th><th>SEO</th><th>GEO</th></tr>
+</thead>
+<tbody>
+<tr><td>争夺对象</td><td>搜索结果页的排名位置</td><td>AI 答案里的引用与表述</td></tr>
+<tr><td>用户动作</td><td>点击链接，进入你的网站</td><td>读完答案，直接决策</td></tr>
+<tr><td>抓取逻辑</td><td>爬虫 + 单一站点权重</td><td>信源网络 + 跨平台分布</td></tr>
+<tr><td>效果度量</td><td>排名、点击率、UV</td><td>被引用率、品牌描述倾向、对比中的站位</td></tr>
+<tr><td>内容形态</td><td>围绕关键词的网页</td><td>结论前置、可验证、结构化的“可引用件“</td></tr>
+<tr><td>生效范围</td><td>优化好一个站，通吃各家搜索</td><td>每家引擎一套信源打法，各做各的</td></tr>
+</tbody>
+</table>
+</div>
+<h2 id="55-一个没有广告位的商场以及商场里已经开始抓小广告了"><a class="header" href="#55-一个没有广告位的商场以及商场里已经开始抓小广告了">5.5 一个没有广告位的商场，以及商场里已经开始抓小广告了</a></h2>
+<p>先说现状。截至 2026 年初，我们逐一核对过：豆包、DeepSeek、Kimi、通义千问、文心一言、腾讯元宝，<strong>六家主流 AI 引擎均无官方的 AI 回答广告产品</strong>。腾讯甚至公开承诺过元宝不嵌入商业结果。这意味着今天你在任何 AI 回答里看到的品牌推荐，全部是有机内容影响的结果——没有一条是买来的。</p>
+<p>回到导购员比喻：<strong>这是一家导购员目前不收红包、也不许挂广告牌的店。</strong></p>
+<p>这个现状有两层含义。第一层是机会：流量采买的钞能力暂时失效了。过去预算充足的大品牌可以直接买断端架，小品牌再努力也只能排队；现在所有品牌回到同一条起跑线，比的是谁的内容更可信、更对导购员的胃口。内容能力第一次压过了预算能力。</p>
+<p>第二层是警醒：没有广告位，就有人动歪脑筋。市面上已经长出了 GEO 灰产——批量生成低质 AIGC 软文，全网铺量，赌 AI 抓取时撞上概率。翻译成比喻：导购员不收红包，那就往她的杂志堆里塞小传单，塞得够多，总能混进她的视野。</p>
+<p>平台已经在动手了。DeepSeek 官方在 2025 年 5 月接受澎湃新闻采访时明确表示，正在对低质 AIGC 铺稿内容进行识别和降权。其他家跟进只是时间问题——逻辑很简单，导购员一旦被发现推荐话术是靠小传单喂出来的，这家店的口碑就完了，平台比谁都急。</p>
+<p>所以这本书从第一章就立规矩：<strong>铺低质软文是一条正在收窄的死路，真实、带数据、可验证的内容才是长期资产。</strong> 灰产赚的是平台打击落地前的时间差，而时间差这门生意，从来长不大。</p>
+<h2 id="56-这个市场到底有多大"><a class="header" href="#56-这个市场到底有多大">5.6 这个市场到底有多大</a></h2>
+<p>最后算账。先看用户侧，导购员的生意有多好：</p>
+<ul>
+<li>知乎研究院 2025 年 Q2 的一份千余人调研显示，<strong>83% 的用户过去三个月用 AI 了解过消费品信息，55% 的消费者认为 AI 推荐会影响自己的决策</strong>；同一调研里，AI 搜索的满意度（3.95）已经超过了传统搜索（3.62）。</li>
+<li>HCR 慧辰 2025 年 5 月的调研更直接：<strong>92% 的消费者在购物决策中使用过 AI 辅助</strong>。</li>
+<li>引擎侧的量级也立住了：以 QuestMobile 2025 年 12 月口径，豆包月活约 2.26 亿，DeepSeek 约 1.35 亿，腾讯元宝增速最快。</li>
+</ul>
+<p>再看生意侧。头豹研究院估测，<strong>2025 年国内 GEO 市场规模约 21 亿元，到 2027 年预计达到 242 亿元</strong>——两年十倍。</p>
+<p>这个数要注明口径：它统计的是围绕 GEO 的服务与工具市场（代运营、内容生产、监测 SaaS 等），是“卖铲子“的钱，不是 AI 渠道本身撬动的交易额。21 亿的绝对值放在整个数字营销大盘里还很小，但曲线的斜率说明方向：这相当于一个刚开张的新商场，客流（用户问 AI 的比例）在猛涨，铺位（被 AI 引用的位置）还没开始收租，先进场的人免费用着端架。</p>
+<p>历史总是押韵的。2003 年前后做 SEO 的人、2013 年前后做微信公众号的人、2018 年前后做抖音的人，享受的都是同一种红利：平台规则成熟之前的那几年，认真做事的人用很低的成本拿走了未来很贵的东西。GEO 现在就站在这个时间点上。</p>
+<blockquote>
+<p><strong>本章小结</strong></p>
+<ul>
+<li>GEO（生成式引擎优化）出自 2023 年 11 月的同名论文（后被 KDD 2024 收录），研究对象是“如何被 AI 在答案中引用“，而非搜索排名。</li>
+<li>核心比喻：SEO 是抢超市货架位置，GEO 是影响导购员的推荐话术。导购员没有货架租金可收，只信自己读过的可信材料——GEO 的全部工作就是写进那几页材料里。</li>
+<li>三层本质区别：排名 vs 引用、点击 vs 被说出、单一爬虫 vs 各不相同的信源网络。引用覆盖率仅约 50.4%，“能被 AI 点名“本身就是稀缺卡位。</li>
+<li>截至 2026 年初，国内六家主流引擎均无官方 AI 回答广告产品，钞能力暂时失效；同时 DeepSeek 已明确对低质 AIGC 铺稿降权，灰产的时间差生意长不大。</li>
+<li>市场处于爆发早期：头豹估测国内 GEO 服务市场 2025 年约 21 亿元、2027 年预计 242 亿元（服务与工具口径）。现在进场，成本最低。</li>
+</ul>
+</blockquote>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="第6章-实测六大国产-ai-引擎引用行为"><a class="header" href="#第6章-实测六大国产-ai-引擎引用行为">第6章 实测：六大国产 AI 引擎引用行为</a></h1>
+<p>前面几章讲的都是推断和方法，这一章上硬菜：我们把六大国产 AI 引擎——豆包、DeepSeek、腾讯元宝、通义千问、文心一言、Kimi——拉进同一个考场，用同一套 12 道题逐个问过去，把它们的引用记录一条条扒下来对账。</p>
+<p>为什么要自己做这件事？因为市面上关于“AI 引擎爱引用什么“的说法，大多是从搜索语料反推的——就像你想知道一家餐馆用什么食材，不去后厨看，而是去翻它扔在门口的垃圾袋。翻垃圾袋能猜个大概，但只有实测才知道：豆包到底有多偏爱抖音视频，元宝是不是真的被公众号“包养“，Kimi 是不是压根不联网。实测做完，我们发现有些推断对了，有些错得离谱——比如知乎，这个被无数 GEO 文章捧上神坛的渠道，在我们的实测引用里几乎查无此人。</p>
+<p>这一章是全书的“数据发动机“：后面的渠道优先级、内容形态选择，都以这里的数据为准。</p>
+<h2 id="实验设计先讲清楚我们是怎么测的"><a class="header" href="#实验设计先讲清楚我们是怎么测的">实验设计：先讲清楚我们是怎么测的</a></h2>
+<h3 id="12-道题怎么选的"><a class="header" href="#12-道题怎么选的">12 道题怎么选的</a></h3>
+<p>题目不是拍脑袋来的，而是从前面 prompt 研究阶段筛出来的真实用户查询，覆盖两个行业（广告电商、教育培训）和五种典型的提问动机：</p>
+<ul>
+<li><strong>对比题</strong>：Q1“晓多跟乐言比店小蜜哪个好用“——用户在 AI 面前做购买决策；</li>
+<li><strong>症状题</strong>：Q2“千川计划跑不动应该加价还是暂停计划“、Q3“全域推广一直消耗不出单怎么办“——带着具体问题来求医问药；</li>
+<li><strong>方法题</strong>：Q4“怎么用 DeepSeek 和剪映批量做带货短视频“——要一套可执行流程；</li>
+<li><strong>信任题</strong>：Q5“短视频带货训练营是真的吗“、Q6“抖音小店无货源是割韭菜吗“、Q9、Q10——用户在求一个“要不要信、要不要花钱“的判断；</li>
+<li><strong>选型/私域题</strong>：Q7“小鹅通太贵了有什么平替“、Q8“老师批改作文用什么 AI 工具“、Q11/Q12（教培私域转化）——这是中小商家最关心的钱袋子问题。</li>
+</ul>
+<p>这五种动机，基本就是商家做 GEO 要争夺的全部入口。选 12 题而不是 100 题，是因为我们要逐题人工核对引用来源——题目越少，每一题看得越细。这好比查账：抽查 12 笔流水逐笔对到原始凭证，比扫一眼 1000 笔的总数有用得多。</p>
+<h3 id="为什么每题必须开一个新对话"><a class="header" href="#为什么每题必须开一个新对话">为什么每题必须开一个新对话</a></h3>
+<p>实测方式是 WebBridge 控制真实浏览器逐题提问，<strong>每题都在一个全新的独立对话里提问，逐字提问、不改写</strong>。</p>
+<p>这条纪律是为了防“串味“。AI 对话有上下文记忆：如果你先问了“晓多跟乐言比店小蜜哪个好用“，再在同一会话里问“千川跑不动怎么办“，第二题的答案和引用可能被第一题的上下文带偏——就像面试官面完一个侃侃而谈的候选人，接着面下一个时手里还拿着上一份简历，评分就不干净了。开新对话等于每面一个人都换一块干净白板，保证每道题的引用行为都是该引擎对这个问题的“第一反应“，而不是被聊嗨了之后的样子。</p>
+<p>顺带一个执行细节：千问的匿名额度只够 4~5 个对话，Q5 之后的题是登录后补测完成的。这也提醒我们，不同平台的测试成本不一样，做长期监测时要把登录态、额度这些限制算进去。</p>
+<h3 id="引用率的口径与局限n1-是什么多次采样又是什么"><a class="header" href="#引用率的口径与局限n1-是什么多次采样又是什么">引用率的口径与局限：n=1 是什么，多次采样又是什么</a></h3>
+<p>先说口径。我们说的“引用率“，指<strong>一道题的回答里是否带出了可提取的外部引用来源</strong>：12 题里有几题带引用，就是“几/12“。DeepSeek 的引用来自回答内嵌的引文链接，元宝来自“源“面板的引用卡片，千问要从接口里回抓来源数据，文心更麻烦——页面不渲染链接，我们只能按回答末尾“参考资料“列表里标注的站名提取。</p>
+<p>再说局限，这一节请每个想引用本书数据的读者认真看。</p>
+<p><strong>单次测试是 n=1</strong>。AI 回答有随机性，同一道题今天问和明天问，引用可能不一样。n=1 的结论就像你去相亲角只站了一个下午，回来就说“这个市场全是属狗的“——样本量撑不起统计结论。所以单次测试的所有数字，我们只敢当<strong>方向性信号</strong>用：哪家引得多、哪家几乎不引、信源大致是什么构成，这些结论是稳的；但“引用率 75% 和 83% 谁高谁低“这种比较，别当真。</p>
+<p><strong>多次采样才是统计口径</strong>。我们后来补做了一轮：每题问 4~5 次，看引用行为的稳定性。这就像外卖评分——一条好评可能是刷的，连续五十条评价里四十三条提到“分量足“，那才是这家店的真实属性。多次采样总共落盘 97 条有效采样后被迫中止（原因见本章末尾的风控复盘），但它修正了三个单次测试的结论，后面会专门讲。</p>
+<p>一句话总结：**本书引用行为结论按“方向性“使用，不按“统计显著“使用。**谁要是拿我们的 9/12 去写“某某引擎引用率 75%“的精确报告，那是他不懂抽样，不是我们的数据有问题。</p>
+<h2 id="六引擎逐个画像"><a class="header" href="#六引擎逐个画像">六引擎逐个画像</a></h2>
+<p>给每个引擎一个拟人化比喻，方便你记住它们的脾气。GEO 的实操说白了就是“见人下菜碟“——先认清人，再决定上什么菜。</p>
+<h3 id="文心一言逢问必查的图书管理员"><a class="header" href="#文心一言逢问必查的图书管理员">文心一言：逢问必查的图书管理员</a></h3>
+<p>文心是六家里唯一 <strong>12/12 题全部带引用</strong>的，每题甩出 21~33 条参考资料，全书实测总共 321 条，来源含百度系（爱企查、百度百科、word.baidu、百家号）、新闻门户，以及——大量你听都没听过的小号：“糖汐兮”“猫猫”“好物品质分享全保障“这类。</p>
+<p>它像个强迫症晚期的图书管理员：你随便问一句“中午吃啥“，他都要抱一摞书过来，从《中国饮食文化史》到小区门口打印店复印的传单，全部摊在你面前，每张都标好出处。查得勤是优点，不挑就是缺点了——长尾小自媒体极多，噪音大。</p>
+<p><strong>GEO 含义</strong>：文心的引用门槛是六家里最低的，低权重小号内容也有机会被引。<strong>铺量策略在文心最有效</strong>——百家号、搜狐号发起来，别管账号权重多高。</p>
+<h3 id="腾讯元宝在业主群里翻聊天记录的热心邻居"><a class="header" href="#腾讯元宝在业主群里翻聊天记录的热心邻居">腾讯元宝：在业主群里翻聊天记录的热心邻居</a></h3>
+<p>元宝 12 题中 10 题有引用，去重域名 71 个，但信源构成极度偏科：<strong>mp.weixin.qq.com（公众号）出现 48 次，约占全部引用的三分之一</strong>。</p>
+<p>它像小区里那个消息最灵通的热心邻居：你问什么他都答得上来，但细一打听，情报八成来自他天天泡着的几个业主微信群。公众号就是元宝的业主群。</p>
+<p><strong>GEO 含义</strong>：做元宝，就是做公众号。B 端私域类问题（Q11 引了 15 条，公众号占多数）在元宝上的被引机制几乎全走公众号，这类内容优先发公众号长文，而不是知乎。</p>
+<h3 id="豆包只逛自家超市的导购"><a class="header" href="#豆包只逛自家超市的导购">豆包：只逛自家超市的导购</a></h3>
+<p>豆包 9/12 题有引用，信源构成把“字节系“三个字写在脸上：<strong>抖音视频（iesdouyin.com）出现在 9 题，今日头条 7 题</strong>，其后才是 CSDN（5 题）、博客园（3 题）。</p>
+<p>它像超市自有品牌专区的导购：你问什么他都推荐，但领你逛的永远是自家货架——抖音视频、头条文章，偶尔才去隔壁货架拿一瓶 CSDN。实测比我们此前的推断还极端。</p>
+<p><strong>GEO 含义</strong>：针对豆包的内容，形态上要靠<strong>抖音视频和头条文章</strong>，图文问答铺得再好也够不着它的引用区。另外注意，豆包的引用不在页面渲染成链接，是内嵌角标加底部参考列表——用户看得见来源名，但点不点得着是另一回事。</p>
+<h3 id="deepseek查完才开口的执业律师"><a class="header" href="#deepseek查完才开口的执业律师">DeepSeek：查完才开口的执业律师</a></h3>
+<p>DeepSeek 单次测试 9/12 有引用（Q10、Q11、Q12 未触发联网）。它的信源是六家里最“杂而正“的：新闻媒体（澎湃、央广、人民网）、投诉/政务源（黑猫投诉、地方 315、各地政府网）、品牌官网（小鹅通 sem 页、晓多博客）三管齐下。信任类问题上，它是唯一成体系引用黑猫投诉和地方 315 的。</p>
+<p>它像执业律师：开口之前先查卷宗，而且专挑有法律效力的证据——官方文件、投诉记录、权威媒体报道，营销号软文基本进不了它的证据链。</p>
+<p><strong>GEO 含义</strong>：品牌自有内容阵地能被它直接引用（晓多官方博客、小鹅通官方 sem 页都进了它的引用列表）；评估类内容挂上投诉/政务数据，在 DeepSeek 这里特别吃得开。</p>
+<h3 id="通义千问跑遍全城菜市场的采购员"><a class="header" href="#通义千问跑遍全城菜市场的采购员">通义千问：跑遍全城菜市场的采购员</a></h3>
+<p>千问 10/12 有引用，<strong>去重域名 53 个，引用面是六家里最广的</strong>：新闻媒体（新华网、澎湃、中新网）、百度系（百度百科、mbd.baidu）、机构官网（edu.iflytek.com、ai.youdao.com、xiaoe-tech.com）、政务站（scjgj.beijing.gov.cn）、技术社区、以及 11467 黄页、神马聚合页这类低质长尾，一锅端。</p>
+<p>它像给大食堂采购的老师傅：天不亮出门，批发市场的正经摊位要逛，犄角旮旯的游击队小摊也不放过，最后拉回来一三轮车菜——有有机蔬菜，也有来路不明的散装货。胜在全，输在杂。</p>
+<p><strong>GEO 含义</strong>：千问是唯一同时高频吃新闻媒体、教育机构官网和政务站的引擎，机构类品牌（教育 SaaS、官方平台）在千问上的机会独一份；但低质黄页也能进引用，说明它的门槛同样不高。</p>
+<h3 id="kimi凭记忆答题的学霸"><a class="header" href="#kimi凭记忆答题的学霸">Kimi：凭记忆答题的学霸</a></h3>
+<p>Kimi 是最扎心的一家：<strong>12 题里只有 3 题有引用</strong>，其余 9 题纯模型作答、不联网。少数几次联网，引的也多是 CSDN、搜狐这类内容农场。</p>
+<p>它像班里那个过目不忘的学霸：你问他题，他基本不翻书，张口就答——答案常常还像模像样（Q8 的品牌推荐名单给得挺全），但全凭脑子里的存货。问题是，他的记忆停留在训练数据截止那天，你的新内容根本不在他脑子里。</p>
+<p><strong>GEO 含义</strong>：3/12 的引用率意味着大部分回答完全由模型参数生成，<strong>外链内容很难影响 Kimi 的回答</strong>；叠加其 MAU 萎缩的趋势，Kimi 的 GEO 投入优先级应排在六家最后。prompts 清单里 target_engines 含 kimi 的行，建议整体降半档。</p>
+<h2 id="引用率总表"><a class="header" href="#引用率总表">引用率总表</a></h2>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>引擎</th><th>单次引用率</th><th>多次采样引用率</th><th>头号信源</th><th>一句话脾气</th></tr>
+</thead>
+<tbody>
+<tr><td>文心一言</td><td>12/12</td><td>未测（预计差异不大）</td><td>百度系 + 海量长尾小号</td><td>量大但质杂，门槛最低</td></tr>
+<tr><td>腾讯元宝</td><td>10/12</td><td><strong>89%</strong>（48/54）</td><td>公众号（约占 1/3）</td><td>公众号包养户</td></tr>
+<tr><td>千问</td><td>10/12</td><td>未测</td><td>新闻媒体 + 机构官网</td><td>引用面最广</td></tr>
+<tr><td>DeepSeek</td><td>9/12</td><td><strong>100%</strong>（32/32）</td><td>媒体 + 投诉/政务 + 官网</td><td>被单次测试低估</td></tr>
+<tr><td>豆包</td><td>9/12</td><td>45%（5/11，样本不全）</td><td>抖音视频 + 今日头条</td><td>字节系自留地</td></tr>
+<tr><td>Kimi</td><td>3/12</td><td>未测</td><td>内容农场（少量）</td><td>基本不联网</td></tr>
+</tbody>
+</table>
+</div>
+<p>第一梯队按修正后结论排：<strong>文心、元宝、DeepSeek、千问</strong>，四家都是高引用引擎；豆包看题目类型；Kimi 垫底。</p>
+<h2 id="多次采样带来的三个修正"><a class="header" href="#多次采样带来的三个修正">多次采样带来的三个修正</a></h2>
+<p>单次测试是相亲角站一个下午，多次采样是跟踪随访三个月。随访做完，三个“初诊结论“被推翻了。</p>
+<h3 id="修正一deepseek-被严重低估"><a class="header" href="#修正一deepseek-被严重低估">修正一：DeepSeek 被严重低估</a></h3>
+<p>单次测试 DeepSeek 是 9/12，我们一度把它放在第二梯队。多次采样打完脸：<strong>开启“智能搜索“后 32 次提问全部联网引用，100%</strong>（覆盖 Q1~Q6 各 5 次、Q7 两次）。单次的 9/12 只是部分题恰好没触发联网开关。</p>
+<p>DeepSeek 的高频信源也在这轮看清了：新浪系 13 次、百度系 10 次、抖音电商学习中心 9 次、华声在线 9 次、四川在线 8 次、博客园 7 次、飞书云文档 6 次。两个信号值得单独记：官方学习中心（school.jinritemai.com）被反复引用，<strong>行业 SOP 文档放在飞书云文档（bytedance.larkoffice.com）上也能被 DeepSeek 和千问引到</strong>——这是一个此前没有任何报告提过的内容形态。</p>
+<h3 id="修正二元宝的公众号主导成立"><a class="header" href="#修正二元宝的公众号主导成立">修正二：元宝的公众号主导，成立</a></h3>
+<p>54 次采样里 <strong>48 次有引用（89%），其中 43 次含 mp.weixin.qq.com</strong>——约八成采样带公众号，单次测试“公众号占三分之一“的判断在更大样本下站住了。但也更立体了：今日头条出现 33 次、腾讯新闻 new.qq.com 16 次，元宝的口粮比单次测试显示的更多元，不是只吃公众号一口奶。另外 Q9（AI 辅导作业）5/5 全部无引用——这题在元宝上是稳定的“纯模型作答“题，再多次采样也撬不动。</p>
+<h3 id="修正三豆包的症状题真的不联网"><a class="header" href="#修正三豆包的症状题真的不联网">修正三：豆包的症状题，真的不联网</a></h3>
+<p>Q2“千川跑不动“在单次测试里无引用，我们怀疑是偶然。多次采样 <strong>0/4，稳定无引用</strong>，而 Q1 对比题 4/5 有引用。结论坐实：<strong>症状型口语问题在豆包上倾向纯模型作答</strong>。做这类题的内容卡位，对豆包价值有限——你想让它在“千川跑不动“里引用你，就像往一个不看说明书的用户手里塞说明书，塞了也不看。</p>
+<h2 id="deepseek-风控事件一次代价不小的踩坑"><a class="header" href="#deepseek-风控事件一次代价不小的踩坑">DeepSeek 风控事件：一次代价不小的踩坑</a></h2>
+<p>多次采样原计划每题 5 次 × 5 引擎。执行到一半，停了。</p>
+<p>过程是这样的：我们用自动化方式对 DeepSeek 连续提问，<strong>大约 30 次连续提问后，平台判定违规、触发风控</strong>。考虑到账号安全，整个多次采样计划就此中止——这就是为什么多次采样数据停留在 97 条，元宝做得最全（54 次），DeepSeek 做到一半（32 次），豆包只有 3 题，千问和文心完全没做。</p>
+<p>教训有三条，想长期监测品牌 AI 可见度的读者直接抄作业：</p>
+<ol>
+<li><strong>平台不是爬虫的沙包</strong>。高频自动化提问一定会触发风控，这和爬搜索引擎被 ban 是同一个道理，只是 AI 平台的风控更直接——它本来就是给人一句一句聊的。</li>
+<li><strong>自建监测必须限速</strong>。分钟级间隔、每日提问上限，一个都不能少。单次测试那种“一下午问完 12 题“的强度是安全的，但把同样的强度乘以采样次数，就越线了。</li>
+<li><strong>认真考虑现成工具</strong>。如果你的需求是持续监测（而不是一次性摸底），GEOBase、新榜智汇这类监测工具的存在意义就在于此——自建抓取的隐性成本（账号风险、维护成本、被封后的数据断档）往往高于订阅费。</li>
+</ol>
+<p>这次踩坑也反过来印证了本章开头的方法论：正因为 AI 回答有随机性、平台有风控，引用行为研究才永远是“方向性结论 + 定期复核“，而不是一份测完管三年的报告。</p>
+<p>最后交代一个诚实的尾巴：本次实测在测试账号的各平台留下了每题一个的正式对话记录。这提醒我们，实测用的是真实账号、真实会话，数据带着真实现场的毛边——也正因为如此，它比任何模拟环境里的推断都更接近你的客户真实看到的东西。</p>
+<blockquote>
+<p><strong>本章小结</strong></p>
+<ul>
+<li>12 道实测题覆盖对比、症状、方法、信任、选型五种动机，每题独立新对话防止上下文污染，逐字提问不改写。</li>
+<li>单次测试是 n=1，只能当方向性信号；多次采样（97 条有效采样）才是统计口径，二者不能混着用。</li>
+<li>六引擎脾气分明：文心量大质杂门槛最低，元宝被公众号“包养“，豆包只吃字节系，DeepSeek 证据链最正，千问引用面最广，Kimi 基本不联网、GEO 优先级垫底。</li>
+<li>多次采样修正了三件事：DeepSeek 真实引用率是 100% 应入第一梯队；元宝 80% 采样含公众号、判断成立；豆包症状题稳定不联网、别白费力气。</li>
+<li>高频自动化提问约 30 次就触发 DeepSeek 风控——长期监测要么限速，要么用现成工具。</li>
+</ul>
+</blockquote>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="第7章-信源地图内容铺在哪里才会被-ai-看见"><a class="header" href="#第7章-信源地图内容铺在哪里才会被-ai-看见">第7章 信源地图：内容铺在哪里才会被 AI 看见</a></h1>
+<p>第 6 章讲了内容该“长成什么样“，这一章解决同样重要的另一半问题：内容该“发在哪儿“。</p>
+<p>先给你一个必须记住的底色数据。鲸牙启量对 9786 道题的样本统计显示，AI 回答的整体引用覆盖率只有 50.4%——将近一半的回答没有任何引用，完全是模型凭“记忆“作答。这意味着什么？意味着<strong>能被引用的内容本身就是稀缺卡位</strong>。你的内容只要进入了引用池，就已经赢过一半的答案；而能不能进引用池，七分看渠道，三分看内容。</p>
+<p>但渠道这件事，远比“全网铺一遍“复杂。因为每家 AI 引擎背后站着不同的母公司，吃不同的“供应链“。这一章我们用一个比喻贯穿始终，再把我实测踩出来的坑——包括一次结结实实的认错——全部摊开给你看。</p>
+<h2 id="一生态绑定定律各家-ai-都有自己的食堂供应商体系"><a class="header" href="#一生态绑定定律各家-ai-都有自己的食堂供应商体系">一、生态绑定定律：各家 AI 都有自己的“食堂供应商体系“</a></h2>
+<p>把每家 AI 引擎想象成一家大公司的食堂。员工（用户）来吃饭，菜从哪儿来？字节、腾讯、百度这种自家有农场、有中央厨房的公司，食堂当然优先采购自家供应链的菜——倒不一定是行政命令，而是自家菜最新鲜、拿货最方便、品控最熟。久而久之，外部供应商想进这家食堂，门槛就越来越高。</p>
+<p>这不是比喻，是实测结论。2026 年 8 月，我们用真实浏览器对六家国产引擎逐题实测了 12 个问题（每题独立新对话、逐字提问不改写），结果生态绑定的强烈程度超出了此前的研究推断：</p>
+<ul>
+<li><strong>豆包的字节供应链</strong>：12 题里，9 题引用了抖音视频（iesdouyin），7 题引用了今日头条。你发在知乎上的万字长文，在豆包这里的权重远不如一条讲清楚同一个问题的抖音短视频。</li>
+<li><strong>元宝的腾讯供应链</strong>：单次实测中公众号文章被引用了 48 次，约占其全部引用的三分之一。后来我们做了 54 次多次采样，43 次（约 80%）都引用了 mp.weixin.qq.com。可以下结论：<strong>没有公众号内容的品牌，在元宝上几乎不存在</strong>。多次采样还显示今日头条（33 次）、腾讯新闻（16 次）也是元宝的重要信源。</li>
+<li><strong>文心的百度供应链</strong>：12 题全部有引用，每题引 21 到 33 篇，总共 321 条，百家号、百度百科、爱企查、word.baidu 高频出现。</li>
+</ul>
+<p>文心这里有个反直觉的细节值得单独说。它引用量最大，但“质最杂“——大量无名小号（类似“糖汐兮““好物品质分享“这种名字的账号）也在被引。这说明<strong>文心的引用门槛是六家里最低的，低权重小号内容也有机会</strong>。所以别家的策略是“做精”，文心这里“铺量“居然真的有效——百家号矩阵式发文，是六家里投入产出比最直接的一档。</p>
+<blockquote>
+<p><strong>生态绑定定律</strong>：有内容生态的引擎（豆包、元宝、文心），优先引用自家生态内容；你想影响它，先进它的供应链。</p>
+</blockquote>
+<h2 id="二没有自家食堂的三家deepseekkimi千问吃什么"><a class="header" href="#二没有自家食堂的三家deepseekkimi千问吃什么">二、没有自家食堂的三家：DeepSeek、Kimi、千问吃什么</a></h2>
+<p>DeepSeek、Kimi、千问这三家，母公司要么没有 C 端内容生态，要么生态不绑定。它们像三家没有食堂的公司，行政只能每天出去采购——去门户网站、百科、官网、权威媒体这些“公共菜市场“买菜。对做 GEO 的人来说，这反而是好消息：<strong>公共菜市场谁都能摆摊，不看户口</strong>。</p>
+<p>但三家的采购口味差别很大：</p>
+<p><strong>DeepSeek：杂而正的“挑剔采购员“。</strong> 单次实测它只有 9/12 题联网引用，我们一度低估了它；后来多次采样（受平台风控所限只完成 32 次）发现，开启“智能搜索“后 32/32 全部联网引用——它的引用率被单次测试严重低估，应列入第一梯队。它的高频信源是：新浪系（13 次）、百度系（10 次）、抖音电商学习中心（9 次）、华声在线（9 次）、四川在线（8 次）、博客园（7 次）、飞书云文档（6 次）。新闻门户 + 百科 + 官方文档 + 投诉政务源，信源结构是六家里最“杂而正“的。</p>
+<p><strong>千问：采购清单最长的行政。</strong> 10/12 题有引用，去重域名多达 53 个，是引用面最广的一家——新华网、澎湃、中新网等权威媒体，百度系内容，讯飞、有道、小鹅通这类机构官网，甚至政务站（如北京市监局）都在引。但注意，它的长尾里也有 11467 黄页、神马聚合页这类低质源。千问的打法对应是：权威媒体铺稿 + 官方文档/白皮书，铺得越正越稳。</p>
+<p><strong>Kimi：基本可以排在最后。</strong> 12 题只有 3 题有引用，9 题纯模型作答，有引用也多是 CSDN、搜狐这类内容农场。它的引用覆盖率里官网权重确实高（研究口径 67.6%，六家最高之一），但 3/12 的引用率意味着外链内容很难影响它的回答，加上 MAU 萎缩（约 900 万且持续走低），<strong>投入优先级应排在六家最后</strong>——做好官网事实页顺手覆盖即可，不必专门投入。</p>
+<h2 id="三知乎修正这本书里最重要的一次认错"><a class="header" href="#三知乎修正这本书里最重要的一次认错">三、“知乎修正”：这本书里最重要的一次认错</a></h2>
+<p>现在讲一个我们自己的翻车案例，它比前面所有结论都值钱。</p>
+<p>在做前期研究时，我们基于搜索语料推断：<strong>知乎是当前被 AI 引用最多的 UGC 形态，是 GEO 的主阵地</strong>。这个推断在当时看起来有理有据——知乎内容结构化、问答形态天然匹配、在传统搜索里权重高。我们甚至据此写进了内容落点建议。</p>
+<p>然后实测给了我们一巴掌。</p>
+<p>12 题 × 6 引擎跑下来，<strong>知乎几乎只在文心的引用里零星出现，豆包、DeepSeek、元宝、Kimi 的引用里基本看不到知乎</strong>。真正被高频引用的是：CSDN、博客园、搜狐、网易、今日头条、公众号，外加少量的什么值得买。</p>
+<p>为什么推断会错？因为我们犯了一个 GEO 新手最容易犯的错：<strong>把“传统搜索里的权重“当成了“AI 引用里的权重“</strong>。这两个池子高度重叠但不是同一个东西——百度搜索给知乎的权重，不等于豆包的检索系统能抓到或愿意抓知乎。各家引擎的实时检索有自己的抓取范围、合作协议和反爬现实，这些数据外人看不到，唯一可靠的办法就是实测。</p>
+<p>这个修正直接改变执行层面的渠道优先级。举个具体例子：B 端私域类问题（比如“培训机构怎么做招生获客“），实测中豆包、DeepSeek、Kimi 全部纯模型作答不联网，只有元宝引了 15 条（公众号为主）和文心有引用。如果按“知乎主阵地“的旧判断，你会把这类内容发知乎——结果就是零引用。按修正后的判断，<strong>这类内容应该优先发公众号和百家号</strong>。</p>
+<p>所以这一章我只强调一句话：凡是本书给出渠道结论的地方，我们都标注了它是“推断“还是“实测“。你在外面看到的任何 GEO 渠道建议，也请用同一个标准审视——<strong>没有实测数据背书的渠道结论，都按假设处理</strong>。</p>
+<h2 id="四三个意外发现没人告诉过你的信源"><a class="header" href="#四三个意外发现没人告诉过你的信源">四、三个意外发现：没人告诉过你的信源</a></h2>
+<p>实测最有价值的产出，往往是那些你本来没想找的东西。这次有三个：</p>
+<p><strong>1. 飞书云文档会被引用。</strong> 在千川投放类问题上，飞书云文档（bytedance.larkoffice.com）出现在了 DeepSeek 和千问的引用里，DeepSeek 多次采样中 larkoffice 域名出现了 6 次。这意味着行业 SOP、实操手册这类内容，<strong>做成公开的飞书文档也是一种可被捕捞的形态</strong>——很多团队的内部文档本来就在飞书上，设为“互联网可见“几乎零成本。</p>
+<p><strong>2. 品牌官方博客能直接进引用。</strong> 客服机器人对比题里，晓多的官方博客 insight.xiaoduoai.com 同时出现在豆包、元宝、DeepSeek 三家的引用里；小鹅通的官方 SEM 页也被 DeepSeek 引用。这证实了第 6 章的核心主张：<strong>自建结构化问答库会被直接引用</strong>。官网不是“门面“，是可以被 AI 当教材用的信源。</p>
+<p><strong>3. 抖音电商学习中心被反复引用。</strong> school.jinritemai.com 在千川类问题上被豆包和 DeepSeek 反复引用，DeepSeek 采样里出现 9 次。平台官方的教学内容，在 AI 眼里是垂直领域的“标准教材“。对应策略：你所在行业的<strong>官方学习中心、帮助中心、学院类站点，是天然的引用高地</strong>，值得优先争取露出，或者干脆自己建一个。</p>
+<p>另外补充一个不算意外但被验证的点：信任评估类问题（“XX 靠谱吗”“是不是割韭菜”），DeepSeek 会引黑猫投诉、地方 315，文心会引各地市监局官网。评估类内容挂上政务和投诉数据，引用概率明显更高。</p>
+<h2 id="五信源选择决策树你的内容该先发哪里"><a class="header" href="#五信源选择决策树你的内容该先发哪里">五、信源选择决策树：你的内容该先发哪里</a></h2>
+<p>铺垫完了，上决策树。用的时候从上往下走，走到叶子就是动作。</p>
+<p><strong>第一步：你的目标用户主要在哪个 AI 上提问？</strong> 先定主攻引擎，再谈渠道。大众消费者偏豆包/DeepSeek，微信场景重的行业（教育、B 端服务）必须覆盖元宝，搜索习惯强的中老年和下沉用户绕不开文心。</p>
+<p><strong>第二步：主攻引擎有没有自家生态？</strong></p>
+<ul>
+<li><strong>豆包</strong> → 头条号 + 抖音号内容矩阵。注意一个实测细节：症状型口语问题（“千川跑不动怎么办”）在豆包多次采样中 0/4 无引用，纯模型作答——这类内容想卡位豆包，<strong>必须做成抖音视频或头条文章，图文问答形态没用</strong>；对比类问题（4/5 有引用）则可以图文。</li>
+<li><strong>元宝</strong> → 公众号长文是入场券，没有就先注册再说话。视频号、腾讯新闻源可作补充。</li>
+<li><strong>文心</strong> → 百家号 + 百度百科词条 + 知道。门槛最低，适合铺量；低权重小号也有机会。</li>
+<li><strong>DeepSeek / 千问</strong> → 公共菜市场打法：搜狐、网易、新浪门户铺稿 + 百度百科 + 官网事实页 + 权威媒体（千问尤其吃权威媒体）+ 飞书公开文档。</li>
+<li><strong>Kimi</strong> → 官网事实页顺手做，不专门投入。</li>
+</ul>
+<p><strong>第三步：按问题类型修正渠道。</strong></p>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>问题类型</th><th>首发渠道</th><th>依据</th></tr>
+</thead>
+<tbody>
+<tr><td>对比类（A vs B）</td><td>中立对比表全网铺，含官网</td><td>六家全部引用对比表且答案均衡</td></tr>
+<tr><td>症状型 how-to</td><td>抖音视频/头条（豆包）、公众号（元宝）</td><td>豆包此类题倾向不联网</td></tr>
+<tr><td>信任评估类</td><td>挂投诉/政务数据的内容 + 百家号</td><td>DeepSeek 引黑猫投诉、文心引市监局</td></tr>
+<tr><td>B 端私域/选型</td><td>公众号 + 百家号</td><td>只有元宝、文心引此类题</td></tr>
+<tr><td>行业 SOP/实操手册</td><td>飞书公开文档 + 官网</td><td>飞书文档被 DeepSeek/千问引用</td></tr>
+</tbody>
+</table>
+</div>
+<p><strong>第四步：同一内容至少改造两个形态。</strong> 一份核心内容，改成“公众号长文版“和“头条/搜狐号版“，有视频能力的再加一条抖音版。一次生产，覆盖三个供应链。</p>
+<p>最后提醒一句风控：实测期间我们在约 30 次连续提问后触发了 DeepSeek 的风控判定。想长期监测品牌在 AI 回答里的可见度，别用高频抓取硬来——控制频率，或用 GEOBase、新榜智汇这类现成监测工具。</p>
+<blockquote>
+<p><strong>本章小结</strong></p>
+<ul>
+<li><strong>生态绑定定律</strong>：豆包吃抖音头条（9/12、7/12 题）、元宝吃公众号（约占引用 1/3，80% 采样含公众号）、文心吃百家号百科（12/12 全引）。进不了供应链，内容再好也上不了桌。</li>
+<li>DeepSeek（采样引用率 32/32）、千问（53 个去重域名）走公共菜市场路线：门户 + 百科 + 官网 + 权威媒体；Kimi 引用率仅 3/12，优先级排最后。</li>
+<li><strong>知乎修正</strong>：实测推翻了“知乎是 GEO 主阵地“的推断，被引第一梯队是 CSDN/博客园/搜狐/头条/公众号。任何渠道结论都要区分“推断“和“实测“。</li>
+<li>三个意外信源：飞书公开文档、品牌官方博客（晓多 insight 进三家引用）、平台官方学习中心（抖音电商学习中心被反复引用）。</li>
+<li>渠道决策顺序：先定主攻引擎，再看有无自家生态，再按问题类型修正形态，最后一稿多发改造成本最低。</li>
+</ul>
+</blockquote>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="第8章-行业实战-i广告电商"><a class="header" href="#第8章-行业实战-i广告电商">第8章 行业实战 I：广告电商</a></h1>
+<p>前面几章讲的是 GEO 的原理和通用方法。从这一章开始，我们下到行业里去看真刀真枪的实战。第一个行业选广告电商，原因很简单：这是 GEO 红利兑现最快、实测数据最完整的赛道。电商从业者是中国互联网上提问最凶的一群人——千川投放、客服机器人、ERP、数据工具、带货培训，每个细分场景背后都是真金白银的预算决策。谁的答案被 AI 引用，谁就站在这些人的决策入口上。</p>
+<p>为了写这一章，我们把广告电商领域最高频的一批问题，原封不动地丢给了六家主流 AI 引擎——豆包、DeepSeek、Kimi、千问、文心一言、腾讯元宝，逐题记录它们的答案、引用来源和品牌提及。下面所有标注“我们的实测“的数字，都来自这轮 2026 年 8 月的测试。</p>
+<h2 id="从业者是怎么提问的三大特征"><a class="header" href="#从业者是怎么提问的三大特征">从业者是怎么提问的：三大特征</a></h2>
+<p>先把问题本身研究透，再谈怎么接。看完几十条真实 prompt 之后，我把广告电商从业者的提问归纳成三个特征。这三个特征决定了什么样的内容会被 AI 捡起来。</p>
+<h3 id="特征一症状化他们不说术语只描述病征"><a class="header" href="#特征一症状化他们不说术语只描述病征">特征一：症状化——他们不说术语，只描述病征</a></h3>
+<p>没有人问“千川 ECPM 竞价机制详解“，他们问的是“千川计划跑不动应该加价还是暂停计划““全域推广一直消耗不出单怎么办”“直播间没人看怎么办还要继续播吗”。</p>
+<p>这像什么？像去修车。老师傅最怕的客人是背了一脑袋汽车原理来上课的，最喜欢的客人是进门就说“方向盘到八十码就发抖“的——症状越具体，师傅越好下手。AI 引擎就是那个修车师傅。症状化的提问意味着：能被引用的内容，必须以症状为标题、以排查路径为骨架，而不是以概念为纲。一篇叫《千川投放的底层逻辑》的文章，在这种问题面前几乎没有出场机会；一篇叫《计划 0 消耗？按这五步排查》的文章才会被端上去。</p>
+<h3 id="特征二对比心智带着候选名单来的"><a class="header" href="#特征二对比心智带着候选名单来的">特征二：对比心智——带着候选名单来的</a></h3>
+<p>“晓多跟乐言比店小蜜哪个好用”“聚水潭和旺店通哪个好怎么选”“蝉妈妈和飞瓜数据哪个好”。注意这类问题的结构：提问者心里已经有两三个候选，他要的不是科普，是临门一脚的决断。</p>
+<p>这像极了菜市场里挑鱼的阿姨——她已经把两条鲈鱼拎在手里了，问摊主“哪条新鲜“，不是要听鱼类保鲜知识讲座，是要你给她一个能付钱的理由。这类问题的商业价值最高，因为提问者离下单只差一步。我们在 prompt 研究里把这类问题几乎全标成了 buy 级（购买决策期），而且是竞争最稀缺的区间——大量对比类问题在全网没有一篇像样的新答案，比如“晓多跟乐言比店小蜜“这道题，百度知道里还挂着 2019 年的老帖子，至今无人更新。</p>
+<h3 id="特征三信任焦虑怕被骗要实锤"><a class="header" href="#特征三信任焦虑怕被骗要实锤">特征三：信任焦虑——怕被骗，要实锤</a></h3>
+<p>“短视频带货训练营是真的吗”“抖音小店无货源是割韭菜吗”“抖店代运营靠谱吗会不会把钱转走”“蝉妈妈数据靠谱吗准不准”。这类问题的底色是恐惧：怕交智商税，怕钱被卷走。</p>
+<p>这就像小区业主群里有人问“门口那家开锁公司靠谱吗“——提问的人不缺开锁知识，他要的是邻居的实锤：谁用过、有没有被宰、有没有投诉记录。AI 引擎也懂这一点。我们的实测显示，凡是信任类问题，AI 的引用来源会明显向投诉平台、政府监管网站、权威媒体倾斜——这一点后面的案例会用硬数据展示。</p>
+<p>三大特征对应三类黄金问题：症状型、对比型、信任型。下面逐个拆。</p>
+<h2 id="症状型千川计划跑不动谁的答案被端上桌"><a class="header" href="#症状型千川计划跑不动谁的答案被端上桌">症状型：千川计划跑不动，谁的答案被端上桌</a></h2>
+<p>先看同一道题在六家引擎上的命运分野。问题是：“千川计划跑不动应该加价还是暂停计划”。</p>
+<p>我们的实测显示，六家引擎里四家给出了带引用来源的回答，两家交了白卷：</p>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>引擎</th><th>是否引用</th><th>代表性来源</th></tr>
+</thead>
+<tbody>
+<tr><td>DeepSeek</td><td>有</td><td>抖音电商学习中心（school.jinritemai.com）、巨量引擎飞书文档等</td></tr>
+<tr><td>千问</td><td>有</td><td>共 13 篇来源，含电商垂直站、简书、腾讯云</td></tr>
+<tr><td>元宝</td><td>有</td><td>共 18 条引用，微信公众号、电商工具站为主</td></tr>
+<tr><td>文心一言</td><td>有</td><td>千川垂直内容站、搜狐、环球网等</td></tr>
+<tr><td>豆包</td><td>无引用</td><td>纯模型回答</td></tr>
+<tr><td>Kimi</td><td>无引用</td><td>纯模型回答</td></tr>
+</tbody>
+</table>
+</div>
+<p>豆包这道题 0 引用——通篇是模型自己生成的建议，没有任何来源背书。而 DeepSeek 直接把抖音电商学习中心的内容引了进来。更有意思的是，豆包并非不会引这个来源：同轮测试里“全域推广一直消耗不出单“那道题，豆包就引用了抖音电商学习中心。这说明差异不在引擎的能力，而在于这道题对应的可引用内容供给是否充足、是否被检索命中。对做内容的人来说，这是最重要的一课：<strong>AI 答不答得好是一回事，引不引你是另一回事，而后者取决于你铺没铺路。</strong></p>
+<p>再看答案内容本身。六家的结论高度趋同：不是二选一，先诊断卡在哪个环节——冷启动计划小幅加价（各家给出的幅度惊人一致，多在每次 5%–15% 区间），空耗或成本超标的果断暂停止损、换素材重建。换句话说，AI 已经把“诊断决策树“确立为这类问题的标准答案形态。谁的内容长得像一棵决策树——先问新计划还是老计划、再看消耗和成本、最后分叉到加价/暂停/换素材——谁就长在了标准答案的形状上。</p>
+<blockquote>
+<p>症状型内容公式：症状做标题 → 决策树做骨架 → 每个分支给具体阈值（加多少、等多久、什么红线停）。官方帮助中心内容（如抖音电商学习中心）是这类问题的常客，等于官方已经给你示范了一遍标准打法。</p>
+</blockquote>
+<h2 id="对比型六家引擎集体当和事佬晓多靠官方博客进引用席"><a class="header" href="#对比型六家引擎集体当和事佬晓多靠官方博客进引用席">对比型：六家引擎集体当“和事佬“，晓多靠官方博客进引用席</a></h2>
+<p>第二道题：“晓多跟乐言比店小蜜哪个好用”。这道题是观察对比型问题的绝佳样本，因为它把一个反直觉的规律摆在了台面上。</p>
+<p>先看结论。我们的实测显示，六家引擎无一例外地给出了“平衡答案“——没有一家说“某某最好“，全是按场景分流：只做淘系的中小店选店小蜜（阿里官方、数据直连），多平台经营、售后客诉多的选晓多，重询单转化、垂直品类或多平台布局的选乐言。措辞不同，骨架一模一样。AI 引擎在对比类问题上像一个不想得罪任何一方的老导购：绝不把话说死，但会把“什么人该选什么“给你划得清清楚楚。</p>
+<p>这意味着什么？意味着对比型问题的 GEO 目标不是让 AI 说“你最好“——它不会这么说——而是<strong>挤进它的分流名单，并且让分流理由对你有利</strong>。“多平台经营的商家选晓多“这句话出现在六家答案里，对晓多来说就是稳定的流量入口。</p>
+<p>再看引用席。这道题最值得玩味的数据是：晓多的官方内容（xiaoduoai.com 官网和 insight.xiaoduoai.com 官方博客“晓观点“）被豆包、元宝、文心一言三家引用。元宝的多轮采样更夸张：同一道题跑 5 次，晓多官网和官方博客 5 次全勤。要知道这是一道把三家竞品摆在一起比较的中立问题——而晓多的官方内容能在中立问题里反复上桌，靠的不是广告投放，是它在自家博客持续铺设的产品能力、行业方法论内容，恰好长成了 AI 需要引用的样子：有场景划分、有数据（DeepSeek 的答案里甚至出现了“服饰意图识别准确率 93.4%“这样的细节，来源正是被引用的内容）、有可引用的结论句。</p>
+<blockquote>
+<p>对比型内容公式：不自卖自夸，按场景分流 → 给出可核验的选型标准（试用 7-14 天、看转人工率和独立解决率）→ 让“适合你的那个人群“一眼认出自己。你的目标是名单席位，不是全场最佳。</p>
+</blockquote>
+<h2 id="信任型ai-帮你查案底引用席上的全是官方和苦主"><a class="header" href="#信任型ai-帮你查案底引用席上的全是官方和苦主">信任型：AI 帮你查案底，引用席上的全是“官方和苦主“</a></h2>
+<p>第三道题：“短视频带货训练营是真的吗”。这道题展示了信任类问题的引用逻辑，和前面两类截然不同。</p>
+<p>我们的实测显示，AI 引擎回答这类问题时，信源选择明显“政法化“：</p>
+<ul>
+<li>DeepSeek 的引用来源里，黑猫投诉（tousu.sina.com.cn 及其多个地区子站）和 315 平台（shanxi315.org.cn）赫然在列，答案直接建议“付款前查公司背景并保留证据“；</li>
+<li>文心一言的参考资料列表几乎是一份监管点名册：达州市市场监督管理局、湖南省市场监督管理局、襄阳市市场监督管理局、海口市市场监督管理局、山西省市场监督管理局，全是一个个市监局的官网页面；</li>
+<li>千问引了新华社、央广网、北京市监局（scjgj.beijing.gov.cn）；元宝引了新浪财经、新华社客户端，并在答案里直接指路 12315。</li>
+</ul>
+<p>这个信号再清楚不过：<strong>信任类问题里，AI 的引用天平会压向投诉记录、监管通报、权威媒体，而不是品牌自己的辩解。</strong> 这对两类玩家意味着完全相反的事。</p>
+<p>对被质疑的一方（比如做正经培训的机构），你在自家官网写一百句“我们不是割韭菜“都没用，AI 不会引；有用的是把自己和骗子的差异点，写成能被第三方引用的形态——资质公示、可验证的学员案例、退费条款，最好出现在媒体、行业站、问答平台上。对做测评内容的一方，这是一片沃土：一篇带投诉数据、带识别清单（“敢承诺包赚钱的直接排除、查师资真实背景、要可验证的学员案例”）的评估文章，正是 AI 在这类问题上急需引用的东西。</p>
+<p>六家的结论也再次趋同：真有正规训练营，但市面打着“月入过万、包教包会“旗号的大多数是割韭菜，典型套路是低价引流→制造焦虑→连环收费；新手先用抖音电商学习中心、B 站免费教程。注意这个结论结构——不一棍子打死，也不和稀泥，给明确的识别标准。写信任型内容就照这个结构写。</p>
+<h2 id="案例复盘小鹅通平替谁铺内容谁上榜"><a class="header" href="#案例复盘小鹅通平替谁铺内容谁上榜">案例复盘：小鹅通平替，谁铺内容谁上榜</a></h2>
+<p>把三道黄金题拆开之后，再看一个完整的排位赛案例：“小鹅通太贵了有什么平替”。这道题把 GEO 时代最朴素的真理演了一遍：<strong>榜单不是评出来的，是铺出来的。</strong></p>
+<p>我们的实测显示，六家引擎给出的平替名单几乎不重样：</p>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>引擎</th><th>答案中出现的平替品牌（部分）</th></tr>
+</thead>
+<tbody>
+<tr><td>豆包</td><td>课堂街（点明 1999 元/年、0 抽佣）、千聊、码云数智、乔拓云、凡科教育、知识星球</td></tr>
+<tr><td>DeepSeek</td><td>码云数智（点明 2000-4000 元/年）、知识星球、小报童、创客匠人、有赞</td></tr>
+<tr><td>Kimi</td><td>码云数智、课堂街、迅课、乔拓云、短书、海豚知道、知识星球</td></tr>
+<tr><td>千问</td><td>码云数智（点明年费 1998-3998）、海豚知道、创客匠人、迅课、千聊、学两招</td></tr>
+<tr><td>文心一言</td><td>柚子易课、短书、凡科教育、观达云·网校通、海豚知道、格子匠</td></tr>
+<tr><td>元宝</td><td>千聊、创客匠人、码云数智、乔拓云、课堂街、云朵课堂、迅课等</td></tr>
+</tbody>
+</table>
+</div>
+<p>看出门道了吗？码云数智出现在五家的名单里，是唯一接近“全勤“的品牌——不是因为它产品一定最强，而是因为它的对比、测评、价格类内容在网上铺得最密，密到各家引擎检索“小鹅通平替“时都会撞上它。文心一言推荐的柚子易课、观达云·网校通，在其他五家里连影子都没有——这不是产品力的差距，是内容供给的差距。</p>
+<p>这就像外卖平台上的排位：用户搜“附近轻食“，排在前面的一定是上了架、菜单写得全的店；你手艺再好，没开店就等于不存在。AI 的答案名单就是新时代的货架，上架的方式只有一种——把内容铺到 AI 检索会命中的地方去。</p>
+<p>名单之内的竞争则是另一套打法。注意各家答案都点出了价格细节（豆包说课堂街 1999 元/年、千问说码云数智 1998-3998），这些数字直接来自带准确定价的内容页。我们的 prompt 研究里把“蝉妈妈会员一个月多少钱“这类问题标成 easy_win，原因写得很直白：现有答案各年份互相矛盾，一个带日期的准确定价页就能取代陈旧答案成为引用源。价格页这种 SEO 时代不起眼的内容，在 GEO 时代成了硬通货。</p>
+<h2 id="工具方的-geo-playbook"><a class="header" href="#工具方的-geo-playbook">工具方的 GEO Playbook</a></h2>
+<p>把上面所有案例收拢，给广告电商赛道的工具方（SaaS、数据工具、服务商）一份可以直接执行的 playbook。三件套，按优先级排：</p>
+<p><strong>第一件：官方帮助中心，按“症状+决策树“重写。</strong> 别再按产品功能目录组织帮助文档了，那是给自己人看的。按用户提问的症状组织：“消耗不出单”“计划跑不动”“数据对不上”，每个症状一篇，结构是排查决策树，阈值写具体。抖音电商学习中心就是活样板——我们的实测里，它被 DeepSeek、豆包等多家引擎在投放类问题里反复引用，等于官方内容直接占领了症状型问题的引用席。你没有平台级权威，但你对自己产品的症状问题比谁都熟，这是你的主场。</p>
+<p><strong>第二件：对比测评内容，自己下场写。</strong> “X 跟 Y 比哪个好“这类问题竞品真空严重（想想那道挂着 2019 年旧答案的客服机器人题），而 AI 又一定要给分流式答案。你写一篇诚实、有数据、按场景分流的对比测评，就是给 AI 递标准答案。要点是克制：把自己放进名单、把分流理由写实，别写成软文——AI 明显偏好有中立项和试用建议的内容（六家答案都不约而同提到“先试用 7-14 天再定”）。晓多官方博客被三家中立引用，靠的就是这个分寸感。</p>
+<p><strong>第三件：价格页，带日期、带版本、写清楚。</strong> 价格类问题（“多少钱、值不值、有没有返点”）是典型的 easy_win：旧答案互相矛盾，一个准确、新鲜、口径清晰的价格页就能通吃。价格页要写成页面不是图片，标注生效日期，把年费、抽佣、手续费三笔账分开列——元宝在“小鹅通平替“的答案里专门提醒用户“把年费+手续费+流水抽佣三笔账一起算“，这就是 AI 想要的颗粒度。</p>
+<p>最后一句提醒：这套 playbook 的前提是诚实。信任型问题的实测数据已经摆在那儿——AI 会引黑猫投诉、315 和市监局通报。铺内容能让你上榜，铺出来的东西经不起查，上榜就是上榜示众。</p>
+<blockquote>
+<p><strong>本章小结</strong></p>
+<ul>
+<li>广告电商从业者的提问有三大特征：症状化（描述病征而非术语）、对比心智（带候选名单要决断）、信任焦虑（要实锤不要广告），对应症状型、对比型、信任型三类黄金问题。</li>
+<li>症状型问题拼的是内容形态：决策树结构+具体阈值；实测中同一道千川题，DeepSeek 等四家引用了抖音电商学习中心等来源，豆包、Kimi 则 0 引用——引不引你，取决于内容供给。</li>
+<li>对比型问题里 AI 一律给分流式平衡答案，目标是挤进分流名单；晓多官方博客在竞品对比题中被三家引擎引用，证明官方内容可以打进中立问题的引用席。</li>
+<li>信任型问题的引用天平压向投诉平台、315 和监管官网；被质疑方自辩无效，差异点必须借第三方形态呈现。</li>
+<li>“小鹅通平替“实测显示六家名单几乎不重样、码云数智靠内容密度五家全勤：AI 时代的榜单是铺出来的。工具方 playbook 三件套：症状化帮助中心、自制对比测评、带日期的价格页。</li>
+</ul>
+</blockquote>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="第9章-行业实战-ii教育"><a class="header" href="#第9章-行业实战-ii教育">第9章 行业实战 II：教育</a></h1>
+<p>上一章拆了电商，这一章讲教育。我把它放在第二个讲，是因为教育是 GEO 红利和陷阱同样密集的行业：家长的提问习惯天然适配 AI 引擎，而绝大多数教培机构还没反应过来；同时，这个行业有些 query 看起来金灿灿的，实测下来却发现引擎根本不给你留门。</p>
+<p>本章结论来自我们对教育赛道 40 条真实 prompt 的梳理，以及 DeepSeek、豆包、Kimi、千问、文心、元宝六家引擎的逐题实测。凡是测过的，我会明说“实测“；没测过的，我不装。</p>
+<h2 id="教育-query-的四大特征"><a class="header" href="#教育-query-的四大特征">教育 query 的四大特征</a></h2>
+<h3 id="特征一先怀疑再掏钱智商税句式泛滥"><a class="header" href="#特征一先怀疑再掏钱智商税句式泛滥">特征一：先怀疑，再掏钱——“智商税“句式泛滥</a></h3>
+<p>教育 prompt 里最高频的句式不是“哪个好“，而是“是不是智商税““是不是割韭菜”“是不是骗局”：学习机到底是不是智商税、AI 课程是不是割韭菜、松鼠 AI 自习室加盟是不是骗局、IT 培训的包就业是真的吗……</p>
+<p>背后是教育消费的独特心理：<strong>试错成本不可回收</strong>。买错一箱纸巾大不了扔掉，报错班搭进去的是孩子一个学期——时间没法退货。所以家长的提问像小区业主群里打听新开的健身房：开口第一句永远是“这家是不是准备跑路“，而不是“器材怎么样“。先排雷，再谈选择。对 GEO 来说，负面语义 query 在教育行业不是边缘地带，而是主战场。</p>
+<h3 id="特征二品牌成对成串出现"><a class="header" href="#特征二品牌成对成串出现">特征二：品牌成对、成串出现</a></h3>
+<p>电商用户问“哪个耳机好“，教育用户问的是“科大讯飞和作业帮学习机哪个好““东奥还是中华会计网校”“唐迟王江涛颉斌斌跟谁好”。品牌甚至名师 IP 直接以二选一、三选一的形式写进 query。原因简单：教育产品的差异从外观看不出来，家长能抓住的抓手只有牌子——就像去菜市场买肉，看不出肉质，只能认准“张记“还是“李记“。query 里的品牌名单就是家长的候选名单，而 AI 的回答正在取代知乎高赞，成为最终裁决者。</p>
+<h3 id="特征三成本问到骨头里"><a class="header" href="#特征三成本问到骨头里">特征三：成本问到骨头里</a></h3>
+<p>“粉笔 980 系统班和线下 2 万的协议班差在哪”“学习机一千多的和五千的差在哪”“三年级学习机预算 3000 以内求推荐”。这不是问“多少钱“，而是<strong>价格带 + 具体数字 + 差在哪</strong>的三段式对账。我们的 prompt 库显示，带具体价格锚点的 query 引用潜力普遍是 high——引擎也需要接得住数字的内容，泛泛的“性价比之选“喂不饱它。</p>
+<h3 id="特征四ai-原生场景涌现"><a class="header" href="#特征四ai-原生场景涌现">特征四：AI 原生场景涌现</a></h3>
+<p>最让人兴奋的一条。prompt 库里冒出一批三年前不存在的问题：“用 DeepSeek 豆包辅导孩子作业靠谱吗”“普通人需要花钱学 DeepSeek 吗”“夸克百度的 AI 填志愿靠谱吗”“老师批改作文用什么 AI 工具”。AI 不仅改变了答案的分发，还亲自下场制造了新问题。这些 query 像刚通车的新区马路——路灯没装、路牌没立，谁先立牌子谁就是地标。这类题我们清一色标注 competition: none。</p>
+<h2 id="负面语义占位抢答学习机是不是智商税"><a class="header" href="#负面语义占位抢答学习机是不是智商税">负面语义占位：抢答“学习机是不是智商税“</a></h2>
+<p>很多品牌方的本能错误：看到“智商税“三个字，第一反应是公关式否认“我们不是“。这在 AI 引擎面前最没用，因为它不提供可供引用的判断框架。正确姿势是<strong>替用户把账算清，然后分人群给结论</strong>——什么孩子值得买、什么情况它就是吃灰的平板，一条条说透。我们的 prompt 库对这条 query 标注的提及机制写得很直白：“分人群明确结论的内容被引用”。</p>
+<p>这里有个心态转变：负面占位不是抹黑自己，而是<strong>抢阅卷权</strong>。“是不是智商税“像贴在店门口的差评大字报，你撕不掉，但可以在旁边贴一张更详细的“本店价格构成说明”——路人两张都看，但只有一张是你写的。谁提供判断框架，谁就定义什么叫智商税。</p>
+<p>也要注意烈度差异：“学习机是不是智商税“同题在知乎至少 5 个问题在抢，竞争标注 medium，是拼质量的阵地战；而“松鼠 AI 自习室加盟是不是骗局“这类新兴负面 query 竞争几乎为零，但窗口期短，先到先得。</p>
+<h2 id="ai-原生场景最干净的卡位和元宝-05-的警示"><a class="header" href="#ai-原生场景最干净的卡位和元宝-05-的警示">AI 原生场景：最干净的卡位，和元宝 0/5 的警示</a></h2>
+<p>“用 DeepSeek 辅导孩子作业靠谱吗，会不会让孩子变懒”——我给它的批注是“AI 原生场景最干净的卡位“。干净，是因为没有任何品牌有存量内容优势，一篇分年龄段使用指南就是现成的好答案。</p>
+<p>但实测给了一记提醒。我们在腾讯元宝上对这条 query 做了 5 次独立采样，结果 <strong>0/5 引用</strong>——5 次全部没触发联网检索，元宝纯靠模型自有知识作答。同批 12 道题元宝整体引用率 49/60（81.7%），“小鹅通平替“这类商业化问题是 5/5 全引用，唯独这题稳定地一次不引。0/5 不是偶发，是策略：<strong>引擎会自己判断哪些问题“不需要查资料”</strong>。涉及价值观和教育方法论的开放题，大模型倾向直接输出观点，像教了二十年书的老班主任——你问他“要不要让孩子用计算器“，他张口就答，不翻参考书，因为他觉得这是常识判断，不是事实查询。</p>
+<p>所以“最干净的卡位“要加一个限定：<strong>先测引擎引不引用，再决定投不投入</strong>。同一问题，豆包引了中国教育报，文心引了央视频、央广网、央视新闻一串央媒，DeepSeek 引了中国青年报和光明网（其引用报道里甚至出现“20.5% 受访学生更依赖 AI“的调研数据），千问引了中国教育电视台和广东教育政务站——五家里四家敞开大门，只有元宝关了门。</p>
+<p>打法含义有两层：一是把“引用率“作为卡位价值的第一道筛子，不引用的引擎内容写得再好也进不去；二是看引擎引的都是什么——中国教育报、中国青年报、央广网、教育政务站。牵涉“孩子“的话题，引擎取稿口味集体偏向权威教育媒体，你的分年龄段指南要设法进入这个级别的信源，卡位才成立。</p>
+<h2 id="b-端蓝海招生获客与教务-saas"><a class="header" href="#b-端蓝海招生获客与教务-saas">B 端蓝海：招生获客与教务 SaaS</a></h2>
+<p>教育 GEO 最大的不对称在 B 端。C 端学习机对比好歹有知乎占位，B 端的“地推加来的家长微信怎么转化不被拉黑““开学季体验课转化率低怎么办”“培训机构怎么做私域招生”，三条全部标注 competition: none，是我见过最空旷的区域之一。</p>
+<p>但实测有个反直觉发现：<strong>B 端 query 的引用机制集中在元宝和文心，其他引擎基本不接。</strong> 元宝对“地推家长微信转化“5 次采样 5/5 全部联网引用，来源高度集中在微信公众号（5/5 命中）和大咖创享汇类运营垂直站（woshipm.com 5/5）；文心在两道 B 端题上引用的名单几乎是一份教培自媒体花名册：晋级教育、格子匠、爱耕云、学邦技术、校长实务宝典、小鹅通技术……而 DeepSeek、豆包、Kimi 在这两题上清一色无引用。</p>
+<p>换句话说，B 端教培内容的引用通道像一条窄轨铁路——不是每家火车都能上，目前只有元宝（公众号轨道）和文心（百度系 + 教培垂直号轨道）两班车。你的“体验课转化漏斗诊断“发在自己官网基本没用，得发进公众号或文心的信源池。</p>
+<p>顺带纠正一个易高估的数字：元宝单次测试按引用卡片原始条数算，公众号占比高达 30.4%，像三分天下；但公众号习惯一次回答挂多张卡片，按“回答内域名去重“口径重算后只有 8.8%（44/498），和头条系（39 次）几乎并列。公众号是元宝的重要信源，但不是半壁江山，别把预算全押一个渠道。</p>
+<p>教务 SaaS 那边则是好消息。“小鹅通太贵了有什么平替“这条商业化 query，元宝 5 次采样 5/5 引用且核心域名稳定复现——乔拓云、固乔这类中小厂商站点每次命中；豆包直接给出“课堂街 1999 元/年、0 抽佣“的推荐，DeepSeek 和千问不约而同提到码云数智 2000–4000 元/年的价格带。<strong>小厂商的官网和测评内容在这类 query 上能被稳定引用</strong>，这在 C 端大品牌林立的 query 里不可想象。带真实价格的功能对比表，就是这条赛道的硬通货。</p>
+<h2 id="案例拆解老师批改作文用什么-ai-工具"><a class="header" href="#案例拆解老师批改作文用什么-ai-工具">案例拆解：“老师批改作文用什么 AI 工具”</a></h2>
+<p>这道题把六家引擎的性格差异暴露得最充分：</p>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>引擎</th><th>引用</th><th>推荐/引用要点</th></tr>
+</thead>
+<tbody>
+<tr><td>文心</td><td>有</td><td>推荐批改邦、飞象 AI 作文、笔神、DeepSeek，按批量批改/学情分析/单篇精批/应试训练分场景</td></tr>
+<tr><td>豆包</td><td>有</td><td>引人民网和神笔官网，推荐笔神、神笔、题小小、钉钉 AI 作文批改</td></tr>
+<tr><td>元宝</td><td>5/5</td><td>稳定引批改网官网 pigai.org（5 次全中）、凤凰网教育、公众号</td></tr>
+<tr><td>DeepSeek</td><td>有</td><td>同样引人民网，推荐笔神、神笔，并警告“AI 打分实测分差 8–15 分，须人工复核“</td></tr>
+<tr><td>千问</td><td>有</td><td>引讯飞、有道、百度 AI、阿里云等厂商官方教育站</td></tr>
+<tr><td>Kimi</td><td>无</td><td>凭模型知识推荐笔神、题小小、批改邦、天学网</td></tr>
+</tbody>
+</table>
+</div>
+<p>三个观察。第一，这是罕见的“六家都愿意给品牌名“的题，连不联网的 Kimi 都从模型记忆里掏出产品清单——AI 工具推荐类 query 的品牌提及机制已成型，问题只是你的名字在不在候选池。第二，人民网成了意外赢家，豆包和 DeepSeek 不约而同引了 society.people.com.cn——央媒教育报道在这个品类承担信用背书角色，一次央媒报道的权重可能超过你自己发的五十篇软文。第三，文心的名单（批改邦、飞象、笔神）和豆包、元宝的并不重合，说明答案池还没固化，每个引擎的“推荐位“都有腾挪空间——趁名单没锁死，把教师视角的实测横评铺进各家信源池（这条 query 我们标注的机制正是“教师视角实测横评被引用为推荐答案“）。</p>
+<h2 id="家长决策链与引擎选择为什么优先微信--百度系"><a class="header" href="#家长决策链与引擎选择为什么优先微信--百度系">家长决策链与引擎选择：为什么优先微信 + 百度系</a></h2>
+<p>教育付费决策链的特殊性在于：<strong>使用者、决策者、焦虑承担者是三个人</strong>——孩子是使用者，家长是决策者，而深夜十一点打开 AI 提问的，往往是刚陪写完作业、一肚子焦虑的那个人。你的内容不是写给“用户“看的，是写给“付款且失眠的人“看的。这决定了内容要出现在家长的信息动线上。</p>
+<p>家长的信息动线在哪？微信和百度。这不是拍脑袋：元宝是六家里唯一稳定高频引用公众号的引擎，公众号和腾讯系域名（合计约占去重计次的 14%）构成其信源基本盘——而微信就是家长群、班级通知、升学攻略转发的地方，公众号像班主任贴在教室后门的通知栏，家长每天接送都要瞄一眼。文心背后是整个百度系：百家号、百度百科、百度文库（word.baidu.com 多次出现在文心引用列表）；“孩子学习跟不上怎么办“这类问题，家长的手指肌肉记忆就是打开百度，文心在 B 端教培题上能拉出一整份教培垂直号名单，说明百度系内容池在教培领域确实积得厚。</p>
+<p>所以教育行业的资源分配，我的建议很明确：<strong>公众号 + 百度系（百家号/文库/百科）为主阵地，喂饱元宝和文心；头条系作为元宝第二信源顺手覆盖；知乎只在已成规模的对比题上补课</strong>。这个顺序和 3C 行业“知乎优先“的打法恰好相反——引擎选择跟着决策人走，不跟着平台名气走。</p>
+<p>内容形态则可以直接从实测抄作业：带真实价格的对比表（小鹅通平替题验证）、按分数段分层的决策结论（偏科报一对一还是买学习机）、分年龄段 AI 使用指南（Q9 验证）、加盟回报测算加风险提示（松鼠 AI 题）。共同点是<strong>给结论、给数字、给适用边界</strong>——引擎引用的是判断，不是广告。</p>
+<blockquote>
+<p><strong>本章小结</strong></p>
+<ul>
+<li>教育 query 四大特征：负面“智商税“句式是主战场、品牌成对出现、成本问到具体数字、AI 原生场景持续涌现且竞争近乎为零。</li>
+<li>负面语义占位的核心是抢“阅卷权“：分人群给明确结论、替用户算账，而不是公关式否认。</li>
+<li>先测引用再投入：元宝对“用 DeepSeek 辅导作业“5/5 稳定零引用，说明引擎会自主判断哪些问题不需联网——引用率是卡位价值的第一道筛子。</li>
+<li>B 端是零竞争蓝海但通道窄：方法论内容走元宝公众号轨道和文心教培垂直信源；教务 SaaS 的价格对比内容能被多家稳定引用，小厂商官网也上得了桌。</li>
+<li>家长决策链决定渠道优先级：教育 GEO 优先微信 + 百度系，央媒和教育权威媒体在涉孩子话题上的背书权重远超自媒体。</li>
+</ul>
+</blockquote>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="第10章-方法论与工具geo-工作流"><a class="header" href="#第10章-方法论与工具geo-工作流">第10章 方法论与工具：GEO 工作流</a></h1>
+<p>前面九章讲了原理、引擎格局和各平台打法。这一章收拢成一件事：<strong>一套能跑起来的 GEO 工作流</strong>。我见过太多团队卡在“道理都懂，就是没动手“——要么上来就铺两百篇软文被引擎降权，要么研究了三个月还没发第一篇内容。GEO 不是玄学，它更像开外卖店：先搞清楚客人点什么，再搞清楚平台把谁的店排在前面，然后把菜做好、多开几个档口、天天看后台评分。这一章就按这个顺序走。</p>
+<h2 id="一完整-geo-工作流五步走"><a class="header" href="#一完整-geo-工作流五步走">一、完整 GEO 工作流五步走</a></h2>
+<h3 id="第一步query-研究先去点菜台旁听"><a class="header" href="#第一步query-研究先去点菜台旁听">第一步：Query 研究——先去点菜台旁听</a></h3>
+<p>做 SEO 的人习惯先查关键词工具，看搜索量、看竞价。GEO 的起点不一样：你要研究的是<strong>人怎么跟 AI 说话</strong>。</p>
+<p>这一步像什么？像你盘下一家外卖店之前，先蹲在同行店的点菜台旁听三天。你会发现客人根本不按菜单上的正式名称点菜——他们说的是“有没有不辣的““昨天那个酸汤怎么没了”。AI 时代的 query 也一样，全是口语化的“症状“和“焦虑“。</p>
+<p>我们的实测研究印证了这一点。在广告电商方向，千川/投放类最高频的提问不是“怎么投放“，而是“跑不动怎么办““有消耗不出单”“素材衰退了怎么重新起量”——极度症状化。在教育方向，覆盖率最高的句式是“智商税““割韭菜”“靠谱吗”：“1298 训练营是真的吗”“AI 填志愿会不会耽误孩子”。另外两类高频句式是品牌化对比（“聚水潭 vs 旺店通”“粉笔 vs 中公”）和具体到城市、班型的成本问题（“北京一对一多少钱一小时”“港硕 15 万够不够”）。</p>
+<p>具体做法：</p>
+<ul>
+<li><strong>从真实语料里捞 query，不要自己编。</strong> 我们的语料来源是知乎原题、百度下拉联想、贴吧和百度知道的用户原话，按真实口吻保留。AI 对话框里的问题跟这些社区里的提问高度同构。</li>
+<li><strong>按“决策阶段 × 引用性 × 竞争度“给 query 分级。</strong> 我们的做法是：选型/解决问题类 + 容易被引用 + 竞争空白 = 先做（easy_win）；纯定义类（“千川投流是什么意思”）AI 直接用训练数据回答，引用率低，跳过。</li>
+<li><strong>信任焦虑类是蓝海。</strong> “无货源是割韭菜吗”“代运营靠谱吗“这类问题在知乎、贴吧有大量真实提问，但优质中立答案稀缺——谁先给出有依据的回答，谁就卡位。</li>
+</ul>
+<p>这一步的产出物应该是一张可以直接执行的 query 清单，而不是一份“趋势洞察“PPT。</p>
+<h3 id="第二步信源选择搞清楚每个引擎听谁的"><a class="header" href="#第二步信源选择搞清楚每个引擎听谁的">第二步：信源选择——搞清楚每个引擎听谁的</a></h3>
+<p>SEO 时代，搜索引擎基本就看你自己的站。GEO 时代完全不同：<strong>AI 引擎引用的往往是第三方信源，而每家引擎有自己的“熟人圈“</strong>。</p>
+<p>打个比方：你要在一个小区里把消息传开，光在自家门口贴告示没用，你得知道这栋楼的住户信物业群、那栋楼信广场舞领队。引擎也一样。我们的信源研究显示：</p>
+<ul>
+<li><strong>豆包</strong>核心信源是字节系——今日头条、抖音、西瓜视频，TOP5 信源里三个是字节的，2025 下半年起抖音短视频权重还在上升。打法：头条号 + 抖音内容矩阵。</li>
+<li><strong>腾讯元宝</strong>最吃微信公众号（约占信源 10%，是单一渠道占比最高的），加视频号、搜一搜。<strong>没有公众号内容的品牌在元宝上几乎拿不到曝光。</strong></li>
+<li><strong>文心一言</strong>绑定百家号、百度百科、百度知道，与百度搜索收录深度绑定——SEO 和 GEO 协同度最高，最稳定。</li>
+<li><strong>DeepSeek</strong>没有自有生态，靠开放网页抓取：搜狐、网易、百度百科、行业媒体。打法是多平台铺同口径内容，提高被抓取概率。</li>
+<li><strong>Kimi</strong>外采为主，偏微信公众平台和搜狐，但企业官网权重高——我们的样本里官网引用覆盖率 67.6%，六家最高之一。</li>
+<li><strong>千问</strong>偏好权威媒体和知识文档。</li>
+</ul>
+<p>所以信源选择的动作是：把第一步的 query 清单按目标引擎分工，每条 query 标注“主战场“。教育类内容在元宝和文心上杠杆最大（家长群体与微信、百度搜索场景高度重合）；B 端工具类内容则要把 DeepSeek、Kimi 的门户铺稿和官网事实页做扎实。</p>
+<h3 id="第三步内容生产把内容做成可被引用的零件"><a class="header" href="#第三步内容生产把内容做成可被引用的零件">第三步：内容生产——把内容做成“可被引用的零件“</a></h3>
+<p>这一步是全书前半部分各章内容原则的落地，这里只强调工作流层面的纪律：<strong>内容不是写给读者看完的，是写给 AI“拆件“用的</strong>。AI 引用你，就像后厨从你的摊位上拿净菜——你得按它要的规格切好。具体技术要求下一节详述。</p>
+<p>工作流上要做的判断是生产排序：先做 easy_win（症状型 how-to、工具对比、信任评估），再做 target（数据工具选型、成本类价格页），明确放弃纯定义类。别贪多，一个团队一个月把 10 条 easy_win 做透，比铺 100 条平庸内容有效得多。</p>
+<h3 id="第四步分发矩阵一鱼多吃"><a class="header" href="#第四步分发矩阵一鱼多吃">第四步：分发矩阵——一鱼多吃</a></h3>
+<p>内容生产出来之后，同一份研究要改造成不同平台形态分发出去。这一步的详细改造法见本章第三节。工作流要点只有一条：<strong>分发不是复制粘贴，是改写</strong>。同一段文字原样铺到五个平台，正是 DeepSeek 已经开始识别降权的“低质 AIGC 铺稿“特征。</p>
+<h3 id="第五步监测迭代天天看后台评分"><a class="header" href="#第五步监测迭代天天看后台评分">第五步：监测迭代——天天看后台评分</a></h3>
+<p>外卖店老板每天看评分、看差评、看出餐时长。GEO 也一样：发了内容不等于被引用，要持续监测“AI 在目标 query 下到底引没引你、引的是谁“。</p>
+<p>这里有一个容易被忽视的背景数据：鲸牙启量 9786 题样本研究显示，整体引用覆盖率只有 50.4%——<strong>近一半的 AI 回答根本没有任何引用</strong>。这意味着“能被引用“本身就是稀缺卡位，监测的意义不是看你涨了几个点，而是看你在那“有引用的一半“里占没占到位置。</p>
+<p>监测到结果后的迭代动作：</p>
+<ul>
+<li>被引用了 → 固化这个内容形态，横向复制到同 cluster 的其他 query；</li>
+<li>没被引用但竞品被引了 → 拆解竞品被引的那篇，看它是结论前置做得好还是数据更实，针对性改写；</li>
+<li>整个 query 无引用 → 检查是不是 query 类型选错了（纯定义类引用率天然低），或者信源铺错了平台。</li>
+</ul>
+<p>迭代周期建议以两周为单位。AI 引擎的信源库更新比搜索引擎慢，天天盯没有增量信息，只会制造焦虑。</p>
+<h2 id="二内容形态的技术要求四条硬指标"><a class="header" href="#二内容形态的技术要求四条硬指标">二、内容形态的技术要求：四条硬指标</a></h2>
+<p>这一节的标准全部来自我们的实测观察——我们对比了被引用和没被引用的内容形态，差异高度稳定。记住一个比喻：AI 取内容像<strong>菜市场早高峰的采购员</strong>，没耐心翻你整本账，谁的摊位明码标价、货摆得整齐，就从谁那儿拿。</p>
+<h3 id="1-结论前置40-60-字直接回答"><a class="header" href="#1-结论前置40-60-字直接回答">1. 结论前置：40-60 字直接回答</a></h3>
+<p>文章开头 40-60 字内必须给出直接结论，像导购开口第一句就报结果：“这款学习机适合三年级以上、家长没空盯的家庭，3000 元价位段优先选 A。“不要铺垫行业背景。AI 做答案时优先截取能直接回答问题的段落，铺垫三段的写法等于把净菜藏在地窖里。</p>
+<h3 id="2-对比表至少-5-个维度"><a class="header" href="#2-对比表至少-5-个维度">2. 对比表：至少 5 个维度</a></h3>
+<p>“A 和 B 哪个好“是用户固定句式，而<strong>横向对比表是最容易被 AI 整体引用的内容形态</strong>——表格结构化程度高，引擎几乎可以直接搬进答案。要求至少 5 个对比维度（价格、功能、适用场景、售后、用户口碑等），维度少了没有引用价值。聚水潭 vs 旺店通、粉笔 vs 中公这类成对出现的品牌对比，是我们样本里被引用最整齐的形态。</p>
+<h3 id="3-价格必须带日期"><a class="header" href="#3-价格必须带日期">3. 价格必须带日期</a></h3>
+<p>成本类问题的价格信息在网上普遍陈旧混乱，这恰恰是机会：<strong>带日期的准确定价页容易成为引用源</strong>。写法是“2026 年 7 月官网价：标准版 XXX 元/年“。日期是 AI 判断信息时效的锚点，没有日期的价格在新旧混杂的信源里会被直接丢弃。</p>
+<h3 id="4-可验证数字"><a class="header" href="#4-可验证数字">4. 可验证数字</a></h3>
+<p>价格、ROI、样本量、时间——凡是数字，必须能被第三方查证。这不是道德洁癖，是生存策略：引擎对低质 AIGC 的识别越来越依赖“信息是否可交叉验证“，编造的漂亮数字不但留不下来，还会拖累整个域名的信誉。</p>
+<h2 id="三一鱼多吃多平台分发的改造法"><a class="header" href="#三一鱼多吃多平台分发的改造法">三、一鱼多吃：多平台分发的改造法</a></h2>
+<p>一条内容研究做完，至少要出三个版本。还是食堂的比喻：<strong>一条鱼，知乎版是清蒸配蘸水，公众号版是慢炖整鱼上桌，头条版是鱼丸汤</strong>——原料同一条，刀工、火候、上桌形式全不同。</p>
+<h3 id="知乎问答版"><a class="header" href="#知乎问答版">知乎问答版</a></h3>
+<ul>
+<li>对应引擎：豆包、文心，以及抓开放网页的 DeepSeek。</li>
+<li>形态：以真实问题为标题直接作答，第一句就是 40-60 字结论前置；正文用“分场景建议 + 对比表“展开。</li>
+<li>关键动作：<strong>负面语义要主动占位</strong>。“智商税”“骗局”“退费难“这类词条下已有大量第三方吐槽帖，你不去答，答案就被吐槽帖定义。回答要中立、给判断标准（“什么情况下值得、什么情况下是坑”），这比硬夸更容易被引用。</li>
+</ul>
+<h3 id="公众号长文版"><a class="header" href="#公众号长文版">公众号长文版</a></h3>
+<ul>
+<li>对应引擎：元宝（必需）、Kimi。</li>
+<li>形态：3000 字以上的完整长文，有叙事、有案例细节，结论前置改成“开头摘要“段落；文末挂权威信源引用（教育类必须挂教育部、阳光高考、研招网这类官方源——教育类 AI 回答明显偏好官方数据）。</li>
+<li>提醒：没有公众号矩阵，元宝这条路就是断的，这是刚性约束，不是优化项。</li>
+</ul>
+<h3 id="头条短文版"><a class="header" href="#头条短文版">头条短文版</a></h3>
+<ul>
+<li>对应引擎：豆包（字节系信源权重最高）。</li>
+<li>形态：800-1500 字，单点切入，一篇只讲一个问题；保留结论前置和一张对比表，砍掉长叙事。</li>
+<li>延伸：豆包侧抖音短视频权重在上升，有条件的话把同一结论做成口播短视频，文字稿同步发头条号。</li>
+</ul>
+<p>一个容易漏的形态：<strong>官网事实页</strong>。对 Kimi 这种官网引用覆盖率 67.6% 的引擎，官网上的产品参数页、定价页、FAQ 页就是最直接的引用源。自建结构化问答库会被直接引用——蝉妈妈运营圈、腾讯广告营销学堂这类官方帮助中心在我们的样本里频繁被引，就是证明。</p>
+<h2 id="四监测工具盘点"><a class="header" href="#四监测工具盘点">四、监测工具盘点</a></h2>
+<p>监测解决一个问题：我发出去的内容，AI 引了没有？目前可用的工具有这么几类：</p>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>工具</th><th>定位</th><th>适合谁</th></tr>
+</thead>
+<tbody>
+<tr><td>GEOBase（AIBase）</td><td>免费入口（geo.aibase.com/tools），查品牌在 AI 回答中的可见度</td><td>起步期、验证概念</td></tr>
+<tr><td>新榜智汇 GEO SaaS</td><td>信源研究 + 持续监测，我们引用的信源偏好数据就来自其 2025-12 研究</td><td>有预算、要多引擎持续盯</td></tr>
+<tr><td>鲸牙启量</td><td>引用来源榜，9786 题大样本，能看“引擎到底引谁“</td><td>做信源策略复盘</td></tr>
+<tr><td>犀帆 Seenify</td><td>可见度监测</td><td>备选</td></tr>
+</tbody>
+</table>
+</div>
+<p>提醒一句：市面上各种“GEO 服务商十大排行榜“基本是厂商自费软文，别拿它当选型依据。工具也一样，先用免费的 GEOBase 跑通“query 清单 → 监测 → 迭代“的闭环，再决定要不要付费。</p>
+<h2 id="五风控与边界三条不能踩的线"><a class="header" href="#五风控与边界三条不能踩的线">五、风控与边界：三条不能踩的线</a></h2>
+<h3 id="1-引擎风控deepseek-的教训"><a class="header" href="#1-引擎风控deepseek-的教训">1. 引擎风控：DeepSeek 的教训</a></h3>
+<p>我们自己踩过坑：早期为了快速验证，对一批 query 做了高频自动抓取测试，触发了 DeepSeek 的风控限流。教训有两层。技术上，任何自动化监测都要控制频率、加间隔，模拟正常用户节奏——你把引擎当数据库猛拉，它就把你当爬虫封。策略上，DeepSeek 官方在 2025 年 5 月的采访中已明确表示在对低质 AIGC 铺稿内容识别降权。也就是说，<strong>靠机器铺量和机器猛查这两条路，都在收窄</strong>。</p>
+<h3 id="2-平台打击低质铺稿是负资产"><a class="header" href="#2-平台打击低质铺稿是负资产">2. 平台打击：低质铺稿是负资产</a></h3>
+<p>GEO 灰产已经存在，平台也已经在打。截至 2026 年初，六家引擎都没有官方 AI 回答广告产品，市面上所有“被 AI 推荐“服务都是有机操作——这意味着没有“花钱买位置“的正规出口，想走捷径的人只能走灰产，而灰产正是被降权的对象。铺低质软文不但当下没效果，还会给域名和账号留下降权记录，是负资产。</p>
+<h3 id="3-伦理边界不造假不操纵"><a class="header" href="#3-伦理边界不造假不操纵">3. 伦理边界：不造假、不操纵</a></h3>
+<p>GEO 和“操纵 AI“之间有条清晰的线：<strong>你做的是让真实、优质的信息更容易被 AI 找到和引用，不是让 AI 说假话</strong>。落到行为上：不编造数据、不伪造用户评价、不用批量账号自问自答、不在“智商税“类问题下伪装中立实为洗地。理由很实际——AI 引擎的交叉验证能力在快速增强，造假内容的存活期会越来越短，而真实数据型内容是长期资产。伦理在这里不是高调，是复利。</p>
+<h2 id="六自建监测-vs-买工具怎么决策"><a class="header" href="#六自建监测-vs-买工具怎么决策">六、自建监测 vs 买工具：怎么决策</a></h2>
+<p>像小区装安防：是自己装几个摄像头，还是花钱请物业公司？看三样东西：楼多大、丢没丢过东西、你有没有时间盯监控。</p>
+<ul>
+<li><strong>先买（或先用免费工具），满足以下任一条件</strong>：团队没有专职技术；要监测的 query 少于 50 条；还在验证 GEO 值不值得投入。先用 GEOBase 免费入口，跑通闭环再升级到新榜智汇这类 SaaS。</li>
+<li><strong>再考虑自建，需要同时满足</strong>：query 规模上百条、跨六个引擎、需要按天级频率追踪；有研发资源做定时任务和结果入库；有明确的内部报表需求（比如给多个客户或事业部出数据）。</li>
+<li><strong>自建的红线</strong>：抓取频率必须克制。上面 DeepSeek 风控的教训就发生在这个场景——自建系统最容易犯的错就是“既然自己写了脚本，不如跑勤快点“，结果监测系统本身成了风控对象。</li>
+</ul>
+<p>我们的建议路径：免费工具验证 → SaaS 订阅撑过成长期 → 只有当 SaaS 的成本和灵活度都成为瓶颈时，才投入自建。多数团队停在第二阶段就够了。</p>
+<blockquote>
+<p><strong>本章小结</strong></p>
+<ul>
+<li>GEO 工作流五步：query 研究（从真实语料捞口语化问题）→ 信源选择（按引擎的“熟人圈“分工）→ 内容生产（先做 easy_win）→ 分发矩阵（一鱼多吃、改写而非复制）→ 监测迭代（两周一个周期）。</li>
+<li>内容四条硬指标：结论前置 40-60 字、对比表 5+ 维度、价格带日期、数字可验证——全部来自被引用内容的实测共性。</li>
+<li>分发至少出三版：知乎问答版、公众号长文版（元宝刚需）、头条短文版，外加官网事实页。</li>
+<li>监测先用 GEOBase 免费入口跑通闭环，再按 query 规模决定 SaaS 或自建；自建必须控制抓取频率。</li>
+<li>边界：不高频抓取、不铺低质稿、不造假不操纵——真实数据型内容才是长期资产。</li>
+</ul>
+</blockquote>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="第11章-未来从-geo-到-agent-时代"><a class="header" href="#第11章-未来从-geo-到-agent-时代">第11章 未来：从 GEO 到 Agent 时代</a></h1>
+<h2 id="一先把丑话说在前面这一章是推演不是数据"><a class="header" href="#一先把丑话说在前面这一章是推演不是数据">一、先把丑话说在前面：这一章是推演，不是数据</a></h2>
+<p>前面十章，我给你的基本都是“秤上的数字“——实测过、有据可查。这一章不一样，它更像菜市场收摊之后，摊主一边码菜一边跟你聊“明天该进什么货“：依据是今天卖剩了什么、天气预报说明天降温、隔壁摊涨价了，但说到底，这是对明天的判断，不是今天的流水。</p>
+<p>所以你接下来读到的所有关于“未来形态“的描述，请记住三点：</p>
+<ol>
+<li>海外已经发生的事实（Perplexity 卖广告、ChatGPT 能购物）是依据，不是预言；</li>
+<li>国内引擎的实测数据是锚点，我会注明出处；</li>
+<li>中间连起来的那条线，是我的推演。推演可能错，但我宁可给你一个会错的判断，也不给你一句永远正确的废话。</li>
+</ol>
+<h2 id="二推演一ai-搜索的商业化会长成什么样"><a class="header" href="#二推演一ai-搜索的商业化会长成什么样">二、推演一：AI 搜索的商业化，会长成什么样</a></h2>
+<h3 id="海外已经亮牌了"><a class="header" href="#海外已经亮牌了">海外已经亮牌了</a></h3>
+<p>海外两家头部玩家已经把商业化的底牌亮出来了一半。Perplexity 从 2024 年底开始在答案界面引入广告位——形式是“赞助的追问问题“和答案侧边的品牌展示；ChatGPT 则在 2025 年上线了购物功能，用户在对话里问“预算两百美元送妈妈的礼物“，回答里直接出现商品卡片，随后更进一步，和 Etsy、Shopify 的商家打通，用户可以在对话里直接下单结账，OpenAI 还和 Stripe 一起搞了一套给 Agent 用的交易协议。</p>
+<p>注意这两个动作的区别：Perplexity 卖的是“答案旁边的位置“，ChatGPT 卖的是“答案之后的动作“。一个像商场导购胸前挂了赞助商 logo，一个像导购直接拉着你的手去收银台。这两条路，国内大概率都会走，而且会走得更彻底——因为国内几家引擎背后，本来就站着电商和内容生态。</p>
+<h3 id="国内还在免费导购阶段"><a class="header" href="#国内还在免费导购阶段">国内还在“免费导购“阶段</a></h3>
+<p>截至 2026 年初，我们的研究结论很明确：国内六家主流 AI 引擎——豆包、DeepSeek、Kimi、千问、文心、元宝——都没有官方的 AI 回答广告产品，腾讯甚至公开承诺元宝不嵌入商业结果。也就是说，现在你听到的所有“被 AI 推荐“，全部是有机结果，是 GEO 做出来的，不是花钱买出来的。</p>
+<p>这个窗口期值多少钱？头豹研究院的估测是：2025 年国内 GEO 市场约 21 亿元，2027 年预计 242 亿元。十倍的预期增速，赌的就是这个窗口期以及窗口期之后的习惯迁移。</p>
+<h3 id="我的推演广告位会先进来但答案本身短期内不敢卖"><a class="header" href="#我的推演广告位会先进来但答案本身短期内不敢卖">我的推演：广告位会先进来，但答案本身短期内不敢卖</a></h3>
+<p>我的判断是：国内引擎的商业化会分三步走——第一步，答案界面出现明确的赞助位置（和 Perplexity 一样）；第二步，商品/服务卡片结构化接入，AI 从“告诉你买哪个“变成“帮你比价“；第三步，Agent 替你完成交易，平台从交易中抽佣。</p>
+<p>但有一件事我认为各家短期内都不敢做：把“答案内容本身“卖掉。原因很简单——AI 搜索对用户的全部价值，建立在“它替我说的是客观判断“这个信任上。知乎研究院 2025 年 Q2 的白皮书（1046 份调研）显示，AI 搜索的用户满意度是 3.95，高于传统搜索的 3.62；HCR 慧辰 2025 年 5 月的调研里，92% 的消费者在购物决策中用过 AI 辅助。用户是因为信你才来问你的，一旦发现答案是买的，信任塌方比搜索引擎时代快得多——搜索引擎给你十个链接，掺一个广告你还能自己挑；AI 只给你一个答案，这个答案是买的，你就没得挑了。</p>
+<p>所以对品牌方，推演结论很直白：<strong>未来两三年，“被 AI 有机引用“是最值钱的卡位，因为它花的是内容的钱，占的是信任的坑。</strong> 等广告产品真上线了，有机引用反而会更稀缺——就像自然搜索结果页越往后排越没人看一样。</p>
+<h2 id="三推演二agent-直接下单优化对象从答案变成行动"><a class="header" href="#三推演二agent-直接下单优化对象从答案变成行动">三、推演二：Agent 直接下单，优化对象从“答案“变成“行动“</a></h2>
+<p>现在用户问 AI：“晓多、乐言、店小蜜哪个好？“AI 给个对比表，用户看完自己去下单。下一步是：用户说“给我的店配个客服机器人，预算每月两千以内，能接抖音小店”，Agent 自己比价、自己调用接口、自己完成采购，用户只负责最后按个指纹。</p>
+<p>这不是科幻。Kimi 已经在战略上明牌了——用户规模涨不动（月活约 900 万且萎缩），官方干脆转向 Agent 商业化，不追用户数了。换句话说，有玩家已经判断“卖答案“不如“卖行动“。</p>
+<p>这个转变对优化的影响是根本性的。打个比方：过去你面对的是一个帮顾客跑腿的代购，你要做的是让代购“听说过你、信得过你“；未来这个代购变成了只认表格的采购系统——你说“我要一支口红“没用，你得把色号、规格、条码、价格写进它能读取的清单里，它才买得回来。<strong>优化对象从“被说到“变成了“被调到“：你的产品信息必须是机器可读的、接口可调的、价格可核的。</strong></p>
+<p>到那一天，GEO 会分出一个新工种：不是优化“AI 怎么说你“，而是优化“AI 能不能直接操作你“。我们实测里已经能看到苗头——小鹅通的官方 SEM 页被 DeepSeek 引用，抖音电商学习中心在千川类问题上被豆包和 DeepSeek 反复引用。这些页面本质上就是“官方事实页 + 结构化内容“，它们今天的形态，就是 Agent 时代“可被调用的事实接口“的雏形。</p>
+<h2 id="四推演三品牌数据基建把吆喝变成录进系统的菜单"><a class="header" href="#四推演三品牌数据基建把吆喝变成录进系统的菜单">四、推演三：品牌数据基建——把吆喝变成录进系统的菜单</a></h2>
+<p>AI 时代的品牌基建，我用一个比喻：你是一家餐馆，过去靠门口吆喝揽客，嗓子大就行；后来客人改在点评网站上看评价，你得把照片拍好、评价维护好；现在客人连点评都不看了，直接在外卖平台上下单——这时候你嗓门再大也没用，<strong>平台系统里没录的菜，等于不存在。</strong> 菜单录了几道菜、每道菜有没有写清楚分量和价格、库存状态准不准，这些后台字段决定你能不能被点到。</p>
+<p>这套“后台字段“，就是品牌的数据基建，分三层：</p>
+<h3 id="第一层结构化数据"><a class="header" href="#第一层结构化数据">第一层：结构化数据</a></h3>
+<p>给机器看的身份证。官网用 Schema.org 这类结构化标记把“我是谁、卖什么、多少钱、怎么联系“标清楚，让爬虫和模型不用猜。这件事搜索引擎时代就该做，AI 时代只是惩罚更重了——机器读不懂你，就直接跳过你。</p>
+<h3 id="第二层api-化内容"><a class="header" href="#第二层api-化内容">第二层：API 化内容</a></h3>
+<p>让内容能被程序调用，而不只是被人阅读。价格表、库存、课程安排、服务范围，凡是会被问到的，都应该有一个机器可查的出口。今天 Agent 还得靠抓取网页凑合，明天它们会优先走接口——谁的接口在，谁就是默认选项。</p>
+<h3 id="第三层官方事实页"><a class="header" href="#第三层官方事实页">第三层：官方事实页</a></h3>
+<p>这件事我在前面章节反复强调过，这里用实测数据再砸一次。鲸牙启量对 9786 道题的引用来源统计显示，AI 回答的整体引用覆盖率只有 50.4%——<strong>近一半的回答没有任何引用，能被引用的内容本身就是稀缺卡位。</strong> 而在有引用的部分，官方阵地表现惊人：Kimi 对企业官网/品牌页的引用覆盖率达到 67.6%，是六家引擎里最高的一档；我们的 12 题实测里，晓多的官方博客同时出现在豆包、元宝、DeepSeek 三家的引用列表里，千问一家就引用了讯飞、有道、小鹅通等多家机构官网。</p>
+<p>道理很朴素：AI 和菜市场管理方一样怕担责任，它引用你，等于替你背书，所以它优先选挂了营业执照、贴了检疫票的摊位。你的官方事实页，就是挂在摊位上的那张执照——写清楚产品参数、价格（带日期）、服务范围、联系方式，保持全平台口径一致。这件事不性感，但它是所有 GEO 动作的底座。</p>
+<h2 id="五三类读者的行动清单"><a class="header" href="#五三类读者的行动清单">五、三类读者的行动清单</a></h2>
+<p>推演讲完，落回行动。同样面对 Agent 时代，三类人该做的事不一样。</p>
+<h3 id="品牌方先把自家院子扫干净"><a class="header" href="#品牌方先把自家院子扫干净">品牌方：先把“自家院子“扫干净</a></h3>
+<ul>
+<li><strong>本周就能做</strong>：盘点官网有没有一页“事实页“——产品、价格（带更新日期）、对比维度、常见质疑的官方回应，写给人看，也写给机器看。</li>
+<li><strong>三个月内做</strong>：核心产品信息结构化，全渠道口径对齐。我们实测看到文心一言 12 题全引、每题引 21 到 33 篇，连长尾小号都在被引——这意味着引擎找信源时是“饥不择食“的，你官方口径缺位的地方，自然有别人的嘴替你填上。</li>
+<li><strong>持续做</strong>：监测自家品牌在主流 AI 回答中的出现率和口径。负面语义词条（“智商税”“靠谱吗”）要主动占位，不做回应，答案就会被吐槽帖定义。</li>
+</ul>
+<h3 id="内容创作者从写给人看到写得可引用"><a class="header" href="#内容创作者从写给人看到写得可引用">内容创作者：从“写给人看“到“写得可引用“</a></h3>
+<ul>
+<li>每篇内容做到结论前置、有带日期的真实数字、有 5 个以上维度的对比表——这是被 AI 整体引用的内容形态，前面章节的实测已经反复验证。</li>
+<li>渠道按实测优先级铺：公众号、头条号、搜狐号、CSDN/博客园是实测被引第一梯队；知乎降为辅助（主要对文心有效）。别在过时的渠道地图上浪费弹药。</li>
+<li>长期只吃一碗饭：真实数据和真实经验。DeepSeek 官方已明确对低质 AIGC 铺稿内容识别降权，铺软文的路在收窄。Agent 时代更残酷——机器交叉验证比人快，编的内容死得更快。</li>
+</ul>
+<h3 id="工具服务商卖铲子但别乱挖"><a class="header" href="#工具服务商卖铲子但别乱挖">工具服务商：卖铲子，但别乱挖</a></h3>
+<ul>
+<li>需求是真的：品牌需要知道自己在 AI 回答里的可见度，这个市场会从几十亿长到几百亿（头豹的估测前面给了）。</li>
+<li>但自建高频抓取这条路不好走。我们实测做多次采样时，DeepSeek 在连续提问约 30 次后就触发了平台风控，整个采样计划被迫中止。做监测工具，要么控制频率（分钟级间隔、每日上限），要么接现成数据源，别把客户的账号池往风控枪口上送。</li>
+<li>下一个产品机会在“行动层“：帮品牌把内容 API 化、把事实页结构化、把 Agent 可调用的接口建起来——从“监测可见度“升级到“建设可调性“。</li>
+</ul>
+<h2 id="六全书回顾一张表看懂五代优化"><a class="header" href="#六全书回顾一张表看懂五代优化">六、全书回顾：一张表看懂五代优化</a></h2>
+<p>这本书从 SEO 一路讲到 GEO，名词换了一串，但每一代优化的本质问题只有三个：优化什么？谁决定可见性？核心资产是什么？收在一张表里：</p>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>阶段</th><th>优化什么</th><th>谁决定可见性</th><th>核心资产</th></tr>
+</thead>
+<tbody>
+<tr><td>SEO</td><td>网页在搜索结果列表中的排名</td><td>搜索引擎的排序算法</td><td>关键词内容、外链、站点技术架构</td></tr>
+<tr><td>LSO</td><td>门店在地图与本地搜索中的露出</td><td>本地平台的排序（距离+评价+资料完整度）</td><td>门店资料、用户评价、全平台一致的 POI 信息</td></tr>
+<tr><td>VSO</td><td>语音助手朗读的那唯一一条答案</td><td>语音助手对“唯一答案“的选择</td><td>结构化问答、知识图谱词条、FAQ 标记</td></tr>
+<tr><td>AEO</td><td>答案引擎摘要框里的直接答案</td><td>答案引擎对“最佳答案“的摘取</td><td>结论前置的问答内容、结构化数据</td></tr>
+<tr><td>GEO</td><td>生成式 AI 回答里的引用与提及</td><td>大模型的检索 + 生成（信源偏好）</td><td>多平台同口径的可引用内容、官方事实页、高质量语料</td></tr>
+</tbody>
+</table>
+</div>
+<p>看出规律了吗？从 SEO 到 GEO，<strong>决定可见性的“裁判“离人越来越远，离机器越来越近；而你的核心资产，从“讨好算法的技巧“一步步回归成“经得起机器核查的事实“。</strong> 这不是巧合，这是整个行业的价值回归。</p>
+<h2 id="七结语唯一不变的是成为值得被引用的答案"><a class="header" href="#七结语唯一不变的是成为值得被引用的答案">七、结语：唯一不变的是“成为值得被引用的答案“</a></h2>
+<p>我住的小区门口有个修鞋的老师傅，二十年没换过位置。这条街的生意形态换了三轮：先是百货商场，后来是淘宝，现在是直播间和外卖。他不懂得什么叫 SEO，更不知道 GEO，但他的生意一直不差——因为街坊提起“修鞋“，第一个想到的就是他，新买的靴子要不要钉掌，邻居会直接说“去问门口那个师傅“。</p>
+<p>AI 搜索、Agent 下单，说到底就是把“街坊的口口相传“搬到了机器里。引擎会换代，商业化会洗牌，今天讲的信源偏好、引用机制，三年后可能大半过时——这本书里具体的打法，保质期大概也就两三年。</p>
+<p>但有一样东西不会过时：<strong>让你的信息真实、准确、结构清晰、经得起核查，成为那个“值得被引用的答案“。</strong> 机器在变，机器选答案的标准却越来越接近街坊选师傅的标准——谁靠谱，提谁。</p>
+<p>把这件事做好的人，不需要追逐每一个新名词。名词会来找他。</p>
+<blockquote>
+<p><strong>本章小结</strong></p>
+<ul>
+<li>本章对商业化形态和 Agent 交易的推演，依据是海外已发生的事实（Perplexity 广告、ChatGPT 购物）和国内实测数据，但推演本身不是承诺，请带着批判读。</li>
+<li>国内六大引擎目前均无官方 AI 广告产品，“有机引用“正处在最值钱的窗口期；GEO 市场被估测从 2025 年约 21 亿元增长到 2027 年约 242 亿元。</li>
+<li>Agent 时代的优化对象从“被 AI 说到“变成“被 AI 调到“，品牌数据基建（结构化数据、API 化内容、官方事实页）是入场券——AI 回答整体引用覆盖率仅 50.4%，能被引用的内容本身就是稀缺卡位。</li>
+<li>品牌方扫自家院子、创作者写可引用的内容、工具商从监测升级到“可调性“建设，三类读者的行动路径不同，底座是同一个：事实。</li>
+<li>从 SEO 到 GEO，裁判越来越是机器，资产越来越是事实。唯一不变的策略，是成为值得被引用的答案。</li>
+</ul>
+</blockquote>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+
+            </nav>
+
+        </div>
+
+        <template id=fa-eye><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM432 256c0 79.5-64.5 144-144 144s-144-64.5-144-144s64.5-144 144-144s144 64.5 144 144zM288 192c0 35.3-28.7 64-64 64c-11.5 0-22.3-3-31.6-8.4c-.2 2.8-.4 5.5-.4 8.4c0 53 43 96 96 96s96-43 96-96s-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6z"/></svg></span></template>
+        <template id=fa-eye-slash><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M38.8 5.1C28.4-3.1 13.3-1.2 5.1 9.2S-1.2 34.7 9.2 42.9l592 464c10.4 8.2 25.5 6.3 33.7-4.1s6.3-25.5-4.1-33.7L525.6 386.7c39.6-40.6 66.4-86.1 79.9-118.4c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C465.5 68.8 400.8 32 320 32c-68.2 0-125 26.3-169.3 60.8L38.8 5.1zM223.1 149.5C248.6 126.2 282.7 112 320 112c79.5 0 144 64.5 144 144c0 24.9-6.3 48.3-17.4 68.7L408 294.5c5.2-11.8 8-24.8 8-38.5c0-53-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6c0 10.2-2.4 19.8-6.6 28.3l-90.3-70.8zm223.1 298L373 389.9c-16.4 6.5-34.3 10.1-53 10.1c-79.5 0-144-64.5-144-144c0-6.9 .5-13.6 1.4-20.2L83.1 161.5C60.3 191.2 44 220.8 34.5 243.7c-3.3 7.9-3.3 16.7 0 24.6c14.9 35.7 46.2 87.7 93 131.1C174.5 443.2 239.2 480 320 480c47.8 0 89.9-12.9 126.2-32.5z"/></svg></span></template>
+        <template id=fa-copy><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M502.6 70.63l-61.25-61.25C435.4 3.371 427.2 0 418.7 0H255.1c-35.35 0-64 28.66-64 64l.0195 256C192 355.4 220.7 384 256 384h192c35.2 0 64-28.8 64-64V93.25C512 84.77 508.6 76.63 502.6 70.63zM464 320c0 8.836-7.164 16-16 16H255.1c-8.838 0-16-7.164-16-16L239.1 64.13c0-8.836 7.164-16 16-16h128L384 96c0 17.67 14.33 32 32 32h47.1V320zM272 448c0 8.836-7.164 16-16 16H63.1c-8.838 0-16-7.164-16-16L47.98 192.1c0-8.836 7.164-16 16-16H160V128H63.99c-35.35 0-64 28.65-64 64l.0098 256C.002 483.3 28.66 512 64 512h192c35.2 0 64-28.8 64-64v-32h-47.1L272 448z"/></svg></span></template>
+        <template id=fa-play><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"/></svg></span></template>
+        <template id=fa-clock-rotate-left><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M75 75L41 41C25.9 25.9 0 36.6 0 57.9V168c0 13.3 10.7 24 24 24H134.1c21.4 0 32.1-25.9 17-41l-30.8-30.8C155 85.5 203 64 256 64c106 0 192 86 192 192s-86 192-192 192c-40.8 0-78.6-12.7-109.7-34.4c-14.5-10.1-34.4-6.6-44.6 7.9s-6.6 34.4 7.9 44.6C151.2 495 201.7 512 256 512c141.4 0 256-114.6 256-256S397.4 0 256 0C185.3 0 121.3 28.7 75 75zm181 53c-13.3 0-24 10.7-24 24V256c0 6.4 2.5 12.5 7 17l72 72c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-65-65V152c0-13.3-10.7-24-24-24z"/></svg></span></template>
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr-ef4e11c1.min.js"></script>
+        <script src="mark-09e88c2c.min.js"></script>
+        <script src="searcher-09f2665d.js"></script>
+
+        <script src="clipboard-1626706a.min.js"></script>
+        <script src="highlight-abc7f01d.js"></script>
+        <script src="book-609e4cb8.js"></script>
+
+        <!-- Custom JS scripts -->
+
+        <script>
+        window.addEventListener('load', function() {
+            window.setTimeout(window.print, 100);
+        });
+        </script>
+
+
+    </div>
+    </body>
+</html>
