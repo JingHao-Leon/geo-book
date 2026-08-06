@@ -35,7 +35,7 @@
             const path_to_root = "";
             const default_light_theme = "light";
             const default_dark_theme = "ayu";
-            window.path_to_searchindex_js = "searchindex-732bf55d.js";
+            window.path_to_searchindex_js = "searchindex-b6bfbd6c.js";
         </script>
         <!-- Start loading toc.js asap -->
         <script src="toc-b56c35ea.js"></script>
@@ -181,6 +181,10 @@
                 <div id="mdbook-content" class="content">
                     <main>
                         <h1 id="第4章-aeo答案引擎优化"><a class="header" href="#第4章-aeo答案引擎优化">第4章 AEO：答案引擎优化</a></h1>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="images/illus-ch4-aeo.png" alt="答案引擎像一位懂你需求的导购"><span class="img-wrapper"><img src="images/illus-ch4-aeo.png" alt="答案引擎像一位懂你需求的导购"></span></label></p>
+<blockquote>
+<p>答案引擎（AEO）像一位懂你需求的导购：不再让你逛货架，而是把答案直接递到你手里。</p>
+</blockquote>
 <p>上一章我们讲了 LSO 和 VSO——搜索场景从“打字“扩展到“位置“和“语音“。但不管是语音助手还是本地生活，它们背后藏着同一个趋势：用户越来越不想从十条蓝色链接里自己翻答案了，他们想要<strong>一个直接的答案</strong>。</p>
 <p>这一章讲的 AEO（Answer Engine Optimization，答案引擎优化），就是围绕这个“直接答案“展开的优化技术。它是 SEO 家族里离 GEO 最近的一个分支，甚至可以说：GEO 的地基，一半是 AEO 打的。不懂 AEO，后面第 5 章开始的 GEO 实操你会做得事倍功半。</p>
 <h2 id="从十条蓝色链接到一个直接答案"><a class="header" href="#从十条蓝色链接到一个直接答案">从“十条蓝色链接“到“一个直接答案“</a></h2>
@@ -241,6 +245,13 @@
 <p><strong>第四步，做一张对比表。</strong> 自助开通 vs 代理商开通，按费用、门槛、返点、服务、风险五个维度列清楚。我们的实测反复验证：横向对比表是 AI 引擎最容易整体引用的内容形态，对比类问题在六家国产引擎上全部被实质回答，且答案呈“按场景选“的平衡结构——表格正中这个口味。</p>
 <p><strong>第五步，多平台同口径分发。</strong> 同一个问答核心，改成公众号长文版和百家号版各发一份。实测里，千川类问题的引用源高度集中在抖音电商学习中心（school.jinritemai.com）这类官方结构化内容——光 DeepSeek 的高频信源里，抖音电商学习中心就出现了 9 次。官方阵地你占不了，但“同结构、同口径、带日期“的第三方内容，是机器找不到官方答案时的第一替补。</p>
 <p>做完这五步，你就不是在“优化一个网页“了，你是在<strong>给答案引擎供稿</strong>。这就是 AEO 的终极形态，也是通往 GEO 的桥——下一章我们正式过桥。</p>
+<h2 id="真实案例位置零到底值多少钱"><a class="header" href="#真实案例位置零到底值多少钱">真实案例：位置零到底值多少钱</a></h2>
+<p><strong>案例一：HubSpot 的精选摘要实验。</strong></p>
+<p>位置零的价值，最早是 HubSpot 用数字算出来的。据 HubSpot 官方博客公布的实验，他们把一批高流量关键词页面按精选摘要的口味重构——问题作标题、结论前置成短段、列表用规范的 HTML 结构——结果进入精选摘要（位置零）的帖子，点击率提升最高达 114%；另一批经结构调整后新进入摘要框的帖子，点击量提升了约 10.5%。这个 114% 后来被行业引用到烂，但它真正说明的不是“摘要框有点击“，而是本章那个判断：导购把酱油塞进顾客手里时，货架上的第二名基本就没机会了。值得注意的是，这套方法——答案前置、结构规范——就是今天 AEO 三板斧的原型，十年前就被验证有效。</p>
+<p><strong>这个案例对本章的启示：位置零的优化有公开、可复用的方法论，AEO 的基本功从来不是玄学。</strong></p>
+<p><strong>案例二：Ahrefs 的两百万样本研究，和一个“失去摘要“的反面数字。</strong></p>
+<p>如果说 HubSpot 证明了抢到摘要的好处，Ahrefs 的研究则标定了它的边界。据 Ahrefs 官方博客发布的两百万条精选摘要研究：约 12.3% 的搜索查询会出现精选摘要；有摘要时，摘要框平均拿走约 8.6% 的点击，而排在其后的自然第一名仍能拿到约 19.6%——摘要框远没有“通吃“，大量用户看完摘要仍会点进去看全文。反面数字同样有力：据 SEO 顾问 Glenn Gabe 公开的案例研究，他一个客户的页面丢掉了竞争激烈关键词的精选摘要后，两周内损失超过 3.9 万次点击。一得一失，标出了位置零的真实价位：值得抢，但从来不是流量的全部。</p>
+<p><strong>这个案例对本章的启示：“被摘要“与“被点击“是两层收益——这个结构，正是 GEO 时代“被 AI 引用“与“被用户访问“关系的预演。</strong></p>
 <blockquote>
 <p><strong>本章小结</strong></p>
 <ul>

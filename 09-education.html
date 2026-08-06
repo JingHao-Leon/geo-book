@@ -35,7 +35,7 @@
             const path_to_root = "";
             const default_light_theme = "light";
             const default_dark_theme = "ayu";
-            window.path_to_searchindex_js = "searchindex-732bf55d.js";
+            window.path_to_searchindex_js = "searchindex-b6bfbd6c.js";
         </script>
         <!-- Start loading toc.js asap -->
         <script src="toc-b56c35ea.js"></script>
@@ -183,6 +183,10 @@
                         <h1 id="第9章-行业实战-ii教育"><a class="header" href="#第9章-行业实战-ii教育">第9章 行业实战 II：教育</a></h1>
 <p>上一章拆了电商，这一章讲教育。我把它放在第二个讲，是因为教育是 GEO 红利和陷阱同样密集的行业：家长的提问习惯天然适配 AI 引擎，而绝大多数教培机构还没反应过来；同时，这个行业有些 query 看起来金灿灿的，实测下来却发现引擎根本不给你留门。</p>
 <p>本章结论来自我们对教育赛道 40 条真实 prompt 的梳理，以及 DeepSeek、豆包、Kimi、千问、文心、元宝六家引擎的逐题实测。凡是测过的，我会明说“实测“；没测过的，我不装。</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="images/chart-prompts-dist.png" alt="74 条 GEO 候选 prompt 的优先级分布"><span class="img-wrapper"><img src="images/chart-prompts-dist.png" alt="74 条 GEO 候选 prompt 的优先级分布"></span></label></p>
+<blockquote>
+<p>图 1：两个行业候选 prompt 清单的优先级分布（prompts-广告电商.csv 34 条、prompts-教育.csv 40 条，2026-08-05）。easy_win 指竞争近乎空白、可引用性高、应优先投入的问题；target 为常规投入；skip 暂缓。两个行业 easy_win 占比都在六成上下——GEO 目前仍是大片空地。</p>
+</blockquote>
 <h2 id="教育-query-的四大特征"><a class="header" href="#教育-query-的四大特征">教育 query 的四大特征</a></h2>
 <h3 id="特征一先怀疑再掏钱智商税句式泛滥"><a class="header" href="#特征一先怀疑再掏钱智商税句式泛滥">特征一：先怀疑，再掏钱——“智商税“句式泛滥</a></h3>
 <p>教育 prompt 里最高频的句式不是“哪个好“，而是“是不是智商税““是不是割韭菜”“是不是骗局”：学习机到底是不是智商税、AI 课程是不是割韭菜、松鼠 AI 自习室加盟是不是骗局、IT 培训的包就业是真的吗……</p>

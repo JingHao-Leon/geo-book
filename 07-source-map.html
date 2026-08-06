@@ -35,7 +35,7 @@
             const path_to_root = "";
             const default_light_theme = "light";
             const default_dark_theme = "ayu";
-            window.path_to_searchindex_js = "searchindex-732bf55d.js";
+            window.path_to_searchindex_js = "searchindex-b6bfbd6c.js";
         </script>
         <!-- Start loading toc.js asap -->
         <script src="toc-b56c35ea.js"></script>
@@ -192,6 +192,10 @@
 <li><strong>元宝的腾讯供应链</strong>：单次实测中公众号文章被引用了 48 次，约占其全部引用的三分之一。后来我们做了 54 次多次采样，43 次（约 80%）都引用了 mp.weixin.qq.com。可以下结论：<strong>没有公众号内容的品牌，在元宝上几乎不存在</strong>。多次采样还显示今日头条（33 次）、腾讯新闻（16 次）也是元宝的重要信源。</li>
 <li><strong>文心的百度供应链</strong>：12 题全部有引用，每题引 21 到 33 篇，总共 321 条，百家号、百度百科、爱企查、word.baidu 高频出现。</li>
 </ul>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="images/chart-yuanbao-domains.png" alt="腾讯元宝 Top 10 引用域名"><span class="img-wrapper"><img src="images/chart-yuanbao-domains.png" alt="腾讯元宝 Top 10 引用域名"></span></label></p>
+<blockquote>
+<p>图 1：元宝多次采样（54 次有效采样，2026-08-05）的 Top 10 引用域名，按“每次回答内域名去重“口径计次。公众号（mp.weixin.qq.com）以 44 次居首，今日头条、腾讯新闻分列其后——腾讯系自有内容构成元宝的信源基本盘。</p>
+</blockquote>
 <p>文心这里有个反直觉的细节值得单独说。它引用量最大，但“质最杂“——大量无名小号（类似“糖汐兮““好物品质分享“这种名字的账号）也在被引。这说明<strong>文心的引用门槛是六家里最低的，低权重小号内容也有机会</strong>。所以别家的策略是“做精”，文心这里“铺量“居然真的有效——百家号矩阵式发文，是六家里投入产出比最直接的一档。</p>
 <blockquote>
 <p><strong>生态绑定定律</strong>：有内容生态的引擎（豆包、元宝、文心），优先引用自家生态内容；你想影响它，先进它的供应链。</p>
@@ -200,6 +204,10 @@
 <p>DeepSeek、Kimi、千问这三家，母公司要么没有 C 端内容生态，要么生态不绑定。它们像三家没有食堂的公司，行政只能每天出去采购——去门户网站、百科、官网、权威媒体这些“公共菜市场“买菜。对做 GEO 的人来说，这反而是好消息：<strong>公共菜市场谁都能摆摊，不看户口</strong>。</p>
 <p>但三家的采购口味差别很大：</p>
 <p><strong>DeepSeek：杂而正的“挑剔采购员“。</strong> 单次实测它只有 9/12 题联网引用，我们一度低估了它；后来多次采样（受平台风控所限只完成 32 次）发现，开启“智能搜索“后 32/32 全部联网引用——它的引用率被单次测试严重低估，应列入第一梯队。它的高频信源是：新浪系（13 次）、百度系（10 次）、抖音电商学习中心（9 次）、华声在线（9 次）、四川在线（8 次）、博客园（7 次）、飞书云文档（6 次）。新闻门户 + 百科 + 官方文档 + 投诉政务源，信源结构是六家里最“杂而正“的。</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="images/chart-deepseek-domains.png" alt="DeepSeek Top 10 引用域名"><span class="img-wrapper"><img src="images/chart-deepseek-domains.png" alt="DeepSeek Top 10 引用域名"></span></label></p>
+<blockquote>
+<p>图 2：DeepSeek 多次采样（32 次有效采样，覆盖 Q1–Q7，2026-08-05）的 Top 10 引用域名，按“每次回答内域名去重“口径计次。新闻门户、百度系、官方学习中心与飞书云文档构成其主力信源。</p>
+</blockquote>
 <p><strong>千问：采购清单最长的行政。</strong> 10/12 题有引用，去重域名多达 53 个，是引用面最广的一家——新华网、澎湃、中新网等权威媒体，百度系内容，讯飞、有道、小鹅通这类机构官网，甚至政务站（如北京市监局）都在引。但注意，它的长尾里也有 11467 黄页、神马聚合页这类低质源。千问的打法对应是：权威媒体铺稿 + 官方文档/白皮书，铺得越正越稳。</p>
 <p><strong>Kimi：基本可以排在最后。</strong> 12 题只有 3 题有引用，9 题纯模型作答，有引用也多是 CSDN、搜狐这类内容农场。它的引用覆盖率里官网权重确实高（研究口径 67.6%，六家最高之一），但 3/12 的引用率意味着外链内容很难影响它的回答，加上 MAU 萎缩（约 900 万且持续走低），<strong>投入优先级应排在六家最后</strong>——做好官网事实页顺手覆盖即可，不必专门投入。</p>
 <h2 id="三知乎修正这本书里最重要的一次认错"><a class="header" href="#三知乎修正这本书里最重要的一次认错">三、“知乎修正”：这本书里最重要的一次认错</a></h2>
