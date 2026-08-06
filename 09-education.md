@@ -4,6 +4,10 @@
 
 本章结论来自我们对教育赛道 40 条真实 prompt 的梳理，以及 DeepSeek、豆包、Kimi、千问、文心、元宝六家引擎的逐题实测。凡是测过的，我会明说"实测"；没测过的，我不装。
 
+![74 条 GEO 候选 prompt 的优先级分布](images/chart-prompts-dist.png)
+
+> 图 1：两个行业候选 prompt 清单的优先级分布（prompts-广告电商.csv 34 条、prompts-教育.csv 40 条，2026-08-05）。easy_win 指竞争近乎空白、可引用性高、应优先投入的问题；target 为常规投入；skip 暂缓。两个行业 easy_win 占比都在六成上下——GEO 目前仍是大片空地。
+
 ## 教育 query 的四大特征
 
 ### 特征一：先怀疑，再掏钱——"智商税"句式泛滥
