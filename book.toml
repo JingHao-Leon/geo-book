@@ -1,0 +1,14 @@
+[book]
+title = "从 SEO 到 GEO：AI 时代的搜索优化实战手册"
+authors = ["JingHao-Leon"]
+language = "zh-CN"
+src = "."
+
+[output.html]
+git-repository-url = "https://github.com/JingHao-Leon/geo-book"
+edit-url-template = "https://github.com/JingHao-Leon/geo-book/edit/main/{path}"
+default-theme = "light"
+preferred-dark-theme = "ayu"
+
+[output.html.search]
+enable = true
